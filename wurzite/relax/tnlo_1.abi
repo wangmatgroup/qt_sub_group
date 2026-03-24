@@ -1,0 +1,78 @@
+#Structural optimisation
+
+ngkpt 7 7 4
+kptopt 1
+nshiftk 1
+shiftk    0.0    0.0    0.5
+
+#Definition of the unit cell
+#**********************************
+acell    1.0    1.0    1.0
+rprim
+    5.9121747414    0.0000000000    0.0000000000
+   -2.9560873707    5.1200935176    0.0000000000
+    0.0000000000    0.0000000000    9.4806709296
+
+#Definition of the atom types and pseudopotentials
+ ntypat 2 # two types of atoms
+ znucl 13 7 # the atom types are Phosphorous and Aluminum
+
+# the following norm-conserving pseudopotentials are stored in the abinit distribution, but are freely
+# available through www.pseudo-dojo.org
+# this set uses the Perdew-Wang parameterization of LDA for the xc model
+ pp_dirpath "$ABI_PSPDIR"
+ pseudos "Al.GGA_PBE-JTH.xml,
+    N.GGA_PBE-JTH.xml"
+
+#Definition of the atoms
+ natom 4 # two atoms in the cell
+ typat 1 1 2 2 # type 1 is Phosphorous, type 2 is Aluminum (order defined by znucl above and pseudos list)
+ nband 16 # nband is restricted here to the number of filled bands only, no empty bands.
+ nbdbuf 0
+
+# atomic positions in units of cell vectors
+xred
+    0.3333333333    0.6666666667    0.9992870000
+    0.6666666667    0.3333333333    0.4992870000
+    0.3333333333    0.6666666667    0.3807130000
+    0.6666666667    0.3333333333    0.8807130000
+
+#Numerical parameters of the calculation : planewave basis set and k point grid
+ecut  30 
+dilatmx 1.05
+pawecutdg 30
+
+# scf parameters
+nstep 50  # in general this should be set to its
+         # default (30) or higher
+
+# suppress printing of density, wavefunctions, etc except what is
+# explicitly requested above in the ndtset section
+prtwf 0
+prtden 0
+prteig 0
+
+#Structural relaxation
+#*********************
+   geoopt "bfgs"
+   optcell 2
+   tolvrs 1.0d-15
+   tolmxf 5.0d-6
+   ntime 100
+
+##############################################################
+# This section is used only for regression testing of ABINIT #
+##############################################################
+#%%<BEGIN TEST_INFO>
+#%% [setup]
+#%% executable = abinit
+#%% [files]
+#%% files_to_test =
+#%%   tnlo_1.abo, tolnlines=  1, tolabs=  4.192e-06, tolrel=  8.000e-05, fld_options=-medium
+#%% [paral_info]
+#%% max_nprocs = 2
+#%% [extra_info]
+#%% authors = J. Zwanziger, M. Veithen, P. Ghosez
+#%% keywords =
+#%% description = Structural optimisation
+#%%<END TEST_INFO>

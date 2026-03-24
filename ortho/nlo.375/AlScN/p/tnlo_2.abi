@@ -1,0 +1,97 @@
+# Linear and nonlinear response calculation for AlN
+# Perturbations: electric fields & atomic displacements
+
+ndtset 2
+
+#********************************************
+#DATASET4 : response functions (2nd derivatives of E)
+#           and corresponding 1st order WF derivatives
+#           phonons, electric fields, and strains are all done
+#**************************************************************
+   getwfk_filepath1    "./tnlo_2o_DS2_WFK"        # use GS WF from dataset 2
+   kptopt1    2        # use Half Brillouin Zone (only time-reversal symmetry taken into account)
+   getddk1    3        # use ddk WF from dataset 3 (needed for electric field)
+   rfphon1    1        # compute 1st-order WF derivatives with respect to atomic displacements...
+   rfelfd1    3        # compute 1st-order WF derivatives with respect to electric field
+#   rfstrs1    3        # compute 1st-order WF derivatives with respect to strains
+   tolvrs1    1.0d-12  # SCF convergence criteria (could be tolwfr)
+  prepanl1    1        # make sure that response functions are correctly prepared for a non-linear computation
+    prtwf1    1        # save 1st-order WF on disk, will be used in other datasets
+   prtden1    1        # save 1st-order density on disk, will be used in other datasets
+
+#********************************************
+#DATASET5 : 3rd derivatives of E
+#********************************************
+  getwfk_filepath2           "./tnlo_2o_DS2_WFK"    # use GS WF from dataset 2
+  getden2          1     # use 1st-order densities from dataset 4
+   get1wf2          1    # use 1st-order WFs from dataset 4
+   kptopt2           2     # use Half Brillouin Zone (only time-reversal symmetry taken into account)
+optdriver2           5     # compute 3rd order derivatives of the energy
+  d3e_pert1_elfd2    1     # activate electric field for 1st perturbation...
+  d3e_pert1_phon2    1     # ...and also atomic displacements...
+ d3e_pert1_atpol2    1 32    # ...for all atoms (so here only 1 and 2)...
+  d3e_pert2_elfd2    1     # activate electric field for 2nd perturbation...
+  d3e_pert3_elfd2    1     # activate electric field for 3rd perturbation...
+
+# the following norm-conserving pseudopotentials are stored in the abinit distribution, but are freely
+# available through www.pseudo-dojo.org
+# this set uses the Perdew-Wang parameterization of LDA for the xc model
+ pp_dirpath "$ABI_PSPDIR"
+ pseudos "Psdj_nc_sr_04_pw_std_psp8/Al.psp8, Psdj_nc_sr_04_pw_std_psp8/Sc.psp8, Psdj_nc_sr_04_pw_std_psp8/N.psp8"
+
+#**********************************
+#Definition of the atoms
+#**********************************
+structure "abifile:tnlo_1o_GSR.nc"
+chkprim 0
+nband 88 # nband is restricted here to the number of filled bands only, no empty bands.
+nbdbuf 0
+#**********************************
+#Numerical parameters of the calculation
+#**********************************
+ecut  30 
+pawecutdg 30
+dilatmx 1.05
+#ngkpt 6 6 6 # must be checked carefully for convergence, Raman calculations converge slowly with kpt
+#nshiftk 4 # this Monkhorst-Pack shift pattern is used so that the symmetry of the shifted grid
+          # is correct. A gamma-centered grid would also have the correct symmetry but would be
+          # less efficient.
+#shiftk 0.5 0.5 0.5
+       0.5 0.0 0.0
+       0.0 0.5 0.0
+       0.0 0.0 0.5
+
+ngkpt 6 6 4
+kptopt 1
+nshiftk 1
+shiftk    0.0    0.0    0.5
+
+# scf parameters
+nstep 200  # in general this should be set to its
+         # default (30) or higher
+
+# suppress printing of density, wavefunctions, etc except what is
+# explicitly requested above in the ndtset section
+prtwf 0
+prtden 0
+prteig 0
+
+##############################################################
+# This section is used only for regression testing of ABINIT #
+##############################################################
+#%%<BEGIN TEST_INFO>
+#%% [setup]
+#%% executable = abinit
+#%% test_chain = tnlo_2.abi, tnlo_3.abi, tnlo_4.abi
+#%% [files]
+#%% files_to_test =
+#%%   tnlo_2.abo, tolnlines=7 , tolabs=  2.000e-04, tolrel=  4.000e-02, fld_options=-medium
+#%% [paral_info]
+#%% max_nprocs = 2
+#%% [extra_info]
+#%% authors =  J. Zwanziger, L. Baguet, M. Veithen
+#%% keywords = NC, DFPT, NONLINEAR
+#%% description =
+#%%   Linear and nonlinear response calculation for AlP
+#%%   Perturbations: electric fields & atomic displacements
+#%%<END TEST_INFO>

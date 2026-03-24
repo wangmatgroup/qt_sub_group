@@ -1,0 +1,78 @@
+# NSCF/band structure for AlScN
+
+ndtset 2
+
+#********************************************
+#DATASET1 : scf calculation: GS WF in the IBZ
+#********************************************
+   prtden1    1        # save density on disk, will be used in other datasets
+   kptopt1    1        # use Irreducible Brillouin Zone (all symmetry taken into account)
+   toldfe1    1.0d-12  # SCF convergence criteria (could be tolwfr or tolvrs)
+   ngkpt1 6 6 4
+   nshiftk1 1
+   shiftk1    0.0    0.0    0.5
+#********************************************
+#DATASET2 : non scf calculation: k-point path
+#*****************************************************
+   getden2     1        # use density from dataset 1
+   kptopt2    -3        # will have three segments in the band structure
+   iscf2      -2        # non-self-consistent calculation
+   tolwfr2     1.0d-22  # convergence criteria on WF, need high precision for response
+   ndivsm2     10   # 10 divisions of the smallest of the 3 segments, delimited
+                        # by the 4 points defined by kptbounds.
+   kptbounds2  0.0   0.0   0.0  #  Gamma
+               0.0   0.5   0.0  #  X
+               0.5   0.5   0.0  #  M
+               0.0   0.0   0.0  #  Gamma
+               0.5   0.5   0.5  #  R
+               0.0   0.5   0.0  #  X
+   enunit2  1             # Will output the eigenenergies in eV
+
+# the following norm-conserving pseudopotentials are stored in the abinit distribution, but are freely
+# available through www.pseudo-dojo.org
+# this set uses the Perdew-Wang parameterization of LDA for the xc model
+ pp_dirpath "$ABI_PSPDIR"
+ pseudos "Psdj_nc_sr_04_pw_std_psp8/Al.psp8, Psdj_nc_sr_04_pw_std_psp8/Sc.psp8, Psdj_nc_sr_04_pw_std_psp8/N.psp8"
+
+#**********************************
+#Definition of the atoms
+#**********************************
+structure "abifile:tnlo_1o_GSR.nc"
+chkprim 0
+
+#**********************************
+#Numerical parameters of the calculation
+#**********************************
+ecut  30 
+pawecutdg 30
+
+# scf parameters
+nstep 200  # in general this should be set to its
+         # default (30) or higher
+
+# suppress printing of density, wavefunctions, etc except what is
+# explicitly requested above in the ndtset section
+prtwf 0
+prtden 0
+
+autoparal 1
+
+##############################################################
+# This section is used only for regression testing of ABINIT #
+##############################################################
+#%%<BEGIN TEST_INFO>
+#%% [setup]
+#%% executable = abinit
+#%% test_chain = tnlo_2.abi, tnlo_3.abi, tnlo_4.abi
+#%% [files]
+#%% files_to_test =
+#%%   tnlo_2.abo, tolnlines=7 , tolabs=  2.000e-04, tolrel=  4.000e-02, fld_options=-medium
+#%% [paral_info]
+#%% max_nprocs = 2
+#%% [extra_info]
+#%% authors =  J. Zwanziger, L. Baguet, M. Veithen
+#%% keywords = NC, DFPT, NONLINEAR
+#%% description =
+#%%   Linear and nonlinear response calculation for AlP
+#%%   Perturbations: electric fields & atomic displacements
+#%%<END TEST_INFO>

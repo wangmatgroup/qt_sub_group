@@ -1,0 +1,141 @@
+# Finite difference calculation of d eps / d mu of AlN
+
+ndtset 4
+udtset 3 4 # double loop over data sets: first index 1..3, second index 1..4
+
+# atomic positions: three different sets
+# mu = 0.0 equilibrium
+rprim1?  1.0697753182E+01  1.8807031064E-02  1.9838144118E-03
+         1.6287346124E-02  1.1733117680E+01  6.8608587032E-03
+         3.1812118662E-03  1.2703984179E-02  1.8739172664E+01
+
+# mu = 0.001
+rprim2?  1.0797753182E+01  1.8807031064E-02  1.9838144118E-03
+         1.6287346124E-02  1.1733117680E+01  6.8608587032E-03
+         3.1812118662E-03  1.2703984179E-02  1.8739172664E+01
+
+# mu = -0.001
+rprim3?  1.0597753182E+01  1.8807031064E-02  1.9838144118E-03
+         1.6287346124E-02  1.1733117680E+01  6.8608587032E-03
+         3.1812118662E-03  1.2703984179E-02  1.8739172664E+01
+
+#DATASET1 : scf calculation: GS WF in the BZ
+#********************************************
+   prtden?1   1
+   kptopt?1   1
+   toldfe?1  1.0d-12
+   autoparal?1 1
+
+#DATASET2 : non scf calculation: GS WF in the whole BZ
+#*****************************************************
+   getden?2  -1
+   getwfk?2  -1
+   kptopt?2   2
+     iscf?2  -2
+   tolwfr?2   1.0d-22
+    nband?2   88
+
+#DATASET3 : ddk on the MP grid of k-points
+#*****************************************
+   getwfk?3  -1
+    rfddk?3   1
+   tolwfr?3   1.0d-22
+    nband?3   88
+   kptopt?3   2
+
+
+#DATASET4 : dielectric tensor calculation
+#****************************************
+   getwfk?4  -2
+   getddk?4  -1
+   tolvrs?4   1.0d-12
+   rfelfd?4   3
+    nband?4   88
+   kptopt?4   2
+    prtwf?4   0
+
+#Definition of the unit cell
+acell    1.0    1.0    1.0
+xred      8.2548465155E-01  2.4896522449E-01  4.9736651737E-01
+   8.4199976461E-01  2.4090759222E-01  9.9763478520E-01
+   8.4150624092E-01  7.5817107350E-01  4.9895160555E-01
+   8.3846199675E-01  7.5444473144E-01  9.9951380626E-01
+   3.4310593048E-01 -1.0508762261E-02  4.9631722123E-01
+   3.3980192087E-01 -1.0379322594E-02  9.9740044061E-01
+   3.2955642044E-01  5.0586388470E-01  4.9719345334E-01
+   3.2313660061E-01  4.9808226449E-01  9.9787808622E-01
+   1.6570277940E-01  2.4418020485E-01  2.6372155219E-01
+   1.6016627745E-01  2.3597088794E-01  7.2396029584E-01
+   1.6190148712E-01  7.5674965644E-01  2.5425633469E-01
+   1.6353850624E-01  7.5259324017E-01  7.4367307865E-01
+   6.7079969190E-01  2.3878562478E-03  2.5538319757E-01
+   6.6852059572E-01 -4.9030637101E-03  7.4280177304E-01
+   6.6383518311E-01  5.0869208550E-01  2.4723540661E-01
+   6.6061614210E-01  5.1701200320E-01  7.4049813404E-01
+   8.5120021891E-01  2.3873601914E-01  2.0740012874E-01
+   8.0961719485E-01  2.4131580486E-01  6.8459458358E-01
+   8.5158126947E-01  7.7403289430E-01  1.8895484787E-01
+   8.5894626297E-01  7.7383995540E-01  6.8318783877E-01
+   3.4572255263E-01  1.3750106888E-03  2.0856459675E-01
+   3.6065185231E-01 -2.9114123106E-02  6.8436251354E-01
+   3.0697682962E-01  4.9827508387E-01  2.0608976073E-01
+   3.1917849557E-01  5.1394680620E-01  6.8428501139E-01
+   1.6303594857E-01  2.4552759304E-01  4.5694345294E-01
+   1.6852132046E-01  2.4021027840E-01  9.2738837809E-01
+   1.6021546517E-01  7.5165698915E-01  4.4113920169E-01
+   1.3801079623E-01  7.4899510224E-01  9.3078947055E-01
+   6.6477343454E-01 -7.8665022185E-04  4.4201806231E-01
+   6.7241121516E-01 -1.8241196167E-02  9.2966497401E-01
+   6.6236425624E-01  5.0801848706E-01  4.5644019436E-01
+   6.6865869802E-01  5.1398238854E-01  9.5439129628E-01
+
+
+#Definition of the atom types and pseudopotentials
+ ntypat 3 
+ znucl       13.00000   21.00000    7.00000
+
+# the following norm-conserving pseudopotentials are stored in the abinit distribution, but are freely
+# available through www.pseudo-dojo.org
+# this set uses the Perdew-Wang parameterization of LDA for the xc model
+ pp_dirpath "$ABI_PSPDIR"
+ pseudos "Psdj_nc_sr_04_pw_lda_std_psp8/Al.psp8, Psdj_nc_sr_04_pw_lda_std_psp8/Sc.psp8, Psdj_nc_sr_04_pw_lda_std_psp8/N.psp8"
+
+#Definition of the atoms
+ natom 32 # two atoms in the cell
+ typat      1  2  1  1  1  2  1  2  1  2  1  1  1  1  2  2  3  3  3  3
+            3  3  3  3  3  3  3  3  3  3  3  3
+ nband 88 # nband is restricted here to the number of filled bands only, no empty bands.
+ nbdbuf 0
+
+#Numerical parameters of the calculation : planewave basis set and k point grid
+chkprim 0
+nsppol 2
+spinmagntarget 0
+occopt 1
+ecut  30 
+dilatmx 1.05
+ngkpt 6 6 4
+kptopt 1
+nshiftk 1
+shiftk    0.0    0.0    0.5
+
+# scf parameters
+nstep 50  # limit number of steps for the tutorial, in general this should be set to its
+         # default (30) or higher
+
+##############################################################
+# This section is used only for regression testing of ABINIT #
+##############################################################
+#%%<BEGIN TEST_INFO>
+#%% [setup]
+#%% executable = abinit
+#%% [files]
+#%% files_to_test =
+#%%   tnlo_5.abo, tolnlines= 190, tolabs=  2.0e-6, tolrel= 5e-4
+#%% [paral_info]
+#%% max_nprocs = 2
+#%% [extra_info]
+#%% authors = J. Zwanziger, M. Veithen
+#%% keywords = NC, DFPT
+#%% description = Finite difference calculation of d chi / d mu of AlP
+#%%<END TEST_INFO>
