@@ -22,6 +22,3 @@ ex) `find . -name '*.abi' -exec cp --parents \{\} **path_to_copies** \;`
 3. `git pull --rebase wangmat_qt **your_branch_name**`
 
 4. `git push -u wangmat_qt **your_branch_name**`
-
-### Download files 
-
