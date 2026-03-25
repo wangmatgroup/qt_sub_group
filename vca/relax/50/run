@@ -11,9 +11,10 @@
 #SBATCH --mail-user=young.s@utexas.edu     # Email address to be notified
 
 ulimit -s unlimited
-unset LD_LIBRARY_PATH
 module load gcc/13.2.0
 module load impi/21.12 mkl/24.1 zlib
-export LD_LIBRARY_PATH=/home1/10335/mias0356/lib:/work/10335/mias0356/ls6/work/modules2/libxc-7.0.0/lib
+
+#export LD_LIBRARY_PATH=/home1/10335/mias0356/lib:/work/10335/mias0356/ls6/work/modules2/libxc-7.0.0/lib:/scratch/projects/compilers/intel24.1/oneapi/mkl/2024.1/lib
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/work/10335/mias0356/ls6/work/modules2/hdf5/lib/plugin
 
 ibrun abinit tnlo_1.abi > log 2> err

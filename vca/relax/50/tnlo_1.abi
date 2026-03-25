@@ -35,7 +35,7 @@ znucl 7 13 21
 # available through www.pseudo-dojo.org
 # this set uses the Perdew-Wang parameterization of LDA for the xc model
  pp_dirpath "$ABI_PSPDIR"
- pseudos "Psdj_nc_sr_04_pw_std_psp8/N.psp8, Psdj_nc_sr_04_pw_std_psp8/Al.psp8, Psdj_nc_sr_04_pw_std_psp8/Sc.psp8"
+ pseudos "Psdj_nc_sr_04_pw_lda_std_psp8/N.psp8, Psdj_nc_sr_04_pw_lda_std_psp8/Al.psp8, Psdj_nc_sr_04_pw_lda_std_psp8/Sc.psp8"
 
 xred      
 1.1297595041E+00  2.5000000000E-01  5.0000000000E-01
