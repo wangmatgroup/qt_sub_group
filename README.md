@@ -8,6 +8,6 @@ Settings > Developer Settings > Personal Access Tokens > Tokens (classic) > Gene
 `git remote add wangmat_qt https://github.com/wangmatgroup/qt_sub_group.git`
 
 3. Prepare the contents of the next commit   
-`git add -v *.abi *.abo *.log *_GSR.nc`
+`git add -v *.abi *abo* *log* *.nc *.cif`
 
 4. git branch -M **your_branch_name**
