@@ -8,7 +8,7 @@ Settings > Developer Settings > Personal Access Tokens > Tokens (classic) > Gene
 - **TACC** or **local**:
 - 1. Create a directory with file copies (`*.abi *abo* *log* *.nc *.cif *.ipynb`) to upload to GitHub  
   *It should be separate from your working directory*  
-ex) find . -name '*.abi' -exec cp --parents \{\} ../backup \;
+ex) `find . -name '*.abi' -exec cp --parents \{\} ../**path_to_copies** \;`
 
 - 2. Set a remote at the directory(*NOT the working directory*) for uploading files   
 `git remote add wangmat_qt https://github.com/wangmatgroup/qt_sub_group.git`
