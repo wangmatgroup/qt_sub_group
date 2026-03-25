@@ -1,0 +1,19 @@
+#!/bin/bash 
+#SBATCH -J AlN.vca.relax                   # define the job name
+#SBATCH -o abinit.%j.out                   # define stdout & stderr output files 
+#SBATCH -e abinit.%j.err 
+#SBATCH -N 4                               # request 4 nodes 
+#SBATCH -n 512                             # 224 total tasks = 56 tasks/node , lonestar: 128 threads per node 
+#SBATCH -p development                     # submit to "normal" queue 
+#SBATCH -t 2:00:00                        # run for 4 hours max 
+#SBATCH -A DMR22039                        # Account number of the allocation
+#SBATCH --mail-type=all
+#SBATCH --mail-user=young.s@utexas.edu     # Email address to be notified
+
+ulimit -s unlimited
+unset LD_LIBRARY_PATH
+module load gcc/13.2.0
+module load impi/21.12 mkl/24.1 zlib
+export LD_LIBRARY_PATH=/home1/10335/mias0356/lib:/work/10335/mias0356/ls6/work/modules2/libxc-7.0.0/lib
+
+ibrun abinit tnlo_1.abi > log 2> err

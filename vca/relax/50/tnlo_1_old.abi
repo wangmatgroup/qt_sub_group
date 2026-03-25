@@ -1,0 +1,119 @@
+#Structural optimisation
+
+autoparal 1
+
+ngkpt 3 3 2
+kptopt 1
+nshiftk 1
+shiftk    0.0    0.0    0.5
+
+#**********************************
+#Definition of the atoms
+#**********************************
+#
+
+npsp 3
+natom 32
+ntypat 2  # the last ntypalch will be 
+ typat    # “alchemical” pseudoatoms
+ 2 2 2
+ 2 2 2
+ 2 2 2
+ 2 2 2
+ 2 2 2
+ 2 1 1
+ 1 1 1
+ 1 1 1
+ 1 1 1
+ 1 1 1
+ 1 1
+ntypalch 1
+mixalch 0.5 0.5
+znucl 7 13 21
+
+# the following norm-conserving pseudopotentials are stored in the abinit distribution, but are freely
+# available through www.pseudo-dojo.org
+# this set uses the Perdew-Wang parameterization of LDA for the xc model
+ pp_dirpath "$ABI_PSPDIR"
+ pseudos "Psdj_nc_sr_04_pw_std_psp8/N.psp8, Psdj_nc_sr_04_pw_std_psp8/Al.psp8, Psdj_nc_sr_04_pw_std_psp8/Sc.psp8"
+
+xred
+  8.30474751228950E-01  2.50000000000000E-01  5.00000000000000E-01
+  8.30474751228950E-01  2.50000000000000E-01 -2.52927131209769E-32
+  8.30474751228950E-01  7.50000000000000E-01  5.00000000000000E-01
+  8.30474751228950E-01  7.50000000000000E-01 -5.90749869800588E-32
+  3.30474751228950E-01  0.00000000000000E+00  5.00000000000000E-01
+  3.30474751228950E-01  0.00000000000000E+00  2.51604282087162E-33
+  3.30474751228950E-01  5.00000000000000E-01  5.00000000000000E-01
+  3.30474751228950E-01  5.00000000000000E-01 -8.44012958687087E-33
+  1.69525248771051E-01  2.50000000000000E-01  7.50000000000000E-01
+  1.69525248771051E-01  2.50000000000000E-01  2.50000000000000E-01
+  1.69525248771051E-01  7.50000000000000E-01  7.50000000000000E-01
+  1.69525248771051E-01  7.50000000000000E-01  2.50000000000000E-01
+  6.69525248771050E-01  0.00000000000000E+00  7.50000000000000E-01
+  6.69525248771050E-01  0.00000000000000E+00  2.50000000000000E-01
+  6.69525248771050E-01  5.00000000000000E-01  7.50000000000000E-01
+  6.69525248771050E-01  5.00000000000000E-01  2.50000000000000E-01
+  8.19757029892449E-01  2.50000000000000E-01  7.50000000000000E-01
+  8.19757029892449E-01  2.50000000000000E-01  2.50000000000000E-01
+  8.19757029892449E-01  7.50000000000000E-01  7.50000000000000E-01
+  8.19757029892449E-01  7.50000000000000E-01  2.50000000000000E-01
+  3.19757029892449E-01  0.00000000000000E+00  7.50000000000000E-01
+  3.19757029892449E-01  0.00000000000000E+00  2.50000000000000E-01
+  3.19757029892449E-01  5.00000000000000E-01  7.50000000000000E-01
+  3.19757029892449E-01  5.00000000000000E-01  2.50000000000000E-01
+  1.80242970107551E-01  2.50000000000000E-01  5.00000000000000E-01
+  1.80242970107551E-01  2.50000000000000E-01  3.69563581172670E-32
+  1.80242970107551E-01  7.50000000000000E-01  5.00000000000000E-01
+  1.80242970107551E-01  7.50000000000000E-01 -3.35628101493638E-32
+  6.80242970107551E-01  0.00000000000000E+00  5.00000000000000E-01
+  6.80242970107551E-01  0.00000000000000E+00 -1.53693420408065E-32
+  6.80242970107551E-01  5.00000000000000E-01  5.00000000000000E-01
+  6.80242970107551E-01  5.00000000000000E-01  5.08120141787043E-32
+
+acell    1.0    1.0    1.0
+rprim
+  11.8243565125    0    0
+   0   10.2401802050    0
+   0    0   18.9613418591
+chkprim 0
+
+#Numerical parameters of the calculation : planewave basis set and k point grid
+ecut  30 
+dilatmx 1.05
+pawecutdg 30
+
+# scf parameters
+nstep 200  # in general this should be set to its
+         # default (30) or higher
+
+# suppress printing of density, wavefunctions, etc except what is
+# explicitly requested above in the ndtset section
+prtwf 0
+prtden 0
+prteig 0
+
+#Structural relaxation
+#*********************
+   geoopt "bfgs"
+   optcell 0
+   tolvrs 1.0d-15
+   tolmxf 5.0d-6
+   ntime 100
+
+##############################################################
+# This section is used only for regression testing of ABINIT #
+##############################################################
+#%%<BEGIN TEST_INFO>
+#%% [setup]
+#%% executable = abinit
+#%% [files]
+#%% files_to_test =
+#%%   tnlo_1.abo, tolnlines=  1, tolabs=  4.192e-06, tolrel=  8.000e-05, fld_options=-medium
+#%% [paral_info]
+#%% max_nprocs = 2
+#%% [extra_info]
+#%% authors = J. Zwanziger, M. Veithen, P. Ghosez
+#%% keywords =
+#%% description = Structural optimisation
+#%%<END TEST_INFO>
