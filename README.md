@@ -6,8 +6,8 @@ Share input, output, and post-processing codes
 Settings > Developer Settings > Personal Access Tokens > Tokens (classic) > Generate new token (classic) : Select scopes , check repo > Generate token
 
 - **TACC** or **local**:
-- 1. Create a directory with files (`*.abi *abo* *log* *.nc *.cif *.ipynb`) to upload to GitHub  
-  *It should be separate from your working directory*
+- 1. Create a directory with file copies (`*.abi *abo* *log* *.nc *.cif *.ipynb`) to upload to GitHub  
+  *It should be separate from your working directory*  
 ex) find . -name '*.abi' -exec cp --parents \{\} ../backup \;
 
 - 2. Set a remote at the directory(*NOT the working directory*) for uploading files   
@@ -24,4 +24,4 @@ ex) find . -name '*.abi' -exec cp --parents \{\} ../backup \;
 4. `git push -u wangmat_qt **your_branch_name**`
 
 ### Download files 
-`git clone https://github.com/wangmatgroup/qt_sub_group.git`
+
