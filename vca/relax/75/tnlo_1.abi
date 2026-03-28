@@ -28,7 +28,7 @@ ntypat 2  # the last ntypalch will be
  1 1 1
  1 1
 ntypalch 1
-mixalch 0.5 0.5
+mixalch 0.25 0.75
 znucl 7 13 21
 
 # the following norm-conserving pseudopotentials are stored in the abinit distribution, but are freely
