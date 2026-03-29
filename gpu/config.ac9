@@ -1,0 +1,68 @@
+# ================================================================
+# Configuration file for ABINIT 10.5 compilation
+#
+# CPU: AMD Milan EPYC 7763
+# GPU: NVIDIA A100-PCIE-40GB
+# Compilers: Nvidia HPC compilers 25.3
+# Libraries: Nvidia BLAS/LAPACK, Cuda 12.8, gcc/11.2.0(libstdc++)
+# ================================================================
+
+## EDIT prefix, with_libxc, and WANNIER90_LIBS:
+prefix=/path/to/install/abinit-gpu
+
+# Compilers and flags
+# ========================================
+ with_optim_flavor="standard"
+ fcflags_opt_80_tdep="-O1 -g"
+
+# Parallel compilation
+# ========================================
+ with_mpi=${NVIDIA_DIR}/comm_libs/12.8/openmpi4/openmpi-4.1.5
+ enable_mpi_io="yes"
+ enable_mpi_inplace="yes"
+ enable_openmp="yes"
+
+# CUDA GPU
+# ========================================
+with_cuda="yes"
+CUDA_LIBS="-L${TACC_CUDA_LIB} -L${NVIDIA_MATH_LIB} -L${NVIDIA_DIR}/cuda/12.8/compat -L${TACC_GCC_LIB64} -lcusolver -lcublasLt -lcublas -lcufft -lcudart -lcuda -lstdc++"
+CUDA_FCFLAGS="-I${TACC_CUDA_INC} -I${NVIDIA_MATH_INC}"
+CUDA_CPPFLAGS="-I${TACC_CUDA_INC} -I${NVIDIA_MATH_INC}"
+
+ enable_mpi_gpu_aware="yes"
+ enable_openmp_offload="yes"
+ GPU_ARCH=80
+
+# Debug
+# with_gpu_markers="yes"
+
+# Linear Algebra library
+# ========================================
+ with_linalg_flavor="none"
+LINALG_CPPFLAGS="-I${NVIDIA_INC}"
+LINALG_FCFLAGS="-I${NVIDIA_INC}"
+LINALG_LIBS="-L${NVIDIA_LIB} -llapack_lp64 -lblas_lp64 -lm -ldl"
+
+# FFT
+# ========================================
+ with_fft_flavor="fftw3-threads"
+ FFTW3_LIBS="-L${FFTW3_LIB} -lfftw3f_threads -lfftw3_threads -lfftw3 -lfftw3f -lfftw3_mpi -lfftw3f_mpi"
+ FFTW3_FCFLAGS="-I${FFTW3_INC}"
+
+# NetCDF library
+# ========================================
+ HDF_DIR="${HDF5_DIR}"
+ with_hdf5="${HDF_DIR}"
+ with_netcdf="${HDF_DIR}"
+ with_netcdf_fortran="${HDF_DIR}"
+
+# Additional plugins & libs
+# ========================================
+ with_libxc=/path/to/installed/libxc
+ enable_wannier="yes"
+WANNIER90_LIBS=/path/to/installed/libwannier.a
+
+# Miscellaneous options
+# ========================================
+ enable_zdot_bugfix="yes"
+ enable_gw_dpc="yes"
