@@ -62,7 +62,7 @@ git clone --branch 10.4.3 https://github.com/abinit/abinit.git
 > enable_wannier="yes"  
 > WANNIER90_LIBS=path/you/installed/wannier90/libwannier.a  
 
-module load gcc/13.2 impi/21.12 mkl/24.1  
+module load gcc/13.2 impi/21.12 mkl/24.1 zlib  
 export LD_LIBRARY_PATH=**/path/you/installed/hdf5**/hdf5/lib/plugin:$LD_LIBRARY_PATH  
 ./configure --with-config-file='config.ac9'  
 make (check) -j4  
