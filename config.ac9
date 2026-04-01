@@ -1,0 +1,19 @@
+## module load gcc/13.2 impi/21.12 mkl/24.1 zlib
+prefix=/path/to/install/abinit
+with_libxc=/path/to/libxc-7.0.0
+with_hdf5=/path/to/hdf5
+with_netcdf=/path/to/hdf5
+with_netcdf_fortran=/path/to/hdf5
+
+enable_wannier90="yes"
+WANNIER90_LIBS='/path/to/lib/libwannier.a'
+
+enable_openmp="yes"
+
+with_mpi=$TACC_IMPI_DIR
+
+# BLAS/LAPACK with MKL
+with_linalg_flavor="mkl"
+LINALG_CPPFLAGS="-I${MKLROOT}/include"
+LINALG_FCFLAGS="-I${MKLROOT}/include"
+LINALG_LIBS="-L${MKLROOT}/lib/intel64 -lmkl_gf_lp64 -lmkl_scalapack_lp64 -lmkl_core -lmkl_gnu_thread -lmkl_blacs_intelmpi_lp64 -lpthread -lm -ldl"
