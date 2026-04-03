@@ -11,12 +11,13 @@ Settings > Developer Settings > Personal Access Tokens > Tokens (classic) > Gene
      
 - 1. Create a directory with file copies (`*.abi *abo* *log* *.nc *.cif *.ipynb`) to upload to GitHub  
   *It should be separate from your working directory*  
-ex) `find . -name '*.abi' -exec cp --parents \{\} **path/to/copies** \;`
-or `rsync -av \
+ex) `find . -name '*abi*' -name '*abo*' -name '*log*' -exec cp --parents \{\} **path/to/copies** \;`   
+or
+ex) `rsync -av \
   --include='*/' \
-  --include='*.abi' \
+  --include='*abi*' \
   --include='*abo*' \
-  --include='*log' \
+  --include='*log*' \
   --exclude='*' \
   **working/directory** \
   **path/to/copies**`
@@ -36,12 +37,12 @@ or `rsync -av \
 
 4. `git push -u wangmat_qt **your_branch_name**`
 
-5. When updating files,
+5. When updating files,  
 `rsync -av \
   --include='*/' \
-  --include='*.abi' \
+  --include='*abi*' \
   --include='*abo*' \
-  --include='*log' \
+  --include='*log*' \
   --exclude='*' \
   **working/directory** \
   **path/to/copies**`
