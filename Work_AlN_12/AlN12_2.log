@@ -1,0 +1,2771 @@
+TACC:  Starting up job 2977655 
+TACC:  Starting parallel tasks... 
+  ABINIT 10.4.3-d
+  
+ABI_PSPDIR  found in environment, with value /work/11236/unmeshtok/ls6/modules/abinit-10.4.3/tests//Pspdir/
+-instrng: 219 lines of input have been read from file AlN12_2.abi
+
+
+.Version 10.4.3-d of ABINIT, released May 2025.
+.(MPI version, prepared for a x86_64_linux_gnu13.2 computer) 
+
+.Copyright (C) 1998-2025 ABINIT group . 
+ ABINIT comes with ABSOLUTELY NO WARRANTY.
+ It is free software, and you are welcome to redistribute it
+ under certain conditions (GNU General Public License,
+ see ~abinit/COPYING or http://www.gnu.org/copyleft/gpl.txt).
+
+ ABINIT is a project of the Universite Catholique de Louvain,
+ Corning Inc. and other collaborators, see ~abinit/doc/developers/contributors.txt .
+ Please read https://docs.abinit.org/theory/acknowledgments for suggested
+ acknowledgments of the ABINIT effort.
+ For more information, see https://www.abinit.org .
+
+.Starting date : Fri  6 Mar 2026.
+- ( at 15h39 )
+  
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+ === Build Information === 
+  Version       : 10.4.3-d
+  Build target  : x86_64_linux_gnu13.2
+  Build date    : 20260205
+
+ === Compiler Suite === 
+  C compiler       : gnu13.2
+  C++ compiler     : gnu13.2
+  Fortran compiler : gnu13.2
+  CFLAGS           : -g -O2 -march=native
+  CXXFLAGS         : -g -O2 -march=native
+  FCFLAGS          : -g -ffree-line-length-none -fallow-argument-mismatch -fopenmp    -f ...
+  FC_LDFLAGS       : 
+
+ === Optimizations === 
+  Debug level        : basic
+  Optimization level : standard
+  Architecture       : amd_epyc
+
+ === Multicore === 
+  Parallel build : /scratch/projects/compilers/intel24.1/oneapi/mpi/2021.12
+  Parallel I/O   : 
+  openMP support : yes
+  GPU support    : @with_gpu@
+
+ === Connectors / Fallbacks === 
+  LINALG flavor  : mkl
+  FFT flavor     : dfti
+  HDF5           : yes
+  NetCDF         : yes
+  NetCDF Fortran : yes
+  LibXC          : yes
+  Wannier90      : yes
+
+ === Experimental features === 
+  Exports             : @enable_exports@
+  GW double-precision : 
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Default optimizations:
+   -O2 -march=native
+
+
+ Optimizations for 43_ptgroups:
+   -O0
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ CPP options activated during the build:
+
+                    CC_GNU                   CXX_GNU                    FC_GNU
+ 
+                 HAVE_DFTI HAVE_FC_ALLOCATABLE_DT...             HAVE_FC_ASYNC
+ 
+         HAVE_FC_BACKTRACE  HAVE_FC_COMMAND_ARGUMENT      HAVE_FC_COMMAND_LINE
+ 
+        HAVE_FC_CONTIGUOUS           HAVE_FC_CPUTIME              HAVE_FC_EXIT
+ 
+             HAVE_FC_FLUSH             HAVE_FC_GAMMA            HAVE_FC_GETENV
+ 
+   HAVE_FC_IEEE_ARITHMETIC   HAVE_FC_IEEE_EXCEPTIONS          HAVE_FC_INT_QUAD
+ 
+             HAVE_FC_IOMSG     HAVE_FC_ISO_C_BINDING  HAVE_FC_ISO_FORTRAN_2008
+ 
+        HAVE_FC_LONG_LINES        HAVE_FC_MOVE_ALLOC  HAVE_FC_ON_THE_FLY_SHAPE
+ 
+           HAVE_FC_PRIVATE         HAVE_FC_PROTECTED           HAVE_FC_SHIFTLR
+ 
+         HAVE_FC_STREAM_IO            HAVE_FC_SYSTEM          HAVE_FORTRAN2003
+ 
+                 HAVE_HDF5             HAVE_HDF5_MPI        HAVE_LIBPAW_ABINIT
+ 
+      HAVE_LIBTETRA_ABINIT                HAVE_LIBXC         HAVE_LINALG_AXPBY
+ 
+        HAVE_LINALG_GEMM3M         HAVE_LINALG_GEMMT  HAVE_LINALG_MKL_IMATCOPY
+ 
+   HAVE_LINALG_MKL_OMATADD  HAVE_LINALG_MKL_OMATCOPY   HAVE_LINALG_MKL_THREADS
+ 
+     HAVE_LINALG_SCALAPACK                  HAVE_MPI                 HAVE_MPI2
+ 
+         HAVE_MPI2_INPLACE       HAVE_MPI_IALLGATHER       HAVE_MPI_IALLREDUCE
+ 
+        HAVE_MPI_IALLTOALL       HAVE_MPI_IALLTOALLV           HAVE_MPI_IBCAST
+ 
+         HAVE_MPI_IGATHERV        HAVE_MPI_INTEGER16               HAVE_MPI_IO
+ 
+ HAVE_MPI_TYPE_CREATE_S...               HAVE_NETCDF       HAVE_NETCDF_FORTRAN
+ 
+   HAVE_NETCDF_FORTRAN_MPI           HAVE_NETCDF_MPI         HAVE_OMP_COLLAPSE
+ 
+               HAVE_OPENMP             HAVE_OS_LINUX         HAVE_TIMER_ABINIT
+ 
+            HAVE_WANNIER90                                                      
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+- input  file    -> AlN12_2.abi
+- output file    -> AlN12_2.abo
+- root for input  files -> AlN12_2i
+- root for output files -> AlN12_2o
+
+ abinit : after writing the name of files
+ Netcdf library supports MPI-IO
+ABI_PSPDIR  found in environment, with value /work/11236/unmeshtok/ls6/modules/abinit-10.4.3/tests//Pspdir/
+-instrng: 219 lines of input have been read from file AlN12_2.abi
+
+ For atom type 1, psp file is /work/11236/unmeshtok/ls6/modules/abinit-10.4.3/tests//Pspdir/Psdj_nc_sr_04_pw_std_psp8/Al.psp8
+ For atom type 2, psp file is /work/11236/unmeshtok/ls6/modules/abinit-10.4.3/tests//Pspdir/Psdj_nc_sr_04_pw_std_psp8/N.psp8
+  read the values zionpsp=  3.0 , pspcod=   8 , lmax=   2
+  read the values zionpsp=  5.0 , pspcod=   8 , lmax=   1
+
+ inpspheads: deduce mpsang = 3, n1xccc = 2501.
+
+======================================================= 
+ invars1m : enter jdtset= 1
+  xred   is defined in input file
+ ingeo: takes atomic coordinates from input array xred
+
+--- !COMMENT
+src_file: m_symfind.F90
+src_line: 831
+message: |
+    The tolerance on symmetries =   1.000E-05 is bigger than 1.0e-8.
+    In order to avoid spurious effects, the atomic coordinates have been
+    symmetrized before storing them in the dataset internal variable.
+    So, do not be surprised by the fact that your input variables (xcart, xred, ...)
+    do not correspond exactly to the ones echoed by ABINIT, the latter being used to do the calculations.
+    This is not a problem per se.
+    Still, in order to avoid this symmetrization (e.g. for specific debugging/development), decrease tolsym to 1.0e-8 or lower,
+    or (much preferred) use input primitive vectors that are accurate to better than 1.0e-8.
+    This message will only be printed once, even if there are other datasets where tolsym is bigger than 1.0e-8.
+...
+
+
+--- !COMMENT
+src_file: m_ingeo.F90
+src_line: 931
+message: |
+    The cell is not primitive. One could obtain a primitive cell using the following primitive vectors (rprimd) :
+      2.95608724E+00  5.12009389E+00  0.00000000E+00
+     -6.56383223E-16  1.02401878E+01  0.00000000E+00
+      0.00000000E+00  0.00000000E+00  9.48067094E+00
+     This Bravais lattice has iholohedry   =   3
+                              center       =   0
+                              bravais(3:5) =   1   0   0
+                              bravais(6:8) =   0   1   0
+                              bravais(9:11)=   0   0   1
+     The number of point symmetries would be nptsym=  24
+...
+
+
+--- !COMMENT
+src_file: m_ingeo.F90
+src_line: 939
+message: |
+    Not all components of symrel are integers in the primitive cell coordinate system.
+...
+
+
+--- !COMMENT
+src_file: m_symtk.F90
+src_line: 811
+message: |
+    According to the symmetry finder, the unit cell is
+    not primitive, with multiplicity= 8.
+    This is allowed, as the current chkprim is 0.
+...
+
+
+======================================================= 
+ invars1m : enter jdtset= 2
+  xred   is defined in input file
+ ingeo: takes atomic coordinates from input array xred
+
+--- !COMMENT
+src_file: m_ingeo.F90
+src_line: 931
+message: |
+    The cell is not primitive. One could obtain a primitive cell using the following primitive vectors (rprimd) :
+      2.95608724E+00  5.12009389E+00  0.00000000E+00
+     -6.56383223E-16  1.02401878E+01  0.00000000E+00
+      0.00000000E+00  0.00000000E+00  9.48067094E+00
+     This Bravais lattice has iholohedry   =   3
+                              center       =   0
+                              bravais(3:5) =   1   0   0
+                              bravais(6:8) =   0   1   0
+                              bravais(9:11)=   0   0   1
+     The number of point symmetries would be nptsym=  24
+...
+
+
+--- !COMMENT
+src_file: m_ingeo.F90
+src_line: 939
+message: |
+    Not all components of symrel are integers in the primitive cell coordinate system.
+...
+
+
+--- !COMMENT
+src_file: m_symtk.F90
+src_line: 811
+message: |
+    According to the symmetry finder, the unit cell is
+    not primitive, with multiplicity= 8.
+    This is allowed, as the current chkprim is 0.
+...
+
+
+======================================================= 
+ invars1m : enter jdtset= 3
+  xred   is defined in input file
+ ingeo: takes atomic coordinates from input array xred
+
+--- !COMMENT
+src_file: m_ingeo.F90
+src_line: 931
+message: |
+    The cell is not primitive. One could obtain a primitive cell using the following primitive vectors (rprimd) :
+      2.95608724E+00  5.12009389E+00  0.00000000E+00
+     -6.56383223E-16  1.02401878E+01  0.00000000E+00
+      0.00000000E+00  0.00000000E+00  9.48067094E+00
+     This Bravais lattice has iholohedry   =   3
+                              center       =   0
+                              bravais(3:5) =   1   0   0
+                              bravais(6:8) =   0   1   0
+                              bravais(9:11)=   0   0   1
+     The number of point symmetries would be nptsym=  24
+...
+
+
+--- !COMMENT
+src_file: m_ingeo.F90
+src_line: 939
+message: |
+    Not all components of symrel are integers in the primitive cell coordinate system.
+...
+
+
+--- !COMMENT
+src_file: m_symtk.F90
+src_line: 811
+message: |
+    According to the symmetry finder, the unit cell is
+    not primitive, with multiplicity= 8.
+    This is allowed, as the current chkprim is 0.
+...
+
+
+======================================================= 
+ invars1m : enter jdtset= 4
+  xred   is defined in input file
+ ingeo: takes atomic coordinates from input array xred
+
+--- !COMMENT
+src_file: m_ingeo.F90
+src_line: 931
+message: |
+    The cell is not primitive. One could obtain a primitive cell using the following primitive vectors (rprimd) :
+      2.95608724E+00  5.12009389E+00  0.00000000E+00
+     -6.56383223E-16  1.02401878E+01  0.00000000E+00
+      0.00000000E+00  0.00000000E+00  9.48067094E+00
+     This Bravais lattice has iholohedry   =   3
+                              center       =   0
+                              bravais(3:5) =   1   0   0
+                              bravais(6:8) =   0   1   0
+                              bravais(9:11)=   0   0   1
+     The number of point symmetries would be nptsym=  24
+...
+
+
+--- !COMMENT
+src_file: m_ingeo.F90
+src_line: 939
+message: |
+    Not all components of symrel are integers in the primitive cell coordinate system.
+...
+
+
+--- !COMMENT
+src_file: m_symtk.F90
+src_line: 811
+message: |
+    According to the symmetry finder, the unit cell is
+    not primitive, with multiplicity= 8.
+    This is allowed, as the current chkprim is 0.
+...
+
+
+======================================================= 
+ invars1m : enter jdtset= 5
+  xred   is defined in input file
+ ingeo: takes atomic coordinates from input array xred
+
+--- !COMMENT
+src_file: m_ingeo.F90
+src_line: 931
+message: |
+    The cell is not primitive. One could obtain a primitive cell using the following primitive vectors (rprimd) :
+      2.95608724E+00  5.12009389E+00  0.00000000E+00
+     -6.56383223E-16  1.02401878E+01  0.00000000E+00
+      0.00000000E+00  0.00000000E+00  9.48067094E+00
+     This Bravais lattice has iholohedry   =   3
+                              center       =   0
+                              bravais(3:5) =   1   0   0
+                              bravais(6:8) =   0   1   0
+                              bravais(9:11)=   0   0   1
+     The number of point symmetries would be nptsym=  24
+...
+
+
+--- !COMMENT
+src_file: m_ingeo.F90
+src_line: 939
+message: |
+    Not all components of symrel are integers in the primitive cell coordinate system.
+...
+
+
+--- !COMMENT
+src_file: m_symtk.F90
+src_line: 811
+message: |
+    According to the symmetry finder, the unit cell is
+    not primitive, with multiplicity= 8.
+    This is allowed, as the current chkprim is 0.
+...
+
+ Slater exchange
+ P. A. M. Dirac.,  Math. Proc. Cambridge Philos. Soc. 26, 376 (1930)
+ F. Bloch.,  Z. Phys. 57, 545 (1929)
+ Perdew & Wang
+ J. P. Perdew and Y. Wang.,  Phys. Rev. B 45, 13244 (1992)
+
+
+ initocc_chkneu: image=   1, nelect_occ=  0.25599999999998E+03, zval=  0.25600000E+03,
+         and input value of cellcharge=  0.00000000000000E+00,
+   nelec_occ is computed from occ and wtk, iimage=    1
+   zval is nominal charge of all nuclei, computed from zion (read in psp),
+   cellcharge is an input variable (usually 0).
+
+--- !WARNING
+src_file: m_dtset.F90
+src_line: 1426
+message: |
+    
+    These should obey zval-nelect_occ=cellcharge-nelectjell to better than:  0.10E-10
+...
+
+Action: check input file for occ,wtk, and cellcharge.
+Note that wtk is NOT automatically normalized when occopt=2,
+but is automatically normalized otherwise.
+
+ Slater exchange
+ P. A. M. Dirac.,  Math. Proc. Cambridge Philos. Soc. 26, 376 (1930)
+ F. Bloch.,  Z. Phys. 57, 545 (1929)
+ Perdew & Wang
+ J. P. Perdew and Y. Wang.,  Phys. Rev. B 45, 13244 (1992)
+
+ Slater exchange
+ P. A. M. Dirac.,  Math. Proc. Cambridge Philos. Soc. 26, 376 (1930)
+ F. Bloch.,  Z. Phys. 57, 545 (1929)
+ Perdew & Wang
+ J. P. Perdew and Y. Wang.,  Phys. Rev. B 45, 13244 (1992)
+
+
+ initocc_chkneu: image=   1, nelect_occ=  0.25600000000021E+03, zval=  0.25600000E+03,
+         and input value of cellcharge=  0.00000000000000E+00,
+   nelec_occ is computed from occ and wtk, iimage=    1
+   zval is nominal charge of all nuclei, computed from zion (read in psp),
+   cellcharge is an input variable (usually 0).
+
+--- !WARNING
+src_file: m_dtset.F90
+src_line: 1426
+message: |
+    
+    These should obey zval-nelect_occ=cellcharge-nelectjell to better than:  0.10E-10
+...
+
+Action: check input file for occ,wtk, and cellcharge.
+Note that wtk is NOT automatically normalized when occopt=2,
+but is automatically normalized otherwise.
+
+ Slater exchange
+ P. A. M. Dirac.,  Math. Proc. Cambridge Philos. Soc. 26, 376 (1930)
+ F. Bloch.,  Z. Phys. 57, 545 (1929)
+ Perdew & Wang
+ J. P. Perdew and Y. Wang.,  Phys. Rev. B 45, 13244 (1992)
+
+
+ initocc_chkneu: image=   1, nelect_occ=  0.25600000000021E+03, zval=  0.25600000E+03,
+         and input value of cellcharge=  0.00000000000000E+00,
+   nelec_occ is computed from occ and wtk, iimage=    1
+   zval is nominal charge of all nuclei, computed from zion (read in psp),
+   cellcharge is an input variable (usually 0).
+
+--- !WARNING
+src_file: m_dtset.F90
+src_line: 1426
+message: |
+    
+    These should obey zval-nelect_occ=cellcharge-nelectjell to better than:  0.10E-10
+...
+
+Action: check input file for occ,wtk, and cellcharge.
+Note that wtk is NOT automatically normalized when occopt=2,
+but is automatically normalized otherwise.
+
+ Slater exchange
+ P. A. M. Dirac.,  Math. Proc. Cambridge Philos. Soc. 26, 376 (1930)
+ F. Bloch.,  Z. Phys. 57, 545 (1929)
+ Perdew & Wang
+ J. P. Perdew and Y. Wang.,  Phys. Rev. B 45, 13244 (1992)
+
+
+ initocc_chkneu: image=   1, nelect_occ=  0.25600000000021E+03, zval=  0.25600000E+03,
+         and input value of cellcharge=  0.00000000000000E+00,
+   nelec_occ is computed from occ and wtk, iimage=    1
+   zval is nominal charge of all nuclei, computed from zion (read in psp),
+   cellcharge is an input variable (usually 0).
+
+--- !WARNING
+src_file: m_dtset.F90
+src_line: 1426
+message: |
+    
+    These should obey zval-nelect_occ=cellcharge-nelectjell to better than:  0.10E-10
+...
+
+Action: check input file for occ,wtk, and cellcharge.
+Note that wtk is NOT automatically normalized when occopt=2,
+but is automatically normalized otherwise.
+
+ For input ecut=  3.307500E+01 best grid ngfft=      64     108      50
+       max ecut=  3.430690E+01
+
+ ==== FFT mesh ====
+  FFT mesh divisions ........................    64  108   50
+  Augmented FFT divisions ...................    65  109   50
+  FFT algorithm .............................   512
+  FFT cache size ............................    16
+ getmpw: optimal value of mpw= 20907
+
+--- !WARNING
+src_file: m_mpinfo.F90
+src_line: 2354
+message: |
+    nkpt*nsppol (288) is not a multiple of nproc_spkpt (122)
+    The k-point parallelisation is INEFFICIENT. 
+    Ignore this warning if this is not a GS run.
+...
+
+
+--- !WARNING
+src_file: m_mpi_setup.F90
+src_line: 832
+message: |
+    Your number of spins*k-points (=288) will not distribute correctly
+    with the current number of processors (=122).
+    You will leave some empty.
+    YOU ARE STRONGLY ADVISED TO ACTIVATE AUTOMATIC PARALLELIZATION!
+    USE "AUTOPARAL=1" IN THE INPUT FILE.
+...
+
+ For input ecut=  3.307500E+01 best grid ngfft=      64     108      50
+       max ecut=  3.430690E+01
+
+ ==== FFT mesh ====
+  FFT mesh divisions ........................    64  108   50
+  Augmented FFT divisions ...................    65  109   50
+  FFT algorithm .............................   512
+  FFT cache size ............................    16
+ getmpw: optimal value of mpw= 20907
+ For input ecut=  3.307500E+01 best grid ngfft=      64     108      50
+       max ecut=  3.430690E+01
+
+ ==== FFT mesh ====
+  FFT mesh divisions ........................    64  108   50
+  Augmented FFT divisions ...................    65  109   50
+  FFT algorithm .............................   512
+  FFT cache size ............................    16
+ getmpw: optimal value of mpw= 20907
+ getmpw: optimal value of mpw= 20907
+ For input ecut=  3.307500E+01 best grid ngfft=      64     108      50
+       max ecut=  3.430690E+01
+
+ ==== FFT mesh ====
+  FFT mesh divisions ........................    64  108   50
+  Augmented FFT divisions ...................    65  109   50
+  FFT algorithm .............................   512
+  FFT cache size ............................    16
+ getmpw: optimal value of mpw= 20907
+ getmpw: optimal value of mpw= 20907
+
+--- !WARNING
+src_file: m_mpinfo.F90
+src_line: 2354
+message: |
+    nkpt*nsppol (288) is not a multiple of nproc_spkpt (122)
+    The k-point parallelisation is INEFFICIENT. 
+    Ignore this warning if this is not a GS run.
+...
+
+
+--- !WARNING
+src_file: m_mpi_setup.F90
+src_line: 832
+message: |
+    Your number of spins*k-points (=288) will not distribute correctly
+    with the current number of processors (=122).
+    You will leave some empty.
+    YOU ARE STRONGLY ADVISED TO ACTIVATE AUTOMATIC PARALLELIZATION!
+    USE "AUTOPARAL=1" IN THE INPUT FILE.
+...
+
+ For input ecut=  3.307500E+01 best grid ngfft=      64     108      50
+       max ecut=  3.430690E+01
+
+ ==== FFT mesh ====
+  FFT mesh divisions ........................    64  108   50
+  Augmented FFT divisions ...................    65  109   50
+  FFT algorithm .............................   512
+  FFT cache size ............................    16
+ getmpw: optimal value of mpw= 20907
+ DATASET    1 : the unit cell is not primitive
+
+ getdim_nloc: deduce lmnmax  =  18, lnmax  =   6,
+                      lmnmaxso=  18, lnmaxso=   6.
+memory: analysis of memory needs
+================================================================================
+ Values of the parameters that define the memory need for DATASET  1.
+     intxc =       0    ionmov =       0      iscf =       7    lmnmax =       6
+     lnmax =       6     mgfft =     108  mpssoang =       3    mqgrid =    5303
+     natom =      64  nloc_mem =       1    nspden =       1   nspinor =       1
+    nsppol =       1      nsym =      32    n1xccc =    2501    ntypat =       2
+    occopt =       1   xclevel =       1
+-    mband =         128        mffmem =           1         mkmem =           1
+       mpw =       20907          nfft =      345600          nkpt =         122
+================================================================================
+P This job should need less than                     183.330 Mbytes of memory.
+  Rough estimation (10% accuracy) of disk space for files :
+_ WF disk file :   4981.748 Mbytes ; DEN or POT disk file :      2.639 Mbytes.
+================================================================================
+
+ Biggest array : f_fftgr(disk), with     42.1895 MBytes.
+ memana : allocated an array of     42.190 Mbytes, for testing purposes.
+ memana: allocated     183.330Mbytes, for testing purposes. 
+ The job will continue.
+ DATASET    2 : the unit cell is not primitive
+
+ getdim_nloc: deduce lmnmax  =  18, lnmax  =   6,
+                      lmnmaxso=  18, lnmaxso=   6.
+memory: analysis of memory needs
+================================================================================
+ Values of the parameters that define the memory need for DATASET  2.
+     intxc =       0    ionmov =       0      iscf =      -2    lmnmax =       6
+     lnmax =       6     mgfft =     108  mpssoang =       3    mqgrid =    5303
+     natom =      64  nloc_mem =       1    nspden =       1   nspinor =       1
+    nsppol =       1      nsym =      32    n1xccc =    2501    ntypat =       2
+    occopt =       1   xclevel =       1
+-    mband =         128        mffmem =           1         mkmem =           3
+       mpw =       20907          nfft =      345600          nkpt =         288
+================================================================================
+P This job should need less than                     256.683 Mbytes of memory.
+  Rough estimation (10% accuracy) of disk space for files :
+_ WF disk file :  11760.190 Mbytes ; DEN or POT disk file :      2.639 Mbytes.
+================================================================================
+
+ Biggest array : cg(disk), with    122.5040 MBytes.
+ memana : allocated an array of    122.504 Mbytes, for testing purposes.
+ memana: allocated     256.683Mbytes, for testing purposes. 
+ The job will continue.
+ DATASET    3 : the unit cell is not primitive
+
+ getdim_nloc: deduce lmnmax  =  18, lnmax  =   6,
+                      lmnmaxso=  18, lnmaxso=   6.
+ memorf : analysis of memory needs
+================================================================================
+ Values of the parameters that define the memory need for DATASET  3 (RF).
+     intxc =       0      iscf =       7    lmnmax =       6     lnmax =       6
+     mgfft =     108  mpssoang =       3    mqgrid =    5303     natom =      64
+  nloc_mem =       1    nspden =       1   nspinor =       1    nsppol =       1
+      nsym =      32    n1xccc =    2501    ntypat =       2    occopt =       1
+   xclevel =       1
+-    mband =         128        mffmem =           1         mkmem =           3
+-   mkqmem =           3        mk1mem =           3           mpw =       20907
+      nfft =      345600          nkpt =         288
+================================================================================
+P This job should need less than                     529.072 Mbytes of memory.
+  Rough estimation (10% accuracy) of disk space for files :
+_ WF disk file :   -527.810 Mbytes ; DEN or POT disk file :      2.639 Mbytes.
+================================================================================
+
+ Biggest array : cg(disk), with    122.5040 MBytes.
+ memana : allocated an array of    122.504 Mbytes, for testing purposes.
+ memana: allocated     529.072Mbytes, for testing purposes. 
+ The job will continue.
+ DATASET    4 : the unit cell is not primitive
+
+ getdim_nloc: deduce lmnmax  =  18, lnmax  =   6,
+                      lmnmaxso=  18, lnmaxso=   6.
+ memorf : analysis of memory needs
+================================================================================
+ Values of the parameters that define the memory need for DATASET  4 (RF).
+     intxc =       0      iscf =       7    lmnmax =       6     lnmax =       6
+     mgfft =     108  mpssoang =       3    mqgrid =    5303     natom =      64
+  nloc_mem =       1    nspden =       1   nspinor =       1    nsppol =       1
+      nsym =      32    n1xccc =    2501    ntypat =       2    occopt =       1
+   xclevel =       1
+-    mband =         128        mffmem =           1         mkmem =           3
+-   mkqmem =           3        mk1mem =           3           mpw =       20907
+      nfft =      345600          nkpt =         288
+================================================================================
+P This job should need less than                     529.072 Mbytes of memory.
+  Rough estimation (10% accuracy) of disk space for files :
+_ WF disk file :   -527.810 Mbytes ; DEN or POT disk file :      2.639 Mbytes.
+================================================================================
+
+ Biggest array : cg(disk), with    122.5040 MBytes.
+ memana : allocated an array of    122.504 Mbytes, for testing purposes.
+ memana: allocated     529.072Mbytes, for testing purposes. 
+ The job will continue.
+ DATASET    5 : the unit cell is not primitive
+
+ getdim_nloc: deduce lmnmax  =  18, lnmax  =   6,
+                      lmnmaxso=  18, lnmaxso=   6.
+memory: analysis of memory needs
+================================================================================
+ Values of the parameters that define the memory need for DATASET  5.
+     intxc =       0    ionmov =       0      iscf =       7    lmnmax =       6
+     lnmax =       6     mgfft =     108  mpssoang =       3    mqgrid =    5303
+     natom =      64  nloc_mem =       1    nspden =       1   nspinor =       1
+    nsppol =       1      nsym =      32    n1xccc =    2501    ntypat =       2
+    occopt =       1   xclevel =       1
+-    mband =         128        mffmem =           1         mkmem =           3
+       mpw =       20907          nfft =      345600          nkpt =         288
+================================================================================
+P This job should need less than                     298.871 Mbytes of memory.
+  Rough estimation (10% accuracy) of disk space for files :
+_ WF disk file :  11760.190 Mbytes ; DEN or POT disk file :      2.639 Mbytes.
+================================================================================
+
+ Biggest array : cg(disk), with    122.5040 MBytes.
+ memana : allocated an array of    122.504 Mbytes, for testing purposes.
+ memana: allocated     298.871Mbytes, for testing purposes. 
+ The job will continue.
+--------------------------------------------------------------------------------
+------------- Echo of variables that govern the present computation ------------
+--------------------------------------------------------------------------------
+-
+- outvars: echo of selected default values
+-   iomode0 =  0 , fftalg0 =512 , wfoptalg0 =  0
+-
+- outvars: echo of global parameters not present in the input file
+-  max_nthreads =    1
+-
+ -outvars: echo values of preprocessed input variables --------
+ 
+ These variables are accessible in NetCDF format (AlN12_2o_OUT.nc)
+
+            acell      1.0000000000E+00  1.0000000000E+00  1.0000000000E+00 Bohr
+              amu      2.69815390E+01  1.40067400E+01
+          chkprim           0
+          dilatmx      1.05000000E+00
+  d3e_pert1_atpol1          1      64
+  d3e_pert1_atpol2          1      64
+  d3e_pert1_atpol3          1      64
+  d3e_pert1_atpol4          1      64
+  d3e_pert1_atpol5          1       2
+   d3e_pert1_elfd1          0
+   d3e_pert1_elfd2          0
+   d3e_pert1_elfd3          0
+   d3e_pert1_elfd4          0
+   d3e_pert1_elfd5          1
+   d3e_pert1_phon1          0
+   d3e_pert1_phon2          0
+   d3e_pert1_phon3          0
+   d3e_pert1_phon4          0
+   d3e_pert1_phon5          1
+   d3e_pert2_elfd1          0
+   d3e_pert2_elfd2          0
+   d3e_pert2_elfd3          0
+   d3e_pert2_elfd4          0
+   d3e_pert2_elfd5          1
+   d3e_pert3_elfd1          0
+   d3e_pert3_elfd2          0
+   d3e_pert3_elfd3          0
+   d3e_pert3_elfd4          0
+   d3e_pert3_elfd5          1
+             ecut      3.00000000E+01 Hartree
+           ecutsm      5.00000000E-01 Hartree
+-          fftalg         512
+           getddk1          0
+           getddk2          0
+           getddk3          0
+           getddk4          3
+           getddk5          0
+           getden1          0
+           getden2          1
+           getden3          0
+           getden4          0
+           getden5          0
+           getwfk1          0
+           getwfk2          1
+           getwfk3          2
+           getwfk4          2
+           getwfk5          2
+          get1den1          0
+          get1den2          0
+          get1den3          0
+          get1den4          0
+          get1den5          4
+           get1wf1          0
+           get1wf2          0
+           get1wf3          0
+           get1wf4          0
+           get1wf5          4
+             iscf1          7
+             iscf2         -2
+             iscf3          7
+             iscf4          7
+             iscf5          7
+              ixc       -1012
+           jdtset        1    2    3    4    5
+              kpt1     0.00000000E+00  8.33333333E-02  0.00000000E+00
+                       8.33333333E-02  0.00000000E+00  0.00000000E+00
+                       0.00000000E+00  2.50000000E-01  0.00000000E+00
+                       8.33333333E-02  1.66666667E-01  0.00000000E+00
+                       1.66666667E-01  8.33333333E-02  0.00000000E+00
+                       2.50000000E-01  0.00000000E+00  0.00000000E+00
+                       0.00000000E+00  4.16666667E-01  0.00000000E+00
+                       8.33333333E-02  3.33333333E-01  0.00000000E+00
+                       1.66666667E-01  2.50000000E-01  0.00000000E+00
+                       2.50000000E-01  1.66666667E-01  0.00000000E+00
+                       3.33333333E-01  8.33333333E-02  0.00000000E+00
+                       4.16666667E-01  0.00000000E+00  0.00000000E+00
+                       8.33333333E-02  5.00000000E-01  0.00000000E+00
+                       1.66666667E-01  4.16666667E-01  0.00000000E+00
+                       2.50000000E-01  3.33333333E-01  0.00000000E+00
+                       3.33333333E-01  2.50000000E-01  0.00000000E+00
+                       4.16666667E-01  1.66666667E-01  0.00000000E+00
+                       5.00000000E-01  8.33333333E-02  0.00000000E+00
+                       2.50000000E-01  5.00000000E-01  0.00000000E+00
+                       3.33333333E-01  4.16666667E-01  0.00000000E+00
+                       4.16666667E-01  3.33333333E-01  0.00000000E+00
+                       5.00000000E-01  2.50000000E-01  0.00000000E+00
+                       4.16666667E-01  5.00000000E-01  0.00000000E+00
+                       5.00000000E-01  4.16666667E-01  0.00000000E+00
+                       0.00000000E+00  0.00000000E+00  1.25000000E-01
+                       0.00000000E+00  1.66666667E-01  1.25000000E-01
+                       8.33333333E-02  8.33333333E-02  1.25000000E-01
+                       1.66666667E-01  0.00000000E+00  1.25000000E-01
+                       0.00000000E+00  3.33333333E-01  1.25000000E-01
+                       8.33333333E-02  2.50000000E-01  1.25000000E-01
+                       1.66666667E-01  1.66666667E-01  1.25000000E-01
+                       2.50000000E-01  8.33333333E-02  1.25000000E-01
+                       3.33333333E-01  0.00000000E+00  1.25000000E-01
+                       0.00000000E+00  5.00000000E-01  1.25000000E-01
+                       8.33333333E-02  4.16666667E-01  1.25000000E-01
+                       1.66666667E-01  3.33333333E-01  1.25000000E-01
+                       2.50000000E-01  2.50000000E-01  1.25000000E-01
+                       3.33333333E-01  1.66666667E-01  1.25000000E-01
+                       4.16666667E-01  8.33333333E-02  1.25000000E-01
+                       5.00000000E-01  0.00000000E+00  1.25000000E-01
+                       1.66666667E-01  5.00000000E-01  1.25000000E-01
+                       2.50000000E-01  4.16666667E-01  1.25000000E-01
+                       3.33333333E-01  3.33333333E-01  1.25000000E-01
+                       4.16666667E-01  2.50000000E-01  1.25000000E-01
+                       5.00000000E-01  1.66666667E-01  1.25000000E-01
+                       3.33333333E-01  5.00000000E-01  1.25000000E-01
+                       4.16666667E-01  4.16666667E-01  1.25000000E-01
+                       5.00000000E-01  3.33333333E-01  1.25000000E-01
+                       5.00000000E-01  5.00000000E-01  1.25000000E-01
+                       0.00000000E+00  8.33333333E-02  2.50000000E-01
+              kpt2     0.00000000E+00  8.33333333E-02  0.00000000E+00
+                       8.33333333E-02  0.00000000E+00  0.00000000E+00
+                       0.00000000E+00  2.50000000E-01  0.00000000E+00
+                       8.33333333E-02  1.66666667E-01  0.00000000E+00
+                       1.66666667E-01  8.33333333E-02  0.00000000E+00
+                       2.50000000E-01  0.00000000E+00  0.00000000E+00
+                       0.00000000E+00  4.16666667E-01  0.00000000E+00
+                       8.33333333E-02  3.33333333E-01  0.00000000E+00
+                       1.66666667E-01  2.50000000E-01  0.00000000E+00
+                       2.50000000E-01  1.66666667E-01  0.00000000E+00
+                       3.33333333E-01  8.33333333E-02  0.00000000E+00
+                       4.16666667E-01  0.00000000E+00  0.00000000E+00
+                       8.33333333E-02  5.00000000E-01  0.00000000E+00
+                       1.66666667E-01  4.16666667E-01  0.00000000E+00
+                       2.50000000E-01  3.33333333E-01  0.00000000E+00
+                       3.33333333E-01  2.50000000E-01  0.00000000E+00
+                       4.16666667E-01  1.66666667E-01  0.00000000E+00
+                       5.00000000E-01  8.33333333E-02  0.00000000E+00
+                       8.33333333E-02 -3.33333333E-01  0.00000000E+00
+                       1.66666667E-01 -4.16666667E-01  0.00000000E+00
+                       2.50000000E-01  5.00000000E-01  0.00000000E+00
+                       3.33333333E-01  4.16666667E-01  0.00000000E+00
+                       4.16666667E-01  3.33333333E-01  0.00000000E+00
+                       5.00000000E-01  2.50000000E-01  0.00000000E+00
+                      -4.16666667E-01  1.66666667E-01  0.00000000E+00
+                      -3.33333333E-01  8.33333333E-02  0.00000000E+00
+                       8.33333333E-02 -1.66666667E-01  0.00000000E+00
+                       1.66666667E-01 -2.50000000E-01  0.00000000E+00
+                       2.50000000E-01 -3.33333333E-01  0.00000000E+00
+                       3.33333333E-01 -4.16666667E-01  0.00000000E+00
+                       4.16666667E-01  5.00000000E-01  0.00000000E+00
+                       5.00000000E-01  4.16666667E-01  0.00000000E+00
+                      -4.16666667E-01  3.33333333E-01  0.00000000E+00
+                      -3.33333333E-01  2.50000000E-01  0.00000000E+00
+                      -2.50000000E-01  1.66666667E-01  0.00000000E+00
+                      -1.66666667E-01  8.33333333E-02  0.00000000E+00
+                       0.00000000E+00  0.00000000E+00  1.25000000E-01
+                       0.00000000E+00  1.66666667E-01  1.25000000E-01
+                       8.33333333E-02  8.33333333E-02  1.25000000E-01
+                       1.66666667E-01  0.00000000E+00  1.25000000E-01
+                       0.00000000E+00  3.33333333E-01  1.25000000E-01
+                       8.33333333E-02  2.50000000E-01  1.25000000E-01
+                       1.66666667E-01  1.66666667E-01  1.25000000E-01
+                       2.50000000E-01  8.33333333E-02  1.25000000E-01
+                       3.33333333E-01  0.00000000E+00  1.25000000E-01
+                       0.00000000E+00  5.00000000E-01  1.25000000E-01
+                       8.33333333E-02  4.16666667E-01  1.25000000E-01
+                       1.66666667E-01  3.33333333E-01  1.25000000E-01
+                       2.50000000E-01  2.50000000E-01  1.25000000E-01
+                       3.33333333E-01  1.66666667E-01  1.25000000E-01
+              kpt3     0.00000000E+00  8.33333333E-02  0.00000000E+00
+                       8.33333333E-02  0.00000000E+00  0.00000000E+00
+                       0.00000000E+00  2.50000000E-01  0.00000000E+00
+                       8.33333333E-02  1.66666667E-01  0.00000000E+00
+                       1.66666667E-01  8.33333333E-02  0.00000000E+00
+                       2.50000000E-01  0.00000000E+00  0.00000000E+00
+                       0.00000000E+00  4.16666667E-01  0.00000000E+00
+                       8.33333333E-02  3.33333333E-01  0.00000000E+00
+                       1.66666667E-01  2.50000000E-01  0.00000000E+00
+                       2.50000000E-01  1.66666667E-01  0.00000000E+00
+                       3.33333333E-01  8.33333333E-02  0.00000000E+00
+                       4.16666667E-01  0.00000000E+00  0.00000000E+00
+                       8.33333333E-02  5.00000000E-01  0.00000000E+00
+                       1.66666667E-01  4.16666667E-01  0.00000000E+00
+                       2.50000000E-01  3.33333333E-01  0.00000000E+00
+                       3.33333333E-01  2.50000000E-01  0.00000000E+00
+                       4.16666667E-01  1.66666667E-01  0.00000000E+00
+                       5.00000000E-01  8.33333333E-02  0.00000000E+00
+                       8.33333333E-02 -3.33333333E-01  0.00000000E+00
+                       1.66666667E-01 -4.16666667E-01  0.00000000E+00
+                       2.50000000E-01  5.00000000E-01  0.00000000E+00
+                       3.33333333E-01  4.16666667E-01  0.00000000E+00
+                       4.16666667E-01  3.33333333E-01  0.00000000E+00
+                       5.00000000E-01  2.50000000E-01  0.00000000E+00
+                      -4.16666667E-01  1.66666667E-01  0.00000000E+00
+                      -3.33333333E-01  8.33333333E-02  0.00000000E+00
+                       8.33333333E-02 -1.66666667E-01  0.00000000E+00
+                       1.66666667E-01 -2.50000000E-01  0.00000000E+00
+                       2.50000000E-01 -3.33333333E-01  0.00000000E+00
+                       3.33333333E-01 -4.16666667E-01  0.00000000E+00
+                       4.16666667E-01  5.00000000E-01  0.00000000E+00
+                       5.00000000E-01  4.16666667E-01  0.00000000E+00
+                      -4.16666667E-01  3.33333333E-01  0.00000000E+00
+                      -3.33333333E-01  2.50000000E-01  0.00000000E+00
+                      -2.50000000E-01  1.66666667E-01  0.00000000E+00
+                      -1.66666667E-01  8.33333333E-02  0.00000000E+00
+                       0.00000000E+00  0.00000000E+00  1.25000000E-01
+                       0.00000000E+00  1.66666667E-01  1.25000000E-01
+                       8.33333333E-02  8.33333333E-02  1.25000000E-01
+                       1.66666667E-01  0.00000000E+00  1.25000000E-01
+                       0.00000000E+00  3.33333333E-01  1.25000000E-01
+                       8.33333333E-02  2.50000000E-01  1.25000000E-01
+                       1.66666667E-01  1.66666667E-01  1.25000000E-01
+                       2.50000000E-01  8.33333333E-02  1.25000000E-01
+                       3.33333333E-01  0.00000000E+00  1.25000000E-01
+                       0.00000000E+00  5.00000000E-01  1.25000000E-01
+                       8.33333333E-02  4.16666667E-01  1.25000000E-01
+                       1.66666667E-01  3.33333333E-01  1.25000000E-01
+                       2.50000000E-01  2.50000000E-01  1.25000000E-01
+                       3.33333333E-01  1.66666667E-01  1.25000000E-01
+              kpt4     0.00000000E+00  8.33333333E-02  0.00000000E+00
+                       8.33333333E-02  0.00000000E+00  0.00000000E+00
+                       0.00000000E+00  2.50000000E-01  0.00000000E+00
+                       8.33333333E-02  1.66666667E-01  0.00000000E+00
+                       1.66666667E-01  8.33333333E-02  0.00000000E+00
+                       2.50000000E-01  0.00000000E+00  0.00000000E+00
+                       0.00000000E+00  4.16666667E-01  0.00000000E+00
+                       8.33333333E-02  3.33333333E-01  0.00000000E+00
+                       1.66666667E-01  2.50000000E-01  0.00000000E+00
+                       2.50000000E-01  1.66666667E-01  0.00000000E+00
+                       3.33333333E-01  8.33333333E-02  0.00000000E+00
+                       4.16666667E-01  0.00000000E+00  0.00000000E+00
+                       8.33333333E-02  5.00000000E-01  0.00000000E+00
+                       1.66666667E-01  4.16666667E-01  0.00000000E+00
+                       2.50000000E-01  3.33333333E-01  0.00000000E+00
+                       3.33333333E-01  2.50000000E-01  0.00000000E+00
+                       4.16666667E-01  1.66666667E-01  0.00000000E+00
+                       5.00000000E-01  8.33333333E-02  0.00000000E+00
+                       8.33333333E-02 -3.33333333E-01  0.00000000E+00
+                       1.66666667E-01 -4.16666667E-01  0.00000000E+00
+                       2.50000000E-01  5.00000000E-01  0.00000000E+00
+                       3.33333333E-01  4.16666667E-01  0.00000000E+00
+                       4.16666667E-01  3.33333333E-01  0.00000000E+00
+                       5.00000000E-01  2.50000000E-01  0.00000000E+00
+                      -4.16666667E-01  1.66666667E-01  0.00000000E+00
+                      -3.33333333E-01  8.33333333E-02  0.00000000E+00
+                       8.33333333E-02 -1.66666667E-01  0.00000000E+00
+                       1.66666667E-01 -2.50000000E-01  0.00000000E+00
+                       2.50000000E-01 -3.33333333E-01  0.00000000E+00
+                       3.33333333E-01 -4.16666667E-01  0.00000000E+00
+                       4.16666667E-01  5.00000000E-01  0.00000000E+00
+                       5.00000000E-01  4.16666667E-01  0.00000000E+00
+                      -4.16666667E-01  3.33333333E-01  0.00000000E+00
+                      -3.33333333E-01  2.50000000E-01  0.00000000E+00
+                      -2.50000000E-01  1.66666667E-01  0.00000000E+00
+                      -1.66666667E-01  8.33333333E-02  0.00000000E+00
+                       0.00000000E+00  0.00000000E+00  1.25000000E-01
+                       0.00000000E+00  1.66666667E-01  1.25000000E-01
+                       8.33333333E-02  8.33333333E-02  1.25000000E-01
+                       1.66666667E-01  0.00000000E+00  1.25000000E-01
+                       0.00000000E+00  3.33333333E-01  1.25000000E-01
+                       8.33333333E-02  2.50000000E-01  1.25000000E-01
+                       1.66666667E-01  1.66666667E-01  1.25000000E-01
+                       2.50000000E-01  8.33333333E-02  1.25000000E-01
+                       3.33333333E-01  0.00000000E+00  1.25000000E-01
+                       0.00000000E+00  5.00000000E-01  1.25000000E-01
+                       8.33333333E-02  4.16666667E-01  1.25000000E-01
+                       1.66666667E-01  3.33333333E-01  1.25000000E-01
+                       2.50000000E-01  2.50000000E-01  1.25000000E-01
+                       3.33333333E-01  1.66666667E-01  1.25000000E-01
+              kpt5     0.00000000E+00  8.33333333E-02  0.00000000E+00
+                       8.33333333E-02  0.00000000E+00  0.00000000E+00
+                       0.00000000E+00  2.50000000E-01  0.00000000E+00
+                       8.33333333E-02  1.66666667E-01  0.00000000E+00
+                       1.66666667E-01  8.33333333E-02  0.00000000E+00
+                       2.50000000E-01  0.00000000E+00  0.00000000E+00
+                       0.00000000E+00  4.16666667E-01  0.00000000E+00
+                       8.33333333E-02  3.33333333E-01  0.00000000E+00
+                       1.66666667E-01  2.50000000E-01  0.00000000E+00
+                       2.50000000E-01  1.66666667E-01  0.00000000E+00
+                       3.33333333E-01  8.33333333E-02  0.00000000E+00
+                       4.16666667E-01  0.00000000E+00  0.00000000E+00
+                       8.33333333E-02  5.00000000E-01  0.00000000E+00
+                       1.66666667E-01  4.16666667E-01  0.00000000E+00
+                       2.50000000E-01  3.33333333E-01  0.00000000E+00
+                       3.33333333E-01  2.50000000E-01  0.00000000E+00
+                       4.16666667E-01  1.66666667E-01  0.00000000E+00
+                       5.00000000E-01  8.33333333E-02  0.00000000E+00
+                       8.33333333E-02 -3.33333333E-01  0.00000000E+00
+                       1.66666667E-01 -4.16666667E-01  0.00000000E+00
+                       2.50000000E-01  5.00000000E-01  0.00000000E+00
+                       3.33333333E-01  4.16666667E-01  0.00000000E+00
+                       4.16666667E-01  3.33333333E-01  0.00000000E+00
+                       5.00000000E-01  2.50000000E-01  0.00000000E+00
+                      -4.16666667E-01  1.66666667E-01  0.00000000E+00
+                      -3.33333333E-01  8.33333333E-02  0.00000000E+00
+                       8.33333333E-02 -1.66666667E-01  0.00000000E+00
+                       1.66666667E-01 -2.50000000E-01  0.00000000E+00
+                       2.50000000E-01 -3.33333333E-01  0.00000000E+00
+                       3.33333333E-01 -4.16666667E-01  0.00000000E+00
+                       4.16666667E-01  5.00000000E-01  0.00000000E+00
+                       5.00000000E-01  4.16666667E-01  0.00000000E+00
+                      -4.16666667E-01  3.33333333E-01  0.00000000E+00
+                      -3.33333333E-01  2.50000000E-01  0.00000000E+00
+                      -2.50000000E-01  1.66666667E-01  0.00000000E+00
+                      -1.66666667E-01  8.33333333E-02  0.00000000E+00
+                       0.00000000E+00  0.00000000E+00  1.25000000E-01
+                       0.00000000E+00  1.66666667E-01  1.25000000E-01
+                       8.33333333E-02  8.33333333E-02  1.25000000E-01
+                       1.66666667E-01  0.00000000E+00  1.25000000E-01
+                       0.00000000E+00  3.33333333E-01  1.25000000E-01
+                       8.33333333E-02  2.50000000E-01  1.25000000E-01
+                       1.66666667E-01  1.66666667E-01  1.25000000E-01
+                       2.50000000E-01  8.33333333E-02  1.25000000E-01
+                       3.33333333E-01  0.00000000E+00  1.25000000E-01
+                       0.00000000E+00  5.00000000E-01  1.25000000E-01
+                       8.33333333E-02  4.16666667E-01  1.25000000E-01
+                       1.66666667E-01  3.33333333E-01  1.25000000E-01
+                       2.50000000E-01  2.50000000E-01  1.25000000E-01
+                       3.33333333E-01  1.66666667E-01  1.25000000E-01
+                       outvar_i_n : Printing only first  50 k-points.
+           kptopt1          1
+           kptopt2          2
+           kptopt3          2
+           kptopt4          2
+           kptopt5          2
+         kptrlatt       12    0    0      6    6   -4      0    0    8
+          kptrlen      7.58453675E+01
+P           mkmem1          1
+P           mkmem2          3
+P           mkmem3          3
+P           mkmem4          3
+P           mkmem5          3
+P          mkqmem1          1
+P          mkqmem2          3
+P          mkqmem3          3
+P          mkqmem4          3
+P          mkqmem5          3
+P          mk1mem1          1
+P          mk1mem2          3
+P          mk1mem3          3
+P          mk1mem4          3
+P          mk1mem5          3
+            natom          64
+            nband1        128
+            nband2        128
+            nband3        128
+            nband4        128
+            nband5        128
+           ndtset           5
+            ngfft          64     108      50
+             nkpt1        122
+             nkpt2        288
+             nkpt3        288
+             nkpt4        288
+             nkpt5        288
+             nsym          32
+           ntypat           2
+              occ1     2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000
+              occ3     2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000
+              occ4     2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000
+              occ5     2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000
+        optdriver1          0
+        optdriver2          0
+        optdriver3          1
+        optdriver4          1
+        optdriver5          5
+          prepanl1          0
+          prepanl2          0
+          prepanl3          0
+          prepanl4          1
+          prepanl5          0
+           prtden1          1
+           prtden2          0
+           prtden3          0
+           prtden4          1
+           prtden5          0
+           prteig           0
+           prtpot1          0
+           prtpot2          0
+           prtpot3          1
+           prtpot4          1
+           prtpot5          0
+            prtwf1          1
+            prtwf2          1
+            prtwf3          1
+            prtwf4          1
+            prtwf5          0
+           rfelfd1          0
+           rfelfd2          0
+           rfelfd3          2
+           rfelfd4          3
+           rfelfd5          0
+           rfphon1          0
+           rfphon2          0
+           rfphon3          0
+           rfphon4          1
+           rfphon5          0
+           rfstrs1          0
+           rfstrs2          0
+           rfstrs3          0
+           rfstrs4          3
+           rfstrs5          0
+            rprim      1.1824348962E+01  0.0000000000E+00  0.0000000000E+00
+                       0.0000000000E+00  2.0480375542E+01  0.0000000000E+00
+                       0.0000000000E+00  0.0000000000E+00  9.4806709360E+00
+           shiftk      0.00000000E+00 -5.00000000E-01  1.00000000E+00
+           symrel      1  0  0   0  1  0   0  0  1       1  0  0   0  1  0   0  0  1
+                       1  0  0   0  1  0   0  0  1       1  0  0   0  1  0   0  0  1
+                       1  0  0   0  1  0   0  0  1       1  0  0   0  1  0   0  0  1
+                       1  0  0   0  1  0   0  0  1       1  0  0   0  1  0   0  0  1
+                       1  0  0   0 -1  0   0  0  1       1  0  0   0 -1  0   0  0  1
+                       1  0  0   0 -1  0   0  0  1       1  0  0   0 -1  0   0  0  1
+                       1  0  0   0 -1  0   0  0  1       1  0  0   0 -1  0   0  0  1
+                       1  0  0   0 -1  0   0  0  1       1  0  0   0 -1  0   0  0  1
+                      -1  0  0   0 -1  0   0  0  1      -1  0  0   0 -1  0   0  0  1
+                      -1  0  0   0 -1  0   0  0  1      -1  0  0   0 -1  0   0  0  1
+                      -1  0  0   0 -1  0   0  0  1      -1  0  0   0 -1  0   0  0  1
+                      -1  0  0   0 -1  0   0  0  1      -1  0  0   0 -1  0   0  0  1
+                      -1  0  0   0  1  0   0  0  1      -1  0  0   0  1  0   0  0  1
+                      -1  0  0   0  1  0   0  0  1      -1  0  0   0  1  0   0  0  1
+                      -1  0  0   0  1  0   0  0  1      -1  0  0   0  1  0   0  0  1
+                      -1  0  0   0  1  0   0  0  1      -1  0  0   0  1  0   0  0  1
+            tnons      0.0000000  0.0000000  0.0000000    -0.2500000 -0.2500000  0.0000000
+                       0.5000000  0.0000000  0.0000000     0.5000000  0.5000000  0.0000000
+                       0.2500000  0.2500000  0.0000000     0.0000000  0.5000000  0.0000000
+                      -0.2500000  0.2500000  0.0000000     0.2500000 -0.2500000  0.0000000
+                       0.5000000  0.0000000  0.5000000     0.0000000  0.0000000  0.5000000
+                      -0.2500000  0.2500000  0.5000000     0.0000000  0.5000000  0.5000000
+                       0.5000000  0.5000000  0.5000000     0.2500000 -0.2500000  0.5000000
+                      -0.2500000 -0.2500000  0.5000000     0.2500000  0.2500000  0.5000000
+                       0.3333333  0.2500000  0.5000000     0.0833333  0.0000000  0.5000000
+                      -0.1666667 -0.2500000  0.5000000    -0.4166667  0.0000000  0.5000000
+                       0.0833333  0.5000000  0.5000000     0.3333333 -0.2500000  0.5000000
+                      -0.4166667  0.5000000  0.5000000    -0.1666667  0.2500000  0.5000000
+                       0.0833333  0.0000000  0.0000000     0.3333333 -0.2500000  0.0000000
+                      -0.1666667  0.2500000  0.0000000    -0.4166667  0.0000000  0.0000000
+                       0.0833333  0.5000000  0.0000000     0.3333333  0.2500000  0.0000000
+                      -0.4166667  0.5000000  0.0000000    -0.1666667 -0.2500000  0.0000000
+           toldfe1     1.00000000E-12 Hartree
+           toldfe2     0.00000000E+00 Hartree
+           toldfe3     0.00000000E+00 Hartree
+           toldfe4     0.00000000E+00 Hartree
+           toldfe5     0.00000000E+00 Hartree
+           tolvrs1     0.00000000E+00
+           tolvrs2     0.00000000E+00
+           tolvrs3     0.00000000E+00
+           tolvrs4     1.00000000E-12
+           tolvrs5     0.00000000E+00
+           tolwfr1     0.00000000E+00
+           tolwfr2     1.00000000E-22
+           tolwfr3     1.00000000E-22
+           tolwfr4     0.00000000E+00
+           tolwfr5     0.00000000E+00
+            typat      1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+                       1  1  1  1  1  1  1  1  1  1  1  1  2  2  2  2  2  2  2  2
+                       2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2
+                       2  2  2  2
+              wtk1       0.00347    0.00347    0.00347    0.00694    0.00694    0.00347
+                         0.00347    0.00694    0.00694    0.00694    0.00694    0.00347
+                         0.00347    0.00694    0.00694    0.00694    0.00694    0.00347
+                         0.00347    0.00694    0.00694    0.00347    0.00347    0.00347
+                         0.00347    0.00694    0.01389    0.00694    0.00694    0.01389
+                         0.01389    0.01389    0.00694    0.00347    0.01389    0.01389
+                         0.01389    0.01389    0.01389    0.00347    0.00694    0.01389
+                         0.01389    0.01389    0.00694    0.00694    0.01389    0.00694
+                         0.00347    0.00694
+              wtk2       0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347
+              wtk3       0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347
+              wtk4       0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347
+              wtk5       0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347
+                       outvars : Printing only first  50 k-points.
+           xangst      1.5642929840E+00  9.0314560688E-01  5.0133778926E+00
+                       5.2143143244E+00  9.0314560688E-01  5.0133778926E+00
+                       6.2571749666E+00  9.0314565769E+00  5.0133778926E+00
+                       4.6928809724E+00  9.9346023531E+00  2.5049004018E+00
+                       1.5642929840E+00  9.9346023531E+00  2.5049004018E+00
+                       5.2143234168E-01  1.8062913831E+00  2.5049004018E+00
+                       4.6928809724E+00  9.0314560688E-01  5.0133778926E+00
+                       5.2143234168E-01  9.0314565769E+00  5.0133778926E+00
+                       5.2143143244E+00  9.9346023531E+00  2.5049004018E+00
+                       6.2571749666E+00  1.8062913831E+00  2.5049004018E+00
+                       4.6928809724E+00  6.3220195869E+00  5.0133778926E+00
+                       3.1285869782E+00  3.6125825969E+00  5.0133778926E+00
+                       1.5642929840E+00  4.5157283731E+00  2.5049004018E+00
+                       3.6500203301E+00  7.2251653631E+00  2.5049004018E+00
+                       1.5642929840E+00  6.3220195869E+00  5.0133778926E+00
+                       3.6500203301E+00  3.6125825969E+00  5.0133778926E+00
+                       4.6928809724E+00  4.5157283731E+00  2.5049004018E+00
+                       3.1285869782E+00  7.2251653631E+00  2.5049004018E+00
+                       2.0857263359E+00  9.0314560688E-01  5.0133778926E+00
+                       2.0857263359E+00  9.9346023531E+00  2.5049004018E+00
+                       5.2143143244E+00  4.5157283731E+00  2.5049004018E+00
+                       5.2143143244E+00  6.3220195869E+00  5.0133778926E+00
+                      -1.0102732027E-06  3.6125825969E+00  5.0133778926E+00
+                       5.2143234168E-01  3.6125825969E+00  5.0133778926E+00
+                      -1.0102732027E-06  7.2251653631E+00  2.5049004018E+00
+                       5.2143234168E-01  7.2251653631E+00  2.5049004018E+00
+                       2.0857263359E+00  4.5157283731E+00  2.5049004018E+00
+                       2.0857263359E+00  6.3220195869E+00  5.0133778926E+00
+                       3.1285869782E+00  9.0314565769E+00  5.0133778926E+00
+                       3.6500203301E+00  9.0314565769E+00  5.0133778926E+00
+                       3.1285869782E+00  1.8062913831E+00  2.5049004018E+00
+                       3.6500203301E+00  1.8062913831E+00  2.5049004018E+00
+                       1.5642929840E+00  9.0314560688E-01  1.9100199819E+00
+                       5.2143143244E+00  9.0314560688E-01  1.9100199819E+00
+                       6.2571749666E+00  9.0314565769E+00  1.9100199819E+00
+                       4.6928809724E+00  9.9346023531E+00  4.4184974726E+00
+                       1.5642929840E+00  9.9346023531E+00  4.4184974726E+00
+                       5.2143234168E-01  1.8062913831E+00  4.4184974726E+00
+                       4.6928809724E+00  9.0314560688E-01  1.9100199819E+00
+                       5.2143234168E-01  9.0314565769E+00  1.9100199819E+00
+                       5.2143143244E+00  9.9346023531E+00  4.4184974726E+00
+                       6.2571749666E+00  1.8062913831E+00  4.4184974726E+00
+                       4.6928809724E+00  6.3220195869E+00  1.9100199819E+00
+                       3.1285869782E+00  3.6125825969E+00  1.9100199819E+00
+                       1.5642929840E+00  4.5157283731E+00  4.4184974726E+00
+                       3.6500203301E+00  7.2251653631E+00  4.4184974726E+00
+                       1.5642929840E+00  6.3220195869E+00  1.9100199819E+00
+                       3.6500203301E+00  3.6125825969E+00  1.9100199819E+00
+                       4.6928809724E+00  4.5157283731E+00  4.4184974726E+00
+                       3.1285869782E+00  7.2251653631E+00  4.4184974726E+00
+                       2.0857263359E+00  9.0314560688E-01  1.9100199819E+00
+                       2.0857263359E+00  9.9346023531E+00  4.4184974726E+00
+                       5.2143143244E+00  4.5157283731E+00  4.4184974726E+00
+                       5.2143143244E+00  6.3220195869E+00  1.9100199819E+00
+                      -1.0102732027E-06  3.6125825969E+00  1.9100199819E+00
+                       5.2143234168E-01  3.6125825969E+00  1.9100199819E+00
+                      -1.0102732027E-06  7.2251653631E+00  4.4184974726E+00
+                       5.2143234168E-01  7.2251653631E+00  4.4184974726E+00
+                       2.0857263359E+00  4.5157283731E+00  4.4184974726E+00
+                       2.0857263359E+00  6.3220195869E+00  1.9100199819E+00
+                       3.1285869782E+00  9.0314565769E+00  1.9100199819E+00
+                       3.6500203301E+00  9.0314565769E+00  1.9100199819E+00
+                       3.1285869782E+00  1.8062913831E+00  4.4184974726E+00
+                       3.6500203301E+00  1.8062913831E+00  4.4184974726E+00
+            xcart      2.9560853313E+00  1.7066978551E+00  9.4739112176E+00
+                       9.8536260438E+00  1.7066978551E+00  9.4739112176E+00
+                       1.1824347052E+01  1.7066979511E+01  9.4739112176E+00
+                       8.8682598121E+00  1.8773677686E+01  4.7335757496E+00
+                       2.9560853313E+00  1.8773677686E+01  4.7335757496E+00
+                       9.8536432261E-01  3.4133960303E+00  4.7335757496E+00
+                       8.8682598121E+00  1.7066978551E+00  9.4739112176E+00
+                       9.8536432261E-01  1.7066979511E+01  9.4739112176E+00
+                       9.8536260438E+00  1.8773677686E+01  4.7335757496E+00
+                       1.1824347052E+01  3.4133960303E+00  4.7335757496E+00
+                       8.8682598121E+00  1.1946885626E+01  9.4739112176E+00
+                       5.9121725717E+00  6.8267917405E+00  9.4739112176E+00
+                       2.9560853313E+00  8.5334899157E+00  4.7335757496E+00
+                       6.8975388034E+00  1.3653583801E+01  4.7335757496E+00
+                       2.9560853313E+00  1.1946885626E+01  9.4739112176E+00
+                       6.8975388034E+00  6.8267917405E+00  9.4739112176E+00
+                       8.8682598121E+00  8.5334899157E+00  4.7335757496E+00
+                       5.9121725717E+00  1.3653583801E+01  4.7335757496E+00
+                       3.9414515630E+00  1.7066978551E+00  9.4739112176E+00
+                       3.9414515630E+00  1.8773677686E+01  4.7335757496E+00
+                       9.8536260438E+00  8.5334899157E+00  4.7335757496E+00
+                       9.8536260438E+00  1.1946885626E+01  9.4739112176E+00
+                      -1.9091396726E-06  6.8267917405E+00  9.4739112176E+00
+                       9.8536432261E-01  6.8267917405E+00  9.4739112176E+00
+                      -1.9091396726E-06  1.3653583801E+01  4.7335757496E+00
+                       9.8536432261E-01  1.3653583801E+01  4.7335757496E+00
+                       3.9414515630E+00  8.5334899157E+00  4.7335757496E+00
+                       3.9414515630E+00  1.1946885626E+01  9.4739112176E+00
+                       5.9121725717E+00  1.7066979511E+01  9.4739112176E+00
+                       6.8975388034E+00  1.7066979511E+01  9.4739112176E+00
+                       5.9121725717E+00  3.4133960303E+00  4.7335757496E+00
+                       6.8975388034E+00  3.4133960303E+00  4.7335757496E+00
+                       2.9560853313E+00  1.7066978551E+00  3.6094146741E+00
+                       9.8536260438E+00  1.7066978551E+00  3.6094146741E+00
+                       1.1824347052E+01  1.7066979511E+01  3.6094146741E+00
+                       8.8682598121E+00  1.8773677686E+01  8.3497501421E+00
+                       2.9560853313E+00  1.8773677686E+01  8.3497501421E+00
+                       9.8536432261E-01  3.4133960303E+00  8.3497501421E+00
+                       8.8682598121E+00  1.7066978551E+00  3.6094146741E+00
+                       9.8536432261E-01  1.7066979511E+01  3.6094146741E+00
+                       9.8536260438E+00  1.8773677686E+01  8.3497501421E+00
+                       1.1824347052E+01  3.4133960303E+00  8.3497501421E+00
+                       8.8682598121E+00  1.1946885626E+01  3.6094146741E+00
+                       5.9121725717E+00  6.8267917405E+00  3.6094146741E+00
+                       2.9560853313E+00  8.5334899157E+00  8.3497501421E+00
+                       6.8975388034E+00  1.3653583801E+01  8.3497501421E+00
+                       2.9560853313E+00  1.1946885626E+01  3.6094146741E+00
+                       6.8975388034E+00  6.8267917405E+00  3.6094146741E+00
+                       8.8682598121E+00  8.5334899157E+00  8.3497501421E+00
+                       5.9121725717E+00  1.3653583801E+01  8.3497501421E+00
+                       3.9414515630E+00  1.7066978551E+00  3.6094146741E+00
+                       3.9414515630E+00  1.8773677686E+01  8.3497501421E+00
+                       9.8536260438E+00  8.5334899157E+00  8.3497501421E+00
+                       9.8536260438E+00  1.1946885626E+01  3.6094146741E+00
+                      -1.9091396726E-06  6.8267917405E+00  3.6094146741E+00
+                       9.8536432261E-01  6.8267917405E+00  3.6094146741E+00
+                      -1.9091396726E-06  1.3653583801E+01  8.3497501421E+00
+                       9.8536432261E-01  1.3653583801E+01  8.3497501421E+00
+                       3.9414515630E+00  8.5334899157E+00  8.3497501421E+00
+                       3.9414515630E+00  1.1946885626E+01  3.6094146741E+00
+                       5.9121725717E+00  1.7066979511E+01  3.6094146741E+00
+                       6.8975388034E+00  1.7066979511E+01  3.6094146741E+00
+                       5.9121725717E+00  3.4133960303E+00  8.3497501421E+00
+                       6.8975388034E+00  3.4133960303E+00  8.3497501421E+00
+             xred      2.4999983854E-01  8.3333328125E-02  9.9928700000E-01
+                       8.3333349479E-01  8.3333328125E-02  9.9928700000E-01
+                       9.9999983854E-01  8.3333332813E-01  9.9928700000E-01
+                       7.4999983854E-01  9.1666667187E-01  4.9928700000E-01
+                       2.4999983854E-01  9.1666667187E-01  4.9928700000E-01
+                       8.3333494792E-02  1.6666667188E-01  4.9928700000E-01
+                       7.4999983854E-01  8.3333328125E-02  9.9928700000E-01
+                       8.3333494792E-02  8.3333332813E-01  9.9928700000E-01
+                       8.3333349479E-01  9.1666667187E-01  4.9928700000E-01
+                       9.9999983854E-01  1.6666667188E-01  4.9928700000E-01
+                       7.4999983854E-01  5.8333332813E-01  9.9928700000E-01
+                       4.9999983854E-01  3.3333332812E-01  9.9928700000E-01
+                       2.4999983854E-01  4.1666667188E-01  4.9928700000E-01
+                       5.8333349479E-01  6.6666667187E-01  4.9928700000E-01
+                       2.4999983854E-01  5.8333332813E-01  9.9928700000E-01
+                       5.8333349479E-01  3.3333332812E-01  9.9928700000E-01
+                       7.4999983854E-01  4.1666667188E-01  4.9928700000E-01
+                       4.9999983854E-01  6.6666667187E-01  4.9928700000E-01
+                       3.3333349479E-01  8.3333328125E-02  9.9928700000E-01
+                       3.3333349479E-01  9.1666667187E-01  4.9928700000E-01
+                       8.3333349479E-01  4.1666667188E-01  4.9928700000E-01
+                       8.3333349479E-01  5.8333332813E-01  9.9928700000E-01
+                      -1.6145833303E-07  3.3333332812E-01  9.9928700000E-01
+                       8.3333494792E-02  3.3333332812E-01  9.9928700000E-01
+                      -1.6145833303E-07  6.6666667187E-01  4.9928700000E-01
+                       8.3333494792E-02  6.6666667187E-01  4.9928700000E-01
+                       3.3333349479E-01  4.1666667188E-01  4.9928700000E-01
+                       3.3333349479E-01  5.8333332813E-01  9.9928700000E-01
+                       4.9999983854E-01  8.3333332813E-01  9.9928700000E-01
+                       5.8333349479E-01  8.3333332813E-01  9.9928700000E-01
+                       4.9999983854E-01  1.6666667188E-01  4.9928700000E-01
+                       5.8333349479E-01  1.6666667188E-01  4.9928700000E-01
+                       2.4999983854E-01  8.3333328125E-02  3.8071300000E-01
+                       8.3333349479E-01  8.3333328125E-02  3.8071300000E-01
+                       9.9999983854E-01  8.3333332813E-01  3.8071300000E-01
+                       7.4999983854E-01  9.1666667187E-01  8.8071300000E-01
+                       2.4999983854E-01  9.1666667187E-01  8.8071300000E-01
+                       8.3333494792E-02  1.6666667188E-01  8.8071300000E-01
+                       7.4999983854E-01  8.3333328125E-02  3.8071300000E-01
+                       8.3333494792E-02  8.3333332813E-01  3.8071300000E-01
+                       8.3333349479E-01  9.1666667187E-01  8.8071300000E-01
+                       9.9999983854E-01  1.6666667188E-01  8.8071300000E-01
+                       7.4999983854E-01  5.8333332813E-01  3.8071300000E-01
+                       4.9999983854E-01  3.3333332812E-01  3.8071300000E-01
+                       2.4999983854E-01  4.1666667188E-01  8.8071300000E-01
+                       5.8333349479E-01  6.6666667187E-01  8.8071300000E-01
+                       2.4999983854E-01  5.8333332813E-01  3.8071300000E-01
+                       5.8333349479E-01  3.3333332812E-01  3.8071300000E-01
+                       7.4999983854E-01  4.1666667188E-01  8.8071300000E-01
+                       4.9999983854E-01  6.6666667187E-01  8.8071300000E-01
+                       3.3333349479E-01  8.3333328125E-02  3.8071300000E-01
+                       3.3333349479E-01  9.1666667187E-01  8.8071300000E-01
+                       8.3333349479E-01  4.1666667188E-01  8.8071300000E-01
+                       8.3333349479E-01  5.8333332813E-01  3.8071300000E-01
+                      -1.6145833303E-07  3.3333332812E-01  3.8071300000E-01
+                       8.3333494792E-02  3.3333332812E-01  3.8071300000E-01
+                      -1.6145833303E-07  6.6666667187E-01  8.8071300000E-01
+                       8.3333494792E-02  6.6666667187E-01  8.8071300000E-01
+                       3.3333349479E-01  4.1666667188E-01  8.8071300000E-01
+                       3.3333349479E-01  5.8333332813E-01  3.8071300000E-01
+                       4.9999983854E-01  8.3333332813E-01  3.8071300000E-01
+                       5.8333349479E-01  8.3333332813E-01  3.8071300000E-01
+                       4.9999983854E-01  1.6666667188E-01  8.8071300000E-01
+                       5.8333349479E-01  1.6666667188E-01  8.8071300000E-01
+            znucl       13.00000    7.00000
+
+================================================================================
+
+ chkinp: Checking input parameters for consistency, jdtset=   1.
+ Slater exchange
+ P. A. M. Dirac.,  Math. Proc. Cambridge Philos. Soc. 26, 376 (1930)
+ F. Bloch.,  Z. Phys. 57, 545 (1929)
+ Perdew & Wang
+ J. P. Perdew and Y. Wang.,  Phys. Rev. B 45, 13244 (1992)
+
+
+ chkinp: Checking input parameters for consistency, jdtset=   2.
+ Slater exchange
+ P. A. M. Dirac.,  Math. Proc. Cambridge Philos. Soc. 26, 376 (1930)
+ F. Bloch.,  Z. Phys. 57, 545 (1929)
+ Perdew & Wang
+ J. P. Perdew and Y. Wang.,  Phys. Rev. B 45, 13244 (1992)
+
+
+ chkinp: Checking input parameters for consistency, jdtset=   3.
+ Slater exchange
+ P. A. M. Dirac.,  Math. Proc. Cambridge Philos. Soc. 26, 376 (1930)
+ F. Bloch.,  Z. Phys. 57, 545 (1929)
+ Perdew & Wang
+ J. P. Perdew and Y. Wang.,  Phys. Rev. B 45, 13244 (1992)
+
+
+ chkinp: Checking input parameters for consistency, jdtset=   4.
+ Slater exchange
+ P. A. M. Dirac.,  Math. Proc. Cambridge Philos. Soc. 26, 376 (1930)
+ F. Bloch.,  Z. Phys. 57, 545 (1929)
+ Perdew & Wang
+ J. P. Perdew and Y. Wang.,  Phys. Rev. B 45, 13244 (1992)
+
+
+ chkinp: Checking input parameters for consistency, jdtset=   5.
+ Slater exchange
+ P. A. M. Dirac.,  Math. Proc. Cambridge Philos. Soc. 26, 376 (1930)
+ F. Bloch.,  Z. Phys. 57, 545 (1929)
+ Perdew & Wang
+ J. P. Perdew and Y. Wang.,  Phys. Rev. B 45, 13244 (1992)
+
+ DATA TYPE INFORMATION: 
+ REAL:      Data type name: REAL(DP) 
+            Kind value:      8
+            Precision:      15
+            Smallest nonnegligible quantity relative to 1:  0.22204460E-015
+            Smallest positive number:                       0.22250739E-307
+            Largest representable number:                   0.17976931E+309
+ INTEGER:   Data type name: INTEGER(default) 
+            Kind value: 4
+            Bit size:   32
+            Largest representable number: 2147483647
+ LOGICAL:   Data type name: LOGICAL 
+            Kind value: 4
+ CHARACTER: Data type name: CHARACTER             Kind value: 1
+
+  ==== OpenMP parallelism is ON ====
+- Max_threads:       1
+- Num_threads:       1
+- Num_procs:         1
+- Dynamic:           F
+ 
+  ==== Using MPI-2 specifications ==== 
+  MPI-IO support is ON
+  xmpi_tag_ub ................      1048575
+  xmpi_bsize_ch ..............            1
+  xmpi_bsize_int .............            4
+  xmpi_bsize_sp ..............            4
+  xmpi_bsize_dp ..............            8
+  xmpi_bsize_spc .............            8
+  xmpi_bsize_dpc .............           16
+  xmpio_bsize_frm ............            4
+  xmpi_address_kind ..........            8
+  xmpi_offset_kind ...........            8
+  MPI_WTICK ..................    4.0893611388803263E-010
+
+================================================================================
+== DATASET  1 ==================================================================
+-   mpi_nproc: 122, omp_nthreads: 1 (-1 if OMP is not activated)
+
+
+--- !COMMENT
+src_file: m_xgScalapack.F90
+src_line: 241
+message: |
+    xgScalapack in auto mode
+...
+
+
+ getdim_nloc: deduce lmnmax  =  18, lnmax  =   6,
+                      lmnmaxso=  18, lnmaxso=   6.
+ Slater exchange
+ P. A. M. Dirac.,  Math. Proc. Cambridge Philos. Soc. 26, 376 (1930)
+ F. Bloch.,  Z. Phys. 57, 545 (1929)
+ Perdew & Wang
+ J. P. Perdew and Y. Wang.,  Phys. Rev. B 45, 13244 (1992)
+
+ Unit cell volume ucvol=  2.2959067E+03 bohr^3
+ Angles (23,13,12)=  9.00000000E+01  9.00000000E+01  9.00000000E+01 degrees
+
+ getcut: wavevector=  0.0000  0.0000  0.0000  ngfft=  64 108  50
+         ecut(hartree)=     33.075   => boxcut(ratio)=   2.03691
+- pspini: atom type   1  psp file is /work/11236/unmeshtok/ls6/modules/abinit-10.4.3/tests//Pspdir/Psdj_nc_sr_04_pw_std_psp8/Al.psp8
+- pspatm: opening atomic psp file    /work/11236/unmeshtok/ls6/modules/abinit-10.4.3/tests//Pspdir/Psdj_nc_sr_04_pw_std_psp8/Al.psp8
+- Al    ONCVPSP-3.3.0  r_core=   1.76802   1.76802   1.70587
+- 13.00000   3.00000    171102                znucl, zion, pspdat
+    8   -1012    2    4       600   0.00000   pspcod,pspxc,lmax,lloc,mmax,r2well
+    5.99000000000000    5.00000000000000    0.00000000000000   rchrg,fchrg,qchrg
+     nproj     2     2     2
+     extension_switch     1
+  valence charge (before rescaling) integrates to:    2.9194977370493271     
+  pspatm : epsatm=    0.57439192
+         --- l  ekb(1:nproj) -->
+             0    5.725870    0.726131
+             1    6.190420    0.914022
+             2   -4.229503   -0.925599
+ pspatm: atomic psp has been read  and splines computed
+
+- pspini: atom type   2  psp file is /work/11236/unmeshtok/ls6/modules/abinit-10.4.3/tests//Pspdir/Psdj_nc_sr_04_pw_std_psp8/N.psp8
+- pspatm: opening atomic psp file    /work/11236/unmeshtok/ls6/modules/abinit-10.4.3/tests//Pspdir/Psdj_nc_sr_04_pw_std_psp8/N.psp8
+- N     ONCVPSP-3.3.0  r_core=   1.20551   1.35824
+-  7.00000   5.00000    171101                znucl, zion, pspdat
+    8   -1012    1    4       600   0.00000   pspcod,pspxc,lmax,lloc,mmax,r2well
+    5.99000000000000    4.00000000000000    0.00000000000000   rchrg,fchrg,qchrg
+     nproj     2     2
+     extension_switch     1
+  valence charge (before rescaling) integrates to:    4.9976087884156435     
+  pspatm : epsatm=    5.30777697
+         --- l  ekb(1:nproj) -->
+             0    7.408032    0.617798
+             1   -4.361519   -1.032581
+ pspatm: atomic psp has been read  and splines computed
+
+   4.81867276E+04                                ecore*ucvol(ha*bohr**3)
+ ==== Info on pseudopotentials ====
+  Norm-conserving pseudopotentials
+  Number of pseudopotentials ..    2
+  Number of types of atoms   ..    2
+  Scalar calculation (no spin-orbit term)
+  Nonlocal part applied using Legendre polynomials
+  Max number of non-local projectors over l and type   2
+  Highest angular momentum +1 .......   3
+  Max number of (l,n)   components ..   6
+  Max number of (l,m,n) components ..   6
+
+ Pseudo-Core Charge Info: 
+   Number of radial points for pseudo-core charge .. 2501
+   XC core-correction treatment (optnlxccc) ........    1
+   Radius for pseudo-core charge for each type ..... 
+
+  - Atom type    1 has pseudo-core radius ..       5.9900
+  - Atom type    2 has pseudo-core radius ..       5.9900
+
+ Info on the Q-grid used for form factors in spline form: 
+   Number of q-points for radial functions ffspl ..   5303
+   Number of q-points for vlspl ...................   5303
+   vloc is computed in Reciprocal Space
+   model core charge treated in real-space
+
+  XC functional for type 1 is -1012
+  Pseudo valence available: yes
+  XC functional for type 2 is -1012
+  Pseudo valence available: yes
+
+ wfconv:   128 bands initialized randomly with npw= 20891, for ikpt=     1
+_setup2: Arith. and geom. avg. npw (full set) are   20858.826   20858.820
+ initro: for itypat=  1, take pseudo charge density from pp file
+ initro: for itypat=  2, take pseudo charge density from pp file
+
+================================================================================
+
+ getcut: wavevector=  0.0000  0.0000  0.0000  ngfft=  64 108  50
+         ecut(hartree)=     30.000   => boxcut(ratio)=   2.13875
+
+ 1/G**2 cut-off applied in the following step : cutoff-mode = CRYSTAL
+
+ 1/G**2 cut-off applied in the following step : cutoff-mode = CRYSTAL
+
+ 1/G**2 cut-off applied in the following step : cutoff-mode = CRYSTAL
+
+ ITER STEP NUMBER     1
+ Max number of non-self-consistent loops: 2
+
+--- !WARNING
+src_file: m_vtorho.F90
+src_line: 2132
+message: |
+    For k-point number: 1,
+    The minimal occupation factor is:   2.000.
+    An adequate monitoring of convergence requires it to be  at most 0.01_dp.
+    Action: increase slightly the number of bands (or decrease nbdbuf).
+...
+
+ Total charge density [el/Bohr^3]
+)     Maximum=    3.2374E+00  at reduced coord.    0.7969    0.9167    0.8800
+)     Minimum=    5.1326E-03  at reduced coord.    0.3281    0.0833    0.0000
+   Integrated=    2.5600E+02
+
+ 1/G**2 cut-off applied in the following step : cutoff-mode = CRYSTAL
+ ETOT  1  -218.02971960888    -2.180E+02 4.106E-01 2.801E+04
+ scprqt: <Vxc>= -4.9028390E-01 hartree
+
+ Simple mixing update:
+  residual square of the potential:    14979.427828828611
+{SCF_istep: 1 , Vnl|psi>: 1280 , wall_time: ' 02:04 [minutes] '} <<< TIME
+
+ ITER STEP NUMBER     2
+ Max number of non-self-consistent loops: 2
+
+--- !WARNING
+src_file: m_vtorho.F90
+src_line: 2132
+message: |
+    For k-point number: 1,
+    The minimal occupation factor is:   2.000.
+    An adequate monitoring of convergence requires it to be  at most 0.01_dp.
+    Action: increase slightly the number of bands (or decrease nbdbuf).
+...
+
+ Total charge density [el/Bohr^3]
+)     Maximum=    1.8042E+00  at reduced coord.    0.7969    0.9074    0.8800
+)     Minimum=    3.5395E-03  at reduced coord.    0.3281    0.0833    0.0000
+   Integrated=    2.5600E+02
+ ETOT  2  -227.60998060539    -9.580E+00 5.788E-02 1.025E+04
+ scprqt: <Vxc>= -5.1046767E-01 hartree
+
+ Pulay update with  1 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.626      0.374
+{SCF_istep: 2 , Vnl|psi>: 1280 , wall_time: ' 02:04 [minutes] '} <<< TIME
+
+ ITER STEP NUMBER     3
+
+--- !WARNING
+src_file: m_vtorho.F90
+src_line: 2132
+message: |
+    For k-point number: 1,
+    The minimal occupation factor is:   2.000.
+    An adequate monitoring of convergence requires it to be  at most 0.01_dp.
+    Action: increase slightly the number of bands (or decrease nbdbuf).
+...
+
+ Total charge density [el/Bohr^3]
+)     Maximum=    2.4690E+00  at reduced coord.    0.7969    0.9167    0.8800
+)     Minimum=    2.5751E-03  at reduced coord.    0.3281    0.0833    0.0000
+   Integrated=    2.5600E+02
+ ETOT  3  -232.58699747822    -4.977E+00 3.551E-02 1.727E+02
+ scprqt: <Vxc>= -5.0332667E-01 hartree
+
+ Pulay update with  2 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.790      0.166      0.446E-01
+{SCF_istep: 3 , Vnl|psi>: 640 , wall_time: ' 01:02 [minutes] '} <<< TIME
+
+ ITER STEP NUMBER     4
+
+--- !WARNING
+src_file: m_vtorho.F90
+src_line: 2132
+message: |
+    For k-point number: 1,
+    The minimal occupation factor is:   2.000.
+    An adequate monitoring of convergence requires it to be  at most 0.01_dp.
+    Action: increase slightly the number of bands (or decrease nbdbuf).
+...
+
+ Total charge density [el/Bohr^3]
+)     Maximum=    2.4039E+00  at reduced coord.    0.7969    0.9167    0.8800
+)     Minimum=    3.4901E-03  at reduced coord.    0.3281    0.0833    0.0000
+   Integrated=    2.5600E+02
+ ETOT  4  -232.76174697605    -1.747E-01 2.595E-02 2.760E+00
+ scprqt: <Vxc>= -5.0399714E-01 hartree
+
+ Pulay update with  3 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=   1.20     -0.191     -0.983E-02 -0.111E-02
+{SCF_istep: 4 , Vnl|psi>: 640 , wall_time: ' 01:02 [minutes] '} <<< TIME
+
+ ITER STEP NUMBER     5
+
+--- !WARNING
+src_file: m_vtorho.F90
+src_line: 2132
+message: |
+    For k-point number: 1,
+    The minimal occupation factor is:   2.000.
+    An adequate monitoring of convergence requires it to be  at most 0.01_dp.
+    Action: increase slightly the number of bands (or decrease nbdbuf).
+...
+
+ Total charge density [el/Bohr^3]
+)     Maximum=    2.4074E+00  at reduced coord.    0.7969    0.9167    0.8800
+)     Minimum=    3.0714E-03  at reduced coord.    0.3281    0.0833    0.0000
+   Integrated=    2.5600E+02
+ ETOT  5  -232.79366154633    -3.191E-02 7.969E-03 2.088E+00
+ scprqt: <Vxc>= -5.0406415E-01 hartree
+
+ Pulay update with  4 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.476      0.689     -0.156     -0.735E-02 -0.123E-02
+{SCF_istep: 5 , Vnl|psi>: 640 , wall_time: ' 01:02 [minutes] '} <<< TIME
+
+ ITER STEP NUMBER     6
+
+--- !WARNING
+src_file: m_vtorho.F90
+src_line: 2132
+message: |
+    For k-point number: 1,
+    The minimal occupation factor is:   2.000.
+    An adequate monitoring of convergence requires it to be  at most 0.01_dp.
+    Action: increase slightly the number of bands (or decrease nbdbuf).
+...
+
+ Total charge density [el/Bohr^3]
+)     Maximum=    2.4055E+00  at reduced coord.    0.7969    0.9167    0.8800
+)     Minimum=    3.4701E-03  at reduced coord.    0.3281    0.0833    0.0000
+   Integrated=    2.5600E+02
+ ETOT  6  -232.81150355257    -1.784E-02 7.451E-03 1.552E-01
+ scprqt: <Vxc>= -5.0406361E-01 hartree
+
+ Pulay update with  5 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.818      0.116E-01  0.204     -0.297E-01 -0.162E-02
+{SCF_istep: 6 , Vnl|psi>: 640 , wall_time: ' 01:02 [minutes] '} <<< TIME
+
+ ITER STEP NUMBER     7
+
+--- !WARNING
+src_file: m_vtorho.F90
+src_line: 2132
+message: |
+    For k-point number: 1,
+    The minimal occupation factor is:   2.000.
+    An adequate monitoring of convergence requires it to be  at most 0.01_dp.
+    Action: increase slightly the number of bands (or decrease nbdbuf).
+...
+
+ Total charge density [el/Bohr^3]
+)     Maximum=    2.4067E+00  at reduced coord.    0.7969    0.9167    0.8800
+)     Minimum=    3.2221E-03  at reduced coord.    0.3281    0.0833    0.0000
+   Integrated=    2.5600E+02
+ ETOT  7  -232.82156711306    -1.006E-02 4.101E-03 3.105E-01
+ scprqt: <Vxc>= -5.0409384E-01 hartree
+
+ Pulay update with  6 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.481      0.574     -0.171      0.135     -0.177E-01
+{SCF_istep: 7 , Vnl|psi>: 640 , wall_time: ' 01:02 [minutes] '} <<< TIME
+
+ ITER STEP NUMBER     8
+
+--- !WARNING
+src_file: m_vtorho.F90
+src_line: 2132
+message: |
+    For k-point number: 1,
+    The minimal occupation factor is:   2.000.
+    An adequate monitoring of convergence requires it to be  at most 0.01_dp.
+    Action: increase slightly the number of bands (or decrease nbdbuf).
+...
+
+ Total charge density [el/Bohr^3]
+)     Maximum=    2.4060E+00  at reduced coord.    0.7969    0.9167    0.8800
+)     Minimum=    3.4397E-03  at reduced coord.    0.3281    0.0833    0.0000
+   Integrated=    2.5600E+02
+ ETOT  8  -232.82816787484    -6.601E-03 3.273E-03 3.693E-02
+ scprqt: <Vxc>= -5.0408153E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=   1.78     -0.446     -0.421      0.587E-01  0.389E-01
+{SCF_istep: 8 , Vnl|psi>: 640 , wall_time: ' 01:02 [minutes] '} <<< TIME
+
+ ITER STEP NUMBER     9
+
+--- !WARNING
+src_file: m_vtorho.F90
+src_line: 2132
+message: |
+    For k-point number: 1,
+    The minimal occupation factor is:   2.000.
+    An adequate monitoring of convergence requires it to be  at most 0.01_dp.
+    Action: increase slightly the number of bands (or decrease nbdbuf).
+...
+
+ Total charge density [el/Bohr^3]
+)     Maximum=    2.4064E+00  at reduced coord.    0.7969    0.9167    0.8800
+)     Minimum=    3.2930E-03  at reduced coord.    0.3281    0.0833    0.0000
+   Integrated=    2.5600E+02
+ ETOT  9  -232.83250293086    -4.335E-03 2.649E-03 5.886E-02
+ scprqt: <Vxc>= -5.0410310E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.738      0.909     -0.553     -0.854E-01 -0.773E-02
+{SCF_istep: 9 , Vnl|psi>: 640 , wall_time: ' 01:02 [minutes] '} <<< TIME
+
+ ITER STEP NUMBER    10
+
+--- !WARNING
+src_file: m_vtorho.F90
+src_line: 2132
+message: |
+    For k-point number: 1,
+    The minimal occupation factor is:   2.000.
+    An adequate monitoring of convergence requires it to be  at most 0.01_dp.
+    Action: increase slightly the number of bands (or decrease nbdbuf).
+...
+
+ Total charge density [el/Bohr^3]
+)     Maximum=    2.4062E+00  at reduced coord.    0.7969    0.9167    0.8800
+)     Minimum=    3.4219E-03  at reduced coord.    0.3281    0.0833    0.0000
+   Integrated=    2.5600E+02
+ ETOT 10  -232.83558193156    -3.079E-03 1.532E-03 1.486E-03
+ scprqt: <Vxc>= -5.0409090E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=   1.01      0.623E-01 -0.917E-01 -0.720E-01  0.993E-01
+{SCF_istep: 10 , Vnl|psi>: 640 , wall_time: ' 01:02 [minutes] '} <<< TIME
+
+ ITER STEP NUMBER    11
+
+--- !WARNING
+src_file: m_vtorho.F90
+src_line: 2132
+message: |
+    For k-point number: 1,
+    The minimal occupation factor is:   2.000.
+    An adequate monitoring of convergence requires it to be  at most 0.01_dp.
+    Action: increase slightly the number of bands (or decrease nbdbuf).
+...
+
+ Total charge density [el/Bohr^3]
+)     Maximum=    2.4070E+00  at reduced coord.    0.7969    0.9167    0.8800
+)     Minimum=    3.3307E-03  at reduced coord.    0.3281    0.0833    0.0000
+   Integrated=    2.5600E+02
+ ETOT 11  -232.83779418360    -2.212E-03 1.774E-03 2.291E-02
+ scprqt: <Vxc>= -5.0409605E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)= -0.314      0.815      0.381      0.235     -0.161
+{SCF_istep: 11 , Vnl|psi>: 640 , wall_time: ' 01:02 [minutes] '} <<< TIME
+
+ ITER STEP NUMBER    12
+
+--- !WARNING
+src_file: m_vtorho.F90
+src_line: 2132
+message: |
+    For k-point number: 1,
+    The minimal occupation factor is:   2.000.
+    An adequate monitoring of convergence requires it to be  at most 0.01_dp.
+    Action: increase slightly the number of bands (or decrease nbdbuf).
+...
+
+ Total charge density [el/Bohr^3]
+)     Maximum=    2.4069E+00  at reduced coord.    0.7969    0.9167    0.8800
+)     Minimum=    3.4120E-03  at reduced coord.    0.3281    0.0833    0.0000
+   Integrated=    2.5600E+02
+ ETOT 12  -232.83947527323    -1.681E-03 1.002E-03 1.365E-02
+ scprqt: <Vxc>= -5.0408792E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)= -0.217      0.137      0.702      0.258      0.291
+{SCF_istep: 12 , Vnl|psi>: 640 , wall_time: ' 01:02 [minutes] '} <<< TIME
+
+ ITER STEP NUMBER    13
+
+--- !WARNING
+src_file: m_vtorho.F90
+src_line: 2132
+message: |
+    For k-point number: 1,
+    The minimal occupation factor is:   2.000.
+    An adequate monitoring of convergence requires it to be  at most 0.01_dp.
+    Action: increase slightly the number of bands (or decrease nbdbuf).
+...
+
+ Total charge density [el/Bohr^3]
+)     Maximum=    2.4073E+00  at reduced coord.    0.7969    0.9167    0.8800
+)     Minimum=    3.3529E-03  at reduced coord.    0.3281    0.0833    0.0000
+   Integrated=    2.5600E+02
+ ETOT 13  -232.84075490428    -1.280E-03 1.540E-03 2.663E-02
+ scprqt: <Vxc>= -5.0409197E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  -1.46       1.37      0.832      0.153      0.137
+{SCF_istep: 13 , Vnl|psi>: 640 , wall_time: ' 01:02 [minutes] '} <<< TIME
+
+ ITER STEP NUMBER    14
+
+--- !WARNING
+src_file: m_vtorho.F90
+src_line: 2132
+message: |
+    For k-point number: 1,
+    The minimal occupation factor is:   2.000.
+    An adequate monitoring of convergence requires it to be  at most 0.01_dp.
+    Action: increase slightly the number of bands (or decrease nbdbuf).
+...
+
+ Total charge density [el/Bohr^3]
+)     Maximum=    2.4072E+00  at reduced coord.    0.7969    0.9167    0.8800
+)     Minimum=    3.4059E-03  at reduced coord.    0.3281    0.0833    0.0000
+   Integrated=    2.5600E+02
+ ETOT 14  -232.84177943223    -1.025E-03 7.731E-04 1.583E-02
+ scprqt: <Vxc>= -5.0408822E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.548      -1.93       1.20      0.886      0.220
+{SCF_istep: 14 , Vnl|psi>: 640 , wall_time: ' 01:02 [minutes] '} <<< TIME
+
+ ITER STEP NUMBER    15
+
+--- !WARNING
+src_file: m_vtorho.F90
+src_line: 2132
+message: |
+    For k-point number: 1,
+    The minimal occupation factor is:   2.000.
+    An adequate monitoring of convergence requires it to be  at most 0.01_dp.
+    Action: increase slightly the number of bands (or decrease nbdbuf).
+...
+
+ Total charge density [el/Bohr^3]
+)     Maximum=    2.4075E+00  at reduced coord.    0.7969    0.9167    0.8800
+)     Minimum=    3.3654E-03  at reduced coord.    0.3281    0.0833    0.0000
+   Integrated=    2.5600E+02
+ ETOT 15  -232.84258770552    -8.083E-04 1.347E-03 3.190E-02
+ scprqt: <Vxc>= -5.0409104E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=   1.03     -0.137      -3.42       2.47      0.615
+{SCF_istep: 15 , Vnl|psi>: 640 , wall_time: ' 01:02 [minutes] '} <<< TIME
+
+ ITER STEP NUMBER    16
+
+--- !WARNING
+src_file: m_vtorho.F90
+src_line: 2132
+message: |
+    For k-point number: 1,
+    The minimal occupation factor is:   2.000.
+    An adequate monitoring of convergence requires it to be  at most 0.01_dp.
+    Action: increase slightly the number of bands (or decrease nbdbuf).
+...
+
+ Total charge density [el/Bohr^3]
+)     Maximum=    2.4076E+00  at reduced coord.    0.7969    0.9167    0.8800
+)     Minimum=    3.4010E-03  at reduced coord.    0.3281    0.0833    0.0000
+   Integrated=    2.5600E+02
+ ETOT 16  -232.84325688699    -6.692E-04 1.175E-03 4.236E-02
+ scprqt: <Vxc>= -5.0408758E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.934      0.546     -0.641      -3.78       2.58
+{SCF_istep: 16 , Vnl|psi>: 640 , wall_time: ' 01:02 [minutes] '} <<< TIME
+
+ ITER STEP NUMBER    17
+
+--- !WARNING
+src_file: m_vtorho.F90
+src_line: 2132
+message: |
+    For k-point number: 1,
+    The minimal occupation factor is:   2.000.
+    An adequate monitoring of convergence requires it to be  at most 0.01_dp.
+    Action: increase slightly the number of bands (or decrease nbdbuf).
+...
+
+ Total charge density [el/Bohr^3]
+)     Maximum=    2.4079E+00  at reduced coord.    0.7969    0.9167    0.8800
+)     Minimum=    3.3721E-03  at reduced coord.    0.3281    0.0833    0.0000
+   Integrated=    2.5600E+02
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 0 PID 2040777 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 1 PID 2040778 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 2 PID 2040779 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 3 PID 2040780 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 4 PID 2040781 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 5 PID 2040782 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 6 PID 2040783 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 7 PID 2040784 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 8 PID 2040785 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 9 PID 2040786 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 10 PID 2040787 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 11 PID 2040788 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 12 PID 2040789 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 13 PID 2040790 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 14 PID 2040791 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 15 PID 2040792 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 16 PID 2040793 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 17 PID 2040794 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 18 PID 2040795 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 19 PID 2040796 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 20 PID 2040797 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 21 PID 2040798 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 22 PID 2040799 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 23 PID 2040800 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 24 PID 2040801 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 25 PID 2040802 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 26 PID 2040803 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 27 PID 2040804 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 28 PID 2040805 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 29 PID 2040806 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 30 PID 2040807 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 31 PID 2040808 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 32 PID 2040809 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 33 PID 2040810 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 34 PID 2040811 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 35 PID 2040812 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 36 PID 2040813 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 37 PID 2040814 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 38 PID 2040815 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 39 PID 2040816 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 40 PID 2040817 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 41 PID 2040818 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 42 PID 2040819 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 43 PID 2040820 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 44 PID 2040821 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 45 PID 2040822 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 46 PID 2040823 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 47 PID 2040824 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 48 PID 2040825 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 49 PID 2040826 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 50 PID 2040827 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 51 PID 2040828 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 52 PID 2040829 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 53 PID 2040830 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 54 PID 2040831 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 55 PID 2040832 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 56 PID 2040833 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 57 PID 2040834 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 58 PID 2040835 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 59 PID 2040836 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 60 PID 2040837 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 61 PID 2040838 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 62 PID 2040839 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 63 PID 2040840 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 64 PID 2040841 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 65 PID 2040842 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 66 PID 2040843 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 67 PID 2040844 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 68 PID 2040845 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 69 PID 2040846 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 70 PID 2040847 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 71 PID 2040848 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 72 PID 2040849 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 73 PID 2040850 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 74 PID 2040851 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 75 PID 2040852 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 76 PID 2040853 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 77 PID 2040854 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 78 PID 2040855 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 79 PID 2040856 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 80 PID 2040857 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 81 PID 2040858 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 82 PID 2040859 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 83 PID 2040860 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 84 PID 2040861 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 85 PID 2040862 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 86 PID 2040863 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 87 PID 2040864 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 88 PID 2040865 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 89 PID 2040866 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 90 PID 2040867 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 91 PID 2040868 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 92 PID 2040869 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 93 PID 2040870 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 94 PID 2040871 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 95 PID 2040872 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 96 PID 2040873 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 97 PID 2040874 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 98 PID 2040875 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 99 PID 2040876 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 100 PID 2040877 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 101 PID 2040878 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 102 PID 2040879 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 103 PID 2040880 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 104 PID 2040881 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 105 PID 2040882 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 106 PID 2040883 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 107 PID 2040884 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 108 PID 2040885 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 109 PID 2040886 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 110 PID 2040887 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 111 PID 2040888 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 112 PID 2040889 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 113 PID 2040890 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 114 PID 2040891 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 115 PID 2040892 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 116 PID 2040893 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 117 PID 2040894 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 118 PID 2040895 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 119 PID 2040896 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 120 PID 2040897 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 121 PID 2040898 RUNNING AT c302-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================

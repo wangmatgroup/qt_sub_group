@@ -1,0 +1,1799 @@
+TACC:  Starting up job 2976183 
+TACC:  Starting parallel tasks... 
+  ABINIT 10.4.3-d
+  
+ABI_PSPDIR  found in environment, with value /work/11236/unmeshtok/ls6/modules/abinit-10.4.3/tests//Pspdir/
+-instrng: 219 lines of input have been read from file AlN12_2.abi
+
+
+.Version 10.4.3-d of ABINIT, released May 2025.
+.(MPI version, prepared for a x86_64_linux_gnu13.2 computer) 
+
+.Copyright (C) 1998-2025 ABINIT group . 
+ ABINIT comes with ABSOLUTELY NO WARRANTY.
+ It is free software, and you are welcome to redistribute it
+ under certain conditions (GNU General Public License,
+ see ~abinit/COPYING or http://www.gnu.org/copyleft/gpl.txt).
+
+ ABINIT is a project of the Universite Catholique de Louvain,
+ Corning Inc. and other collaborators, see ~abinit/doc/developers/contributors.txt .
+ Please read https://docs.abinit.org/theory/acknowledgments for suggested
+ acknowledgments of the ABINIT effort.
+ For more information, see https://www.abinit.org .
+
+.Starting date : Fri  6 Mar 2026.
+- ( at 09h29 )
+  
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+ === Build Information === 
+  Version       : 10.4.3-d
+  Build target  : x86_64_linux_gnu13.2
+  Build date    : 20260205
+
+ === Compiler Suite === 
+  C compiler       : gnu13.2
+  C++ compiler     : gnu13.2
+  Fortran compiler : gnu13.2
+  CFLAGS           : -g -O2 -march=native
+  CXXFLAGS         : -g -O2 -march=native
+  FCFLAGS          : -g -ffree-line-length-none -fallow-argument-mismatch -fopenmp    -f ...
+  FC_LDFLAGS       : 
+
+ === Optimizations === 
+  Debug level        : basic
+  Optimization level : standard
+  Architecture       : amd_epyc
+
+ === Multicore === 
+  Parallel build : /scratch/projects/compilers/intel24.1/oneapi/mpi/2021.12
+  Parallel I/O   : 
+  openMP support : yes
+  GPU support    : @with_gpu@
+
+ === Connectors / Fallbacks === 
+  LINALG flavor  : mkl
+  FFT flavor     : dfti
+  HDF5           : yes
+  NetCDF         : yes
+  NetCDF Fortran : yes
+  LibXC          : yes
+  Wannier90      : yes
+
+ === Experimental features === 
+  Exports             : @enable_exports@
+  GW double-precision : 
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Default optimizations:
+   -O2 -march=native
+
+
+ Optimizations for 43_ptgroups:
+   -O0
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ CPP options activated during the build:
+
+                    CC_GNU                   CXX_GNU                    FC_GNU
+ 
+                 HAVE_DFTI HAVE_FC_ALLOCATABLE_DT...             HAVE_FC_ASYNC
+ 
+         HAVE_FC_BACKTRACE  HAVE_FC_COMMAND_ARGUMENT      HAVE_FC_COMMAND_LINE
+ 
+        HAVE_FC_CONTIGUOUS           HAVE_FC_CPUTIME              HAVE_FC_EXIT
+ 
+             HAVE_FC_FLUSH             HAVE_FC_GAMMA            HAVE_FC_GETENV
+ 
+   HAVE_FC_IEEE_ARITHMETIC   HAVE_FC_IEEE_EXCEPTIONS          HAVE_FC_INT_QUAD
+ 
+             HAVE_FC_IOMSG     HAVE_FC_ISO_C_BINDING  HAVE_FC_ISO_FORTRAN_2008
+ 
+        HAVE_FC_LONG_LINES        HAVE_FC_MOVE_ALLOC  HAVE_FC_ON_THE_FLY_SHAPE
+ 
+           HAVE_FC_PRIVATE         HAVE_FC_PROTECTED           HAVE_FC_SHIFTLR
+ 
+         HAVE_FC_STREAM_IO            HAVE_FC_SYSTEM          HAVE_FORTRAN2003
+ 
+                 HAVE_HDF5             HAVE_HDF5_MPI        HAVE_LIBPAW_ABINIT
+ 
+      HAVE_LIBTETRA_ABINIT                HAVE_LIBXC         HAVE_LINALG_AXPBY
+ 
+        HAVE_LINALG_GEMM3M         HAVE_LINALG_GEMMT  HAVE_LINALG_MKL_IMATCOPY
+ 
+   HAVE_LINALG_MKL_OMATADD  HAVE_LINALG_MKL_OMATCOPY   HAVE_LINALG_MKL_THREADS
+ 
+     HAVE_LINALG_SCALAPACK                  HAVE_MPI                 HAVE_MPI2
+ 
+         HAVE_MPI2_INPLACE       HAVE_MPI_IALLGATHER       HAVE_MPI_IALLREDUCE
+ 
+        HAVE_MPI_IALLTOALL       HAVE_MPI_IALLTOALLV           HAVE_MPI_IBCAST
+ 
+         HAVE_MPI_IGATHERV        HAVE_MPI_INTEGER16               HAVE_MPI_IO
+ 
+ HAVE_MPI_TYPE_CREATE_S...               HAVE_NETCDF       HAVE_NETCDF_FORTRAN
+ 
+   HAVE_NETCDF_FORTRAN_MPI           HAVE_NETCDF_MPI         HAVE_OMP_COLLAPSE
+ 
+               HAVE_OPENMP             HAVE_OS_LINUX         HAVE_TIMER_ABINIT
+ 
+            HAVE_WANNIER90                                                      
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+- input  file    -> AlN12_2.abi
+- output file    -> AlN12_2.abo
+- root for input  files -> AlN12_2i
+- root for output files -> AlN12_2o
+
+ abinit : after writing the name of files
+ Netcdf library supports MPI-IO
+ABI_PSPDIR  found in environment, with value /work/11236/unmeshtok/ls6/modules/abinit-10.4.3/tests//Pspdir/
+-instrng: 219 lines of input have been read from file AlN12_2.abi
+
+ For atom type 1, psp file is /work/11236/unmeshtok/ls6/modules/abinit-10.4.3/tests//Pspdir/Psdj_nc_sr_04_pw_std_psp8/Al.psp8
+ For atom type 2, psp file is /work/11236/unmeshtok/ls6/modules/abinit-10.4.3/tests//Pspdir/Psdj_nc_sr_04_pw_std_psp8/N.psp8
+  read the values zionpsp=  3.0 , pspcod=   8 , lmax=   2
+  read the values zionpsp=  5.0 , pspcod=   8 , lmax=   1
+
+ inpspheads: deduce mpsang = 3, n1xccc = 2501.
+
+======================================================= 
+ invars1m : enter jdtset= 1
+  xred   is defined in input file
+ ingeo: takes atomic coordinates from input array xred
+
+--- !COMMENT
+src_file: m_symfind.F90
+src_line: 831
+message: |
+    The tolerance on symmetries =   1.000E-05 is bigger than 1.0e-8.
+    In order to avoid spurious effects, the atomic coordinates have been
+    symmetrized before storing them in the dataset internal variable.
+    So, do not be surprised by the fact that your input variables (xcart, xred, ...)
+    do not correspond exactly to the ones echoed by ABINIT, the latter being used to do the calculations.
+    This is not a problem per se.
+    Still, in order to avoid this symmetrization (e.g. for specific debugging/development), decrease tolsym to 1.0e-8 or lower,
+    or (much preferred) use input primitive vectors that are accurate to better than 1.0e-8.
+    This message will only be printed once, even if there are other datasets where tolsym is bigger than 1.0e-8.
+...
+
+
+--- !COMMENT
+src_file: m_ingeo.F90
+src_line: 931
+message: |
+    The cell is not primitive. One could obtain a primitive cell using the following primitive vectors (rprimd) :
+      2.95608724E+00  5.12009389E+00  0.00000000E+00
+     -6.56383223E-16  1.02401878E+01  0.00000000E+00
+      0.00000000E+00  0.00000000E+00  9.48067094E+00
+     This Bravais lattice has iholohedry   =   3
+                              center       =   0
+                              bravais(3:5) =   1   0   0
+                              bravais(6:8) =   0   1   0
+                              bravais(9:11)=   0   0   1
+     The number of point symmetries would be nptsym=  24
+...
+
+
+--- !COMMENT
+src_file: m_ingeo.F90
+src_line: 939
+message: |
+    Not all components of symrel are integers in the primitive cell coordinate system.
+...
+
+
+--- !COMMENT
+src_file: m_symtk.F90
+src_line: 811
+message: |
+    According to the symmetry finder, the unit cell is
+    not primitive, with multiplicity= 8.
+    This is allowed, as the current chkprim is 0.
+...
+
+
+======================================================= 
+ invars1m : enter jdtset= 2
+  xred   is defined in input file
+ ingeo: takes atomic coordinates from input array xred
+
+--- !COMMENT
+src_file: m_ingeo.F90
+src_line: 931
+message: |
+    The cell is not primitive. One could obtain a primitive cell using the following primitive vectors (rprimd) :
+      2.95608724E+00  5.12009389E+00  0.00000000E+00
+     -6.56383223E-16  1.02401878E+01  0.00000000E+00
+      0.00000000E+00  0.00000000E+00  9.48067094E+00
+     This Bravais lattice has iholohedry   =   3
+                              center       =   0
+                              bravais(3:5) =   1   0   0
+                              bravais(6:8) =   0   1   0
+                              bravais(9:11)=   0   0   1
+     The number of point symmetries would be nptsym=  24
+...
+
+
+--- !COMMENT
+src_file: m_ingeo.F90
+src_line: 939
+message: |
+    Not all components of symrel are integers in the primitive cell coordinate system.
+...
+
+
+--- !COMMENT
+src_file: m_symtk.F90
+src_line: 811
+message: |
+    According to the symmetry finder, the unit cell is
+    not primitive, with multiplicity= 8.
+    This is allowed, as the current chkprim is 0.
+...
+
+
+======================================================= 
+ invars1m : enter jdtset= 3
+  xred   is defined in input file
+ ingeo: takes atomic coordinates from input array xred
+
+--- !COMMENT
+src_file: m_ingeo.F90
+src_line: 931
+message: |
+    The cell is not primitive. One could obtain a primitive cell using the following primitive vectors (rprimd) :
+      2.95608724E+00  5.12009389E+00  0.00000000E+00
+     -6.56383223E-16  1.02401878E+01  0.00000000E+00
+      0.00000000E+00  0.00000000E+00  9.48067094E+00
+     This Bravais lattice has iholohedry   =   3
+                              center       =   0
+                              bravais(3:5) =   1   0   0
+                              bravais(6:8) =   0   1   0
+                              bravais(9:11)=   0   0   1
+     The number of point symmetries would be nptsym=  24
+...
+
+
+--- !COMMENT
+src_file: m_ingeo.F90
+src_line: 939
+message: |
+    Not all components of symrel are integers in the primitive cell coordinate system.
+...
+
+
+--- !COMMENT
+src_file: m_symtk.F90
+src_line: 811
+message: |
+    According to the symmetry finder, the unit cell is
+    not primitive, with multiplicity= 8.
+    This is allowed, as the current chkprim is 0.
+...
+
+
+======================================================= 
+ invars1m : enter jdtset= 4
+  xred   is defined in input file
+ ingeo: takes atomic coordinates from input array xred
+
+--- !COMMENT
+src_file: m_ingeo.F90
+src_line: 931
+message: |
+    The cell is not primitive. One could obtain a primitive cell using the following primitive vectors (rprimd) :
+      2.95608724E+00  5.12009389E+00  0.00000000E+00
+     -6.56383223E-16  1.02401878E+01  0.00000000E+00
+      0.00000000E+00  0.00000000E+00  9.48067094E+00
+     This Bravais lattice has iholohedry   =   3
+                              center       =   0
+                              bravais(3:5) =   1   0   0
+                              bravais(6:8) =   0   1   0
+                              bravais(9:11)=   0   0   1
+     The number of point symmetries would be nptsym=  24
+...
+
+
+--- !COMMENT
+src_file: m_ingeo.F90
+src_line: 939
+message: |
+    Not all components of symrel are integers in the primitive cell coordinate system.
+...
+
+
+--- !COMMENT
+src_file: m_symtk.F90
+src_line: 811
+message: |
+    According to the symmetry finder, the unit cell is
+    not primitive, with multiplicity= 8.
+    This is allowed, as the current chkprim is 0.
+...
+
+
+======================================================= 
+ invars1m : enter jdtset= 5
+  xred   is defined in input file
+ ingeo: takes atomic coordinates from input array xred
+
+--- !COMMENT
+src_file: m_ingeo.F90
+src_line: 931
+message: |
+    The cell is not primitive. One could obtain a primitive cell using the following primitive vectors (rprimd) :
+      2.95608724E+00  5.12009389E+00  0.00000000E+00
+     -6.56383223E-16  1.02401878E+01  0.00000000E+00
+      0.00000000E+00  0.00000000E+00  9.48067094E+00
+     This Bravais lattice has iholohedry   =   3
+                              center       =   0
+                              bravais(3:5) =   1   0   0
+                              bravais(6:8) =   0   1   0
+                              bravais(9:11)=   0   0   1
+     The number of point symmetries would be nptsym=  24
+...
+
+
+--- !COMMENT
+src_file: m_ingeo.F90
+src_line: 939
+message: |
+    Not all components of symrel are integers in the primitive cell coordinate system.
+...
+
+
+--- !COMMENT
+src_file: m_symtk.F90
+src_line: 811
+message: |
+    According to the symmetry finder, the unit cell is
+    not primitive, with multiplicity= 8.
+    This is allowed, as the current chkprim is 0.
+...
+
+ Slater exchange
+ P. A. M. Dirac.,  Math. Proc. Cambridge Philos. Soc. 26, 376 (1930)
+ F. Bloch.,  Z. Phys. 57, 545 (1929)
+ Perdew & Wang
+ J. P. Perdew and Y. Wang.,  Phys. Rev. B 45, 13244 (1992)
+
+
+ initocc_chkneu: image=   1, nelect_occ=  0.25599999999998E+03, zval=  0.25600000E+03,
+         and input value of cellcharge=  0.00000000000000E+00,
+   nelec_occ is computed from occ and wtk, iimage=    1
+   zval is nominal charge of all nuclei, computed from zion (read in psp),
+   cellcharge is an input variable (usually 0).
+
+--- !WARNING
+src_file: m_dtset.F90
+src_line: 1426
+message: |
+    
+    These should obey zval-nelect_occ=cellcharge-nelectjell to better than:  0.10E-10
+...
+
+Action: check input file for occ,wtk, and cellcharge.
+Note that wtk is NOT automatically normalized when occopt=2,
+but is automatically normalized otherwise.
+
+ Slater exchange
+ P. A. M. Dirac.,  Math. Proc. Cambridge Philos. Soc. 26, 376 (1930)
+ F. Bloch.,  Z. Phys. 57, 545 (1929)
+ Perdew & Wang
+ J. P. Perdew and Y. Wang.,  Phys. Rev. B 45, 13244 (1992)
+
+ Slater exchange
+ P. A. M. Dirac.,  Math. Proc. Cambridge Philos. Soc. 26, 376 (1930)
+ F. Bloch.,  Z. Phys. 57, 545 (1929)
+ Perdew & Wang
+ J. P. Perdew and Y. Wang.,  Phys. Rev. B 45, 13244 (1992)
+
+
+ initocc_chkneu: image=   1, nelect_occ=  0.25600000000021E+03, zval=  0.25600000E+03,
+         and input value of cellcharge=  0.00000000000000E+00,
+   nelec_occ is computed from occ and wtk, iimage=    1
+   zval is nominal charge of all nuclei, computed from zion (read in psp),
+   cellcharge is an input variable (usually 0).
+
+--- !WARNING
+src_file: m_dtset.F90
+src_line: 1426
+message: |
+    
+    These should obey zval-nelect_occ=cellcharge-nelectjell to better than:  0.10E-10
+...
+
+Action: check input file for occ,wtk, and cellcharge.
+Note that wtk is NOT automatically normalized when occopt=2,
+but is automatically normalized otherwise.
+
+ Slater exchange
+ P. A. M. Dirac.,  Math. Proc. Cambridge Philos. Soc. 26, 376 (1930)
+ F. Bloch.,  Z. Phys. 57, 545 (1929)
+ Perdew & Wang
+ J. P. Perdew and Y. Wang.,  Phys. Rev. B 45, 13244 (1992)
+
+
+ initocc_chkneu: image=   1, nelect_occ=  0.25600000000021E+03, zval=  0.25600000E+03,
+         and input value of cellcharge=  0.00000000000000E+00,
+   nelec_occ is computed from occ and wtk, iimage=    1
+   zval is nominal charge of all nuclei, computed from zion (read in psp),
+   cellcharge is an input variable (usually 0).
+
+--- !WARNING
+src_file: m_dtset.F90
+src_line: 1426
+message: |
+    
+    These should obey zval-nelect_occ=cellcharge-nelectjell to better than:  0.10E-10
+...
+
+Action: check input file for occ,wtk, and cellcharge.
+Note that wtk is NOT automatically normalized when occopt=2,
+but is automatically normalized otherwise.
+
+ Slater exchange
+ P. A. M. Dirac.,  Math. Proc. Cambridge Philos. Soc. 26, 376 (1930)
+ F. Bloch.,  Z. Phys. 57, 545 (1929)
+ Perdew & Wang
+ J. P. Perdew and Y. Wang.,  Phys. Rev. B 45, 13244 (1992)
+
+
+ initocc_chkneu: image=   1, nelect_occ=  0.25600000000021E+03, zval=  0.25600000E+03,
+         and input value of cellcharge=  0.00000000000000E+00,
+   nelec_occ is computed from occ and wtk, iimage=    1
+   zval is nominal charge of all nuclei, computed from zion (read in psp),
+   cellcharge is an input variable (usually 0).
+
+--- !WARNING
+src_file: m_dtset.F90
+src_line: 1426
+message: |
+    
+    These should obey zval-nelect_occ=cellcharge-nelectjell to better than:  0.10E-10
+...
+
+Action: check input file for occ,wtk, and cellcharge.
+Note that wtk is NOT automatically normalized when occopt=2,
+but is automatically normalized otherwise.
+
+ getmpw sequential formula gave: 20859
+
+ ====================================================================================================
+ Searching for all possible proc distributions for this input with #CPUs<=72:
+
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ |       np_spkpt|       npfft|      npband|      bandpp|  #MPI(proc)|    WEIGHT|
+ |    1<<   72|    1<<   52|    1<<   72|    1<<  128|    1<<   72|  <=    72|
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ |          18|           2|           2|          64|          72|    62.581|
+ |          18|           2|           2|          32|          72|    62.538|
+ |          18|           2|           2|          16|          72|    62.453|
+ |          18|           2|           2|           8|          72|    62.283|
+ |          18|           2|           2|           4|          72|    61.942|
+ |          18|           2|           2|           2|          72|    61.263|
+ |          18|           2|           2|           1|          72|    59.914|
+ |          18|           4|           1|         128|          72|    59.124|
+ |          18|           4|           1|          64|          72|    59.103|
+ |          72|           1|           1|           1|          72|    59.098|
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Only the best possible choices for nproc are printed...
+
+ >>> Possible (best) choices for the number of bands (nband) are:
+     with: np_spkpt=18 npfft=2
+     nband=   126 using     72 CPUs =    72 MPI x  1 threads (npband=    2)
+     nband=   128 using     72 CPUs =    72 MPI x  1 threads (npband=    2)
+     nband=   130 using     72 CPUs =    72 MPI x  1 threads (npband=    2)
+     nband=   129 using     36 CPUs =    36 MPI x  1 threads (npband=    1)
+     nband=   125 using     36 CPUs =    36 MPI x  1 threads (npband=    1)
+     nband=   127 using     36 CPUs =    36 MPI x  1 threads (npband=    1)
+     nband=   131 using     36 CPUs =    36 MPI x  1 threads (npband=    1)
+ >>> The present nband value (   128) seems to be a good choice!
+ ====================================================================================================
+
+
+
+--- !WARNING
+src_file: m_mpinfo.F90
+src_line: 2354
+message: |
+    nkpt*nsppol (122) is not a multiple of nproc_spkpt (18)
+    The k-point parallelisation is INEFFICIENT. 
+    Ignore this warning if this is not a GS run.
+...
+
+
+--- !WARNING
+src_file: m_mpi_setup.F90
+src_line: 923
+message: |
+    The number of KPT processors, np_spkpt, should be a multiple of nkpt*nsppol.
+    However, np_spkpt=18 and nkpt*nsppol=122
+...
+
+ For input ecut=  3.307500E+01 best grid ngfft=      64     108      50
+       max ecut=  3.430690E+01
+
+ ==== FFT mesh ====
+  FFT mesh divisions ........................    64  108   50
+  Augmented FFT divisions ...................    65  109   50
+  FFT algorithm .............................   401
+  FFT cache size ............................    16
+ Relative gap for number of plane waves between process (%):  0.07
+ Relative gap for number of plane waves between process (%):  0.16
+ Relative gap for number of plane waves between process (%):  0.03
+ Relative gap for number of plane waves between process (%):  0.31
+ Relative gap for number of plane waves between process (%):  0.28
+ Relative gap for number of plane waves between process (%):  0.34
+ Relative gap for number of plane waves between process (%):  0.07
+ Relative gap for number of plane waves between process (%):  0.09
+ Relative gap for number of plane waves between process (%):  0.37
+ Relative gap for number of plane waves between process (%):  0.39
+ Relative gap for number of plane waves between process (%):  0.22
+ Relative gap for number of plane waves between process (%):  0.13
+ Relative gap for number of plane waves between process (%):  0.00
+ Relative gap for number of plane waves between process (%):  0.20
+ Relative gap for number of plane waves between process (%):  0.03
+ Relative gap for number of plane waves between process (%):  0.55
+ Relative gap for number of plane waves between process (%):  0.21
+ Relative gap for number of plane waves between process (%):  0.10
+ Relative gap for number of plane waves between process (%):  0.00
+ Relative gap for number of plane waves between process (%):  0.23
+ Relative gap for number of plane waves between process (%):  0.17
+ Relative gap for number of plane waves between process (%):  0.25
+ Relative gap for number of plane waves between process (%):  0.00
+ Relative gap for number of plane waves between process (%):  0.23
+ Relative gap for number of plane waves between process (%):  0.05
+ Relative gap for number of plane waves between process (%):  0.19
+ Relative gap for number of plane waves between process (%):  0.20
+ Relative gap for number of plane waves between process (%):  0.03
+ Relative gap for number of plane waves between process (%):  0.07
+ Relative gap for number of plane waves between process (%):  0.01
+ Relative gap for number of plane waves between process (%):  0.04
+ Relative gap for number of plane waves between process (%):  0.25
+ Relative gap for number of plane waves between process (%):  0.12
+ Relative gap for number of plane waves between process (%):  0.00
+ Relative gap for number of plane waves between process (%):  0.03
+ Relative gap for number of plane waves between process (%):  0.00
+ Relative gap for number of plane waves between process (%):  0.14
+ Relative gap for number of plane waves between process (%):  0.14
+ Relative gap for number of plane waves between process (%):  0.17
+ Relative gap for number of plane waves between process (%):  0.15
+ Relative gap for number of plane waves between process (%):  0.00
+ Relative gap for number of plane waves between process (%):  0.01
+ Relative gap for number of plane waves between process (%):  0.07
+ Relative gap for number of plane waves between process (%):  0.08
+ Relative gap for number of plane waves between process (%):  0.15
+ Relative gap for number of plane waves between process (%):  0.00
+ Relative gap for number of plane waves between process (%):  0.09
+ Relative gap for number of plane waves between process (%):  0.06
+ Relative gap for number of plane waves between process (%):  0.00
+ Relative gap for number of plane waves between process (%):  0.03
+ Relative gap for number of plane waves between process (%):  0.07
+ Relative gap for number of plane waves between process (%):  0.01
+ Relative gap for number of plane waves between process (%):  0.14
+ Relative gap for number of plane waves between process (%):  0.11
+ Relative gap for number of plane waves between process (%):  0.02
+ Relative gap for number of plane waves between process (%):  0.02
+ Relative gap for number of plane waves between process (%):  0.02
+ Relative gap for number of plane waves between process (%):  0.12
+ Relative gap for number of plane waves between process (%):  0.10
+ Relative gap for number of plane waves between process (%):  0.08
+ Relative gap for number of plane waves between process (%):  0.00
+ Relative gap for number of plane waves between process (%):  0.00
+ Relative gap for number of plane waves between process (%):  0.04
+ Relative gap for number of plane waves between process (%):  0.02
+ Relative gap for number of plane waves between process (%):  0.04
+ Relative gap for number of plane waves between process (%):  0.01
+ Relative gap for number of plane waves between process (%):  0.08
+ Relative gap for number of plane waves between process (%):  0.00
+ Relative gap for number of plane waves between process (%):  0.21
+ Relative gap for number of plane waves between process (%):  0.06
+ Relative gap for number of plane waves between process (%):  0.04
+ Relative gap for number of plane waves between process (%):  0.00
+ Relative gap for number of plane waves between process (%):  0.04
+ Relative gap for number of plane waves between process (%):  0.04
+ Relative gap for number of plane waves between process (%):  0.02
+ Relative gap for number of plane waves between process (%):  0.04
+ Relative gap for number of plane waves between process (%):  0.11
+ Relative gap for number of plane waves between process (%):  0.10
+ Relative gap for number of plane waves between process (%):  0.02
+ Relative gap for number of plane waves between process (%):  0.04
+ Relative gap for number of plane waves between process (%):  0.26
+ Relative gap for number of plane waves between process (%):  0.04
+ Relative gap for number of plane waves between process (%):  0.00
+ Relative gap for number of plane waves between process (%):  0.13
+ Relative gap for number of plane waves between process (%):  0.04
+ Relative gap for number of plane waves between process (%):  0.09
+ Relative gap for number of plane waves between process (%):  0.22
+ Relative gap for number of plane waves between process (%):  0.01
+ Relative gap for number of plane waves between process (%):  0.00
+ Relative gap for number of plane waves between process (%):  0.00
+ Relative gap for number of plane waves between process (%):  0.04
+ Relative gap for number of plane waves between process (%):  0.08
+ Relative gap for number of plane waves between process (%):  0.19
+ Relative gap for number of plane waves between process (%):  0.17
+ Relative gap for number of plane waves between process (%):  0.00
+ Relative gap for number of plane waves between process (%):  0.10
+ Relative gap for number of plane waves between process (%):  0.23
+ Relative gap for number of plane waves between process (%):  0.00
+ Relative gap for number of plane waves between process (%):  0.08
+ Relative gap for number of plane waves between process (%):  0.15
+ Relative gap for number of plane waves between process (%):  0.04
+ Relative gap for number of plane waves between process (%):  0.15
+ Relative gap for number of plane waves between process (%):  0.12
+ Relative gap for number of plane waves between process (%):  0.36
+ Relative gap for number of plane waves between process (%):  0.19
+ Relative gap for number of plane waves between process (%):  0.12
+ Relative gap for number of plane waves between process (%):  0.04
+ Relative gap for number of plane waves between process (%):  0.06
+ Relative gap for number of plane waves between process (%):  0.10
+ Relative gap for number of plane waves between process (%):  0.23
+ Relative gap for number of plane waves between process (%):  0.00
+ Relative gap for number of plane waves between process (%):  0.23
+ Relative gap for number of plane waves between process (%):  0.08
+ Relative gap for number of plane waves between process (%):  0.17
+ Relative gap for number of plane waves between process (%):  0.34
+ Relative gap for number of plane waves between process (%):  0.00
+ Relative gap for number of plane waves between process (%):  0.00
+ Relative gap for number of plane waves between process (%):  0.00
+ Relative gap for number of plane waves between process (%):  0.06
+ Relative gap for number of plane waves between process (%):  0.23
+ Relative gap for number of plane waves between process (%):  0.00
+ Relative gap for number of plane waves between process (%):  0.46
+ getmpw: optimal value of mpw= 5234
+ getmpw sequential formula gave: 20859
+
+ ====================================================================================================
+ Searching for all possible proc distributions for this input with #CPUs<=72:
+
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ |       np_spkpt|       npfft|      npband|      bandpp|  #MPI(proc)|    WEIGHT|
+ |    1<<   72|    1<<   52|    1<<   72|    1<<  128|    1<<   72|  <=    72|
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ |          72|           1|           1|           1|          72|    69.235|
+ |          36|           1|           2|          64|          72|    68.203|
+ |          36|           1|           2|          32|          72|    68.187|
+ |          36|           1|           2|          16|          72|    68.155|
+ |          36|           1|           2|           8|          72|    68.091|
+ |          36|           1|           2|           4|          72|    67.964|
+ |          36|           1|           2|           2|          72|    67.709|
+ |          36|           1|           2|           1|          72|    67.203|
+ |          36|           2|           1|         128|          72|    67.055|
+ |          36|           2|           1|          64|          72|    67.047|
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Only the best possible choices for nproc are printed...
+
+ >>> Possible (best) choices for the number of bands (nband) are:
+     with: np_spkpt=72 npfft=1
+     nband=   125 using     72 CPUs =    72 MPI x  1 threads (npband=    1)
+     nband=   131 using     72 CPUs =    72 MPI x  1 threads (npband=    1)
+     nband=   130 using     72 CPUs =    72 MPI x  1 threads (npband=    1)
+     nband=   129 using     72 CPUs =    72 MPI x  1 threads (npband=    1)
+     nband=   128 using     72 CPUs =    72 MPI x  1 threads (npband=    1)
+     nband=   127 using     72 CPUs =    72 MPI x  1 threads (npband=    1)
+     nband=   126 using     72 CPUs =    72 MPI x  1 threads (npband=    1)
+ >>> The present nband value (   128) seems to be a good choice!
+ ====================================================================================================
+
+
+ For input ecut=  3.307500E+01 best grid ngfft=      64     108      50
+       max ecut=  3.430690E+01
+
+ ==== FFT mesh ====
+  FFT mesh divisions ........................    64  108   50
+  Augmented FFT divisions ...................    65  109   50
+  FFT algorithm .............................   512
+  FFT cache size ............................    16
+ getmpw: optimal value of mpw= 20907
+
+ ====================================================================================================
+ Searching for all possible proc distributions for this input with #CPUs<=72:
+
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ |       np_spkpt|  #MPI(proc)|    WEIGHT|
+ |   67<<   72|    1<<   72|  <=    72|
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ |          72|          72|    69.235|
+ |          71|          71|    36.037|
+ |          70|          70|    36.016|
+ |          69|          69|    35.995|
+ |          68|          68|    35.973|
+ |          67|          67|    35.950|
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Only the best possible choices for nproc are printed...
+ ====================================================================================================
+
+
+ For input ecut=  3.307500E+01 best grid ngfft=      64     108      50
+       max ecut=  3.430690E+01
+
+ ==== FFT mesh ====
+  FFT mesh divisions ........................    64  108   50
+  Augmented FFT divisions ...................    65  109   50
+  FFT algorithm .............................   512
+  FFT cache size ............................    16
+ getmpw: optimal value of mpw= 20907
+ getmpw: optimal value of mpw= 20907
+
+ ====================================================================================================
+ Searching for all possible proc distributions for this input with #CPUs<=72:
+
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ |       np_spkpt|  #MPI(proc)|    WEIGHT|
+ |   67<<   72|    1<<   72|  <=    72|
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ |          72|          72|    69.235|
+ |          71|          71|    36.037|
+ |          70|          70|    36.016|
+ |          69|          69|    35.995|
+ |          68|          68|    35.973|
+ |          67|          67|    35.950|
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Only the best possible choices for nproc are printed...
+ ====================================================================================================
+
+
+ For input ecut=  3.307500E+01 best grid ngfft=      64     108      50
+       max ecut=  3.430690E+01
+
+ ==== FFT mesh ====
+  FFT mesh divisions ........................    64  108   50
+  Augmented FFT divisions ...................    65  109   50
+  FFT algorithm .............................   512
+  FFT cache size ............................    16
+ getmpw: optimal value of mpw= 20907
+ getmpw: optimal value of mpw= 20907
+ For input ecut=  3.307500E+01 best grid ngfft=      64     108      50
+       max ecut=  3.430690E+01
+
+ ==== FFT mesh ====
+  FFT mesh divisions ........................    64  108   50
+  Augmented FFT divisions ...................    65  109   50
+  FFT algorithm .............................   512
+  FFT cache size ............................    16
+ getmpw: optimal value of mpw= 20907
+ DATASET    1 : the unit cell is not primitive
+
+ getdim_nloc: deduce lmnmax  =  18, lnmax  =   6,
+                      lmnmaxso=  18, lnmaxso=   6.
+memory: analysis of memory needs
+================================================================================
+ Values of the parameters that define the memory need for DATASET  1.
+     intxc =       0    ionmov =       0      iscf =       7    lmnmax =       6
+     lnmax =       6     mgfft =     108  mpssoang =       3    mqgrid =    5303
+     natom =      64  nloc_mem =       1    nspden =       1   nspinor =       1
+    nsppol =       1      nsym =      32    n1xccc =    2501    ntypat =       2
+    occopt =       1   xclevel =       1
+-    mband =         128        mffmem =           1         mkmem =           7
+       mpw =        5234          nfft =      172800          nkpt =         122
+================================================================================
+P This job should need less than                     165.536 Mbytes of memory.
+  Rough estimation (10% accuracy) of disk space for files :
+_ WF disk file :   2494.330 Mbytes ; DEN or POT disk file :      1.320 Mbytes.
+================================================================================
+
+ Biggest array : cg(disk), with     71.5606 MBytes.
+ memana : allocated an array of     71.561 Mbytes, for testing purposes.
+ memana: allocated     165.536Mbytes, for testing purposes. 
+ The job will continue.
+ DATASET    2 : the unit cell is not primitive
+
+ getdim_nloc: deduce lmnmax  =  18, lnmax  =   6,
+                      lmnmaxso=  18, lnmaxso=   6.
+memory: analysis of memory needs
+================================================================================
+ Values of the parameters that define the memory need for DATASET  2.
+     intxc =       0    ionmov =       0      iscf =      -2    lmnmax =       6
+     lnmax =       6     mgfft =     108  mpssoang =       3    mqgrid =    5303
+     natom =      64  nloc_mem =       1    nspden =       1   nspinor =       1
+    nsppol =       1      nsym =      32    n1xccc =    2501    ntypat =       2
+    occopt =       1   xclevel =       1
+-    mband =         128        mffmem =           1         mkmem =           4
+       mpw =       20907          nfft =      345600          nkpt =         288
+================================================================================
+P This job should need less than                     297.756 Mbytes of memory.
+  Rough estimation (10% accuracy) of disk space for files :
+_ WF disk file :  11760.190 Mbytes ; DEN or POT disk file :      2.639 Mbytes.
+================================================================================
+
+ Biggest array : cg(disk), with    163.3379 MBytes.
+ memana : allocated an array of    163.338 Mbytes, for testing purposes.
+ memana: allocated     297.756Mbytes, for testing purposes. 
+ The job will continue.
+ DATASET    3 : the unit cell is not primitive
+
+ getdim_nloc: deduce lmnmax  =  18, lnmax  =   6,
+                      lmnmaxso=  18, lnmaxso=   6.
+ memorf : analysis of memory needs
+================================================================================
+ Values of the parameters that define the memory need for DATASET  3 (RF).
+     intxc =       0      iscf =       7    lmnmax =       6     lnmax =       6
+     mgfft =     108  mpssoang =       3    mqgrid =    5303     natom =      64
+  nloc_mem =       1    nspden =       1   nspinor =       1    nsppol =       1
+      nsym =      32    n1xccc =    2501    ntypat =       2    occopt =       1
+   xclevel =       1
+-    mband =         128        mffmem =           1         mkmem =           4
+-   mkqmem =           4        mk1mem =           4           mpw =       20907
+      nfft =      345600          nkpt =         288
+================================================================================
+P This job should need less than                     652.053 Mbytes of memory.
+  Rough estimation (10% accuracy) of disk space for files :
+_ WF disk file :   -527.810 Mbytes ; DEN or POT disk file :      2.639 Mbytes.
+================================================================================
+
+ Biggest array : cg(disk), with    163.3379 MBytes.
+ memana : allocated an array of    163.338 Mbytes, for testing purposes.
+ memana: allocated     652.053Mbytes, for testing purposes. 
+ The job will continue.
+ DATASET    4 : the unit cell is not primitive
+
+ getdim_nloc: deduce lmnmax  =  18, lnmax  =   6,
+                      lmnmaxso=  18, lnmaxso=   6.
+ memorf : analysis of memory needs
+================================================================================
+ Values of the parameters that define the memory need for DATASET  4 (RF).
+     intxc =       0      iscf =       7    lmnmax =       6     lnmax =       6
+     mgfft =     108  mpssoang =       3    mqgrid =    5303     natom =      64
+  nloc_mem =       1    nspden =       1   nspinor =       1    nsppol =       1
+      nsym =      32    n1xccc =    2501    ntypat =       2    occopt =       1
+   xclevel =       1
+-    mband =         128        mffmem =           1         mkmem =           4
+-   mkqmem =           4        mk1mem =           4           mpw =       20907
+      nfft =      345600          nkpt =         288
+================================================================================
+P This job should need less than                     652.053 Mbytes of memory.
+  Rough estimation (10% accuracy) of disk space for files :
+_ WF disk file :   -527.810 Mbytes ; DEN or POT disk file :      2.639 Mbytes.
+================================================================================
+
+ Biggest array : cg(disk), with    163.3379 MBytes.
+ memana : allocated an array of    163.338 Mbytes, for testing purposes.
+ memana: allocated     652.053Mbytes, for testing purposes. 
+ The job will continue.
+ DATASET    5 : the unit cell is not primitive
+
+ getdim_nloc: deduce lmnmax  =  18, lnmax  =   6,
+                      lmnmaxso=  18, lnmaxso=   6.
+memory: analysis of memory needs
+================================================================================
+ Values of the parameters that define the memory need for DATASET  5.
+     intxc =       0    ionmov =       0      iscf =       7    lmnmax =       6
+     lnmax =       6     mgfft =     108  mpssoang =       3    mqgrid =    5303
+     natom =      64  nloc_mem =       1    nspden =       1   nspinor =       1
+    nsppol =       1      nsym =      32    n1xccc =    2501    ntypat =       2
+    occopt =       1   xclevel =       1
+-    mband =         128        mffmem =           1         mkmem =           4
+       mpw =       20907          nfft =      345600          nkpt =         288
+================================================================================
+P This job should need less than                     339.944 Mbytes of memory.
+  Rough estimation (10% accuracy) of disk space for files :
+_ WF disk file :  11760.190 Mbytes ; DEN or POT disk file :      2.639 Mbytes.
+================================================================================
+
+ Biggest array : cg(disk), with    163.3379 MBytes.
+ memana : allocated an array of    163.338 Mbytes, for testing purposes.
+ memana: allocated     339.944Mbytes, for testing purposes. 
+ The job will continue.
+--------------------------------------------------------------------------------
+------------- Echo of variables that govern the present computation ------------
+--------------------------------------------------------------------------------
+-
+- outvars: echo of selected default values
+-   iomode0 =  0 , fftalg0 =512 , wfoptalg0 =  0
+-
+- outvars: echo of global parameters not present in the input file
+-  max_nthreads =    1
+-
+ -outvars: echo values of preprocessed input variables --------
+ 
+ These variables are accessible in NetCDF format (AlN12_2o_OUT.nc)
+
+-          iomode1          1
+-          iomode2          0
+-          iomode3          0
+-          iomode4          0
+-          iomode5          0
+            acell      1.0000000000E+00  1.0000000000E+00  1.0000000000E+00 Bohr
+              amu      2.69815390E+01  1.40067400E+01
+        autoparal           1
+           bandpp1         64
+           bandpp2          1
+           bandpp3          1
+           bandpp4          1
+           bandpp5          1
+          chkprim           0
+     densfor_pred1          6
+     densfor_pred2          2
+     densfor_pred3          2
+     densfor_pred4          2
+     densfor_pred5          2
+          dilatmx      1.05000000E+00
+  d3e_pert1_atpol1          1      64
+  d3e_pert1_atpol2          1      64
+  d3e_pert1_atpol3          1      64
+  d3e_pert1_atpol4          1      64
+  d3e_pert1_atpol5          1       2
+   d3e_pert1_elfd1          0
+   d3e_pert1_elfd2          0
+   d3e_pert1_elfd3          0
+   d3e_pert1_elfd4          0
+   d3e_pert1_elfd5          1
+   d3e_pert1_phon1          0
+   d3e_pert1_phon2          0
+   d3e_pert1_phon3          0
+   d3e_pert1_phon4          0
+   d3e_pert1_phon5          1
+   d3e_pert2_elfd1          0
+   d3e_pert2_elfd2          0
+   d3e_pert2_elfd3          0
+   d3e_pert2_elfd4          0
+   d3e_pert2_elfd5          1
+   d3e_pert3_elfd1          0
+   d3e_pert3_elfd2          0
+   d3e_pert3_elfd3          0
+   d3e_pert3_elfd4          0
+   d3e_pert3_elfd5          1
+             ecut      3.00000000E+01 Hartree
+           ecutsm      5.00000000E-01 Hartree
+-          fftalg1        401
+-          fftalg2        512
+-          fftalg3        512
+-          fftalg4        512
+-          fftalg5        512
+           getddk1          0
+           getddk2          0
+           getddk3          0
+           getddk4          3
+           getddk5          0
+           getden1          0
+           getden2          1
+           getden3          0
+           getden4          0
+           getden5          0
+           getwfk1          0
+           getwfk2          1
+           getwfk3          2
+           getwfk4          2
+           getwfk5          2
+          get1den1          0
+          get1den2          0
+          get1den3          0
+          get1den4          0
+          get1den5          4
+           get1wf1          0
+           get1wf2          0
+           get1wf3          0
+           get1wf4          0
+           get1wf5          4
+             iscf1          7
+             iscf2         -2
+             iscf3          7
+             iscf4          7
+             iscf5          7
+              ixc       -1012
+           jdtset        1    2    3    4    5
+              kpt1     0.00000000E+00  8.33333333E-02  0.00000000E+00
+                       8.33333333E-02  0.00000000E+00  0.00000000E+00
+                       0.00000000E+00  2.50000000E-01  0.00000000E+00
+                       8.33333333E-02  1.66666667E-01  0.00000000E+00
+                       1.66666667E-01  8.33333333E-02  0.00000000E+00
+                       2.50000000E-01  0.00000000E+00  0.00000000E+00
+                       0.00000000E+00  4.16666667E-01  0.00000000E+00
+                       8.33333333E-02  3.33333333E-01  0.00000000E+00
+                       1.66666667E-01  2.50000000E-01  0.00000000E+00
+                       2.50000000E-01  1.66666667E-01  0.00000000E+00
+                       3.33333333E-01  8.33333333E-02  0.00000000E+00
+                       4.16666667E-01  0.00000000E+00  0.00000000E+00
+                       8.33333333E-02  5.00000000E-01  0.00000000E+00
+                       1.66666667E-01  4.16666667E-01  0.00000000E+00
+                       2.50000000E-01  3.33333333E-01  0.00000000E+00
+                       3.33333333E-01  2.50000000E-01  0.00000000E+00
+                       4.16666667E-01  1.66666667E-01  0.00000000E+00
+                       5.00000000E-01  8.33333333E-02  0.00000000E+00
+                       2.50000000E-01  5.00000000E-01  0.00000000E+00
+                       3.33333333E-01  4.16666667E-01  0.00000000E+00
+                       4.16666667E-01  3.33333333E-01  0.00000000E+00
+                       5.00000000E-01  2.50000000E-01  0.00000000E+00
+                       4.16666667E-01  5.00000000E-01  0.00000000E+00
+                       5.00000000E-01  4.16666667E-01  0.00000000E+00
+                       0.00000000E+00  0.00000000E+00  1.25000000E-01
+                       0.00000000E+00  1.66666667E-01  1.25000000E-01
+                       8.33333333E-02  8.33333333E-02  1.25000000E-01
+                       1.66666667E-01  0.00000000E+00  1.25000000E-01
+                       0.00000000E+00  3.33333333E-01  1.25000000E-01
+                       8.33333333E-02  2.50000000E-01  1.25000000E-01
+                       1.66666667E-01  1.66666667E-01  1.25000000E-01
+                       2.50000000E-01  8.33333333E-02  1.25000000E-01
+                       3.33333333E-01  0.00000000E+00  1.25000000E-01
+                       0.00000000E+00  5.00000000E-01  1.25000000E-01
+                       8.33333333E-02  4.16666667E-01  1.25000000E-01
+                       1.66666667E-01  3.33333333E-01  1.25000000E-01
+                       2.50000000E-01  2.50000000E-01  1.25000000E-01
+                       3.33333333E-01  1.66666667E-01  1.25000000E-01
+                       4.16666667E-01  8.33333333E-02  1.25000000E-01
+                       5.00000000E-01  0.00000000E+00  1.25000000E-01
+                       1.66666667E-01  5.00000000E-01  1.25000000E-01
+                       2.50000000E-01  4.16666667E-01  1.25000000E-01
+                       3.33333333E-01  3.33333333E-01  1.25000000E-01
+                       4.16666667E-01  2.50000000E-01  1.25000000E-01
+                       5.00000000E-01  1.66666667E-01  1.25000000E-01
+                       3.33333333E-01  5.00000000E-01  1.25000000E-01
+                       4.16666667E-01  4.16666667E-01  1.25000000E-01
+                       5.00000000E-01  3.33333333E-01  1.25000000E-01
+                       5.00000000E-01  5.00000000E-01  1.25000000E-01
+                       0.00000000E+00  8.33333333E-02  2.50000000E-01
+              kpt2     0.00000000E+00  8.33333333E-02  0.00000000E+00
+                       8.33333333E-02  0.00000000E+00  0.00000000E+00
+                       0.00000000E+00  2.50000000E-01  0.00000000E+00
+                       8.33333333E-02  1.66666667E-01  0.00000000E+00
+                       1.66666667E-01  8.33333333E-02  0.00000000E+00
+                       2.50000000E-01  0.00000000E+00  0.00000000E+00
+                       0.00000000E+00  4.16666667E-01  0.00000000E+00
+                       8.33333333E-02  3.33333333E-01  0.00000000E+00
+                       1.66666667E-01  2.50000000E-01  0.00000000E+00
+                       2.50000000E-01  1.66666667E-01  0.00000000E+00
+                       3.33333333E-01  8.33333333E-02  0.00000000E+00
+                       4.16666667E-01  0.00000000E+00  0.00000000E+00
+                       8.33333333E-02  5.00000000E-01  0.00000000E+00
+                       1.66666667E-01  4.16666667E-01  0.00000000E+00
+                       2.50000000E-01  3.33333333E-01  0.00000000E+00
+                       3.33333333E-01  2.50000000E-01  0.00000000E+00
+                       4.16666667E-01  1.66666667E-01  0.00000000E+00
+                       5.00000000E-01  8.33333333E-02  0.00000000E+00
+                       8.33333333E-02 -3.33333333E-01  0.00000000E+00
+                       1.66666667E-01 -4.16666667E-01  0.00000000E+00
+                       2.50000000E-01  5.00000000E-01  0.00000000E+00
+                       3.33333333E-01  4.16666667E-01  0.00000000E+00
+                       4.16666667E-01  3.33333333E-01  0.00000000E+00
+                       5.00000000E-01  2.50000000E-01  0.00000000E+00
+                      -4.16666667E-01  1.66666667E-01  0.00000000E+00
+                      -3.33333333E-01  8.33333333E-02  0.00000000E+00
+                       8.33333333E-02 -1.66666667E-01  0.00000000E+00
+                       1.66666667E-01 -2.50000000E-01  0.00000000E+00
+                       2.50000000E-01 -3.33333333E-01  0.00000000E+00
+                       3.33333333E-01 -4.16666667E-01  0.00000000E+00
+                       4.16666667E-01  5.00000000E-01  0.00000000E+00
+                       5.00000000E-01  4.16666667E-01  0.00000000E+00
+                      -4.16666667E-01  3.33333333E-01  0.00000000E+00
+                      -3.33333333E-01  2.50000000E-01  0.00000000E+00
+                      -2.50000000E-01  1.66666667E-01  0.00000000E+00
+                      -1.66666667E-01  8.33333333E-02  0.00000000E+00
+                       0.00000000E+00  0.00000000E+00  1.25000000E-01
+                       0.00000000E+00  1.66666667E-01  1.25000000E-01
+                       8.33333333E-02  8.33333333E-02  1.25000000E-01
+                       1.66666667E-01  0.00000000E+00  1.25000000E-01
+                       0.00000000E+00  3.33333333E-01  1.25000000E-01
+                       8.33333333E-02  2.50000000E-01  1.25000000E-01
+                       1.66666667E-01  1.66666667E-01  1.25000000E-01
+                       2.50000000E-01  8.33333333E-02  1.25000000E-01
+                       3.33333333E-01  0.00000000E+00  1.25000000E-01
+                       0.00000000E+00  5.00000000E-01  1.25000000E-01
+                       8.33333333E-02  4.16666667E-01  1.25000000E-01
+                       1.66666667E-01  3.33333333E-01  1.25000000E-01
+                       2.50000000E-01  2.50000000E-01  1.25000000E-01
+                       3.33333333E-01  1.66666667E-01  1.25000000E-01
+              kpt3     0.00000000E+00  8.33333333E-02  0.00000000E+00
+                       8.33333333E-02  0.00000000E+00  0.00000000E+00
+                       0.00000000E+00  2.50000000E-01  0.00000000E+00
+                       8.33333333E-02  1.66666667E-01  0.00000000E+00
+                       1.66666667E-01  8.33333333E-02  0.00000000E+00
+                       2.50000000E-01  0.00000000E+00  0.00000000E+00
+                       0.00000000E+00  4.16666667E-01  0.00000000E+00
+                       8.33333333E-02  3.33333333E-01  0.00000000E+00
+                       1.66666667E-01  2.50000000E-01  0.00000000E+00
+                       2.50000000E-01  1.66666667E-01  0.00000000E+00
+                       3.33333333E-01  8.33333333E-02  0.00000000E+00
+                       4.16666667E-01  0.00000000E+00  0.00000000E+00
+                       8.33333333E-02  5.00000000E-01  0.00000000E+00
+                       1.66666667E-01  4.16666667E-01  0.00000000E+00
+                       2.50000000E-01  3.33333333E-01  0.00000000E+00
+                       3.33333333E-01  2.50000000E-01  0.00000000E+00
+                       4.16666667E-01  1.66666667E-01  0.00000000E+00
+                       5.00000000E-01  8.33333333E-02  0.00000000E+00
+                       8.33333333E-02 -3.33333333E-01  0.00000000E+00
+                       1.66666667E-01 -4.16666667E-01  0.00000000E+00
+                       2.50000000E-01  5.00000000E-01  0.00000000E+00
+                       3.33333333E-01  4.16666667E-01  0.00000000E+00
+                       4.16666667E-01  3.33333333E-01  0.00000000E+00
+                       5.00000000E-01  2.50000000E-01  0.00000000E+00
+                      -4.16666667E-01  1.66666667E-01  0.00000000E+00
+                      -3.33333333E-01  8.33333333E-02  0.00000000E+00
+                       8.33333333E-02 -1.66666667E-01  0.00000000E+00
+                       1.66666667E-01 -2.50000000E-01  0.00000000E+00
+                       2.50000000E-01 -3.33333333E-01  0.00000000E+00
+                       3.33333333E-01 -4.16666667E-01  0.00000000E+00
+                       4.16666667E-01  5.00000000E-01  0.00000000E+00
+                       5.00000000E-01  4.16666667E-01  0.00000000E+00
+                      -4.16666667E-01  3.33333333E-01  0.00000000E+00
+                      -3.33333333E-01  2.50000000E-01  0.00000000E+00
+                      -2.50000000E-01  1.66666667E-01  0.00000000E+00
+                      -1.66666667E-01  8.33333333E-02  0.00000000E+00
+                       0.00000000E+00  0.00000000E+00  1.25000000E-01
+                       0.00000000E+00  1.66666667E-01  1.25000000E-01
+                       8.33333333E-02  8.33333333E-02  1.25000000E-01
+                       1.66666667E-01  0.00000000E+00  1.25000000E-01
+                       0.00000000E+00  3.33333333E-01  1.25000000E-01
+                       8.33333333E-02  2.50000000E-01  1.25000000E-01
+                       1.66666667E-01  1.66666667E-01  1.25000000E-01
+                       2.50000000E-01  8.33333333E-02  1.25000000E-01
+                       3.33333333E-01  0.00000000E+00  1.25000000E-01
+                       0.00000000E+00  5.00000000E-01  1.25000000E-01
+                       8.33333333E-02  4.16666667E-01  1.25000000E-01
+                       1.66666667E-01  3.33333333E-01  1.25000000E-01
+                       2.50000000E-01  2.50000000E-01  1.25000000E-01
+                       3.33333333E-01  1.66666667E-01  1.25000000E-01
+              kpt4     0.00000000E+00  8.33333333E-02  0.00000000E+00
+                       8.33333333E-02  0.00000000E+00  0.00000000E+00
+                       0.00000000E+00  2.50000000E-01  0.00000000E+00
+                       8.33333333E-02  1.66666667E-01  0.00000000E+00
+                       1.66666667E-01  8.33333333E-02  0.00000000E+00
+                       2.50000000E-01  0.00000000E+00  0.00000000E+00
+                       0.00000000E+00  4.16666667E-01  0.00000000E+00
+                       8.33333333E-02  3.33333333E-01  0.00000000E+00
+                       1.66666667E-01  2.50000000E-01  0.00000000E+00
+                       2.50000000E-01  1.66666667E-01  0.00000000E+00
+                       3.33333333E-01  8.33333333E-02  0.00000000E+00
+                       4.16666667E-01  0.00000000E+00  0.00000000E+00
+                       8.33333333E-02  5.00000000E-01  0.00000000E+00
+                       1.66666667E-01  4.16666667E-01  0.00000000E+00
+                       2.50000000E-01  3.33333333E-01  0.00000000E+00
+                       3.33333333E-01  2.50000000E-01  0.00000000E+00
+                       4.16666667E-01  1.66666667E-01  0.00000000E+00
+                       5.00000000E-01  8.33333333E-02  0.00000000E+00
+                       8.33333333E-02 -3.33333333E-01  0.00000000E+00
+                       1.66666667E-01 -4.16666667E-01  0.00000000E+00
+                       2.50000000E-01  5.00000000E-01  0.00000000E+00
+                       3.33333333E-01  4.16666667E-01  0.00000000E+00
+                       4.16666667E-01  3.33333333E-01  0.00000000E+00
+                       5.00000000E-01  2.50000000E-01  0.00000000E+00
+                      -4.16666667E-01  1.66666667E-01  0.00000000E+00
+                      -3.33333333E-01  8.33333333E-02  0.00000000E+00
+                       8.33333333E-02 -1.66666667E-01  0.00000000E+00
+                       1.66666667E-01 -2.50000000E-01  0.00000000E+00
+                       2.50000000E-01 -3.33333333E-01  0.00000000E+00
+                       3.33333333E-01 -4.16666667E-01  0.00000000E+00
+                       4.16666667E-01  5.00000000E-01  0.00000000E+00
+                       5.00000000E-01  4.16666667E-01  0.00000000E+00
+                      -4.16666667E-01  3.33333333E-01  0.00000000E+00
+                      -3.33333333E-01  2.50000000E-01  0.00000000E+00
+                      -2.50000000E-01  1.66666667E-01  0.00000000E+00
+                      -1.66666667E-01  8.33333333E-02  0.00000000E+00
+                       0.00000000E+00  0.00000000E+00  1.25000000E-01
+                       0.00000000E+00  1.66666667E-01  1.25000000E-01
+                       8.33333333E-02  8.33333333E-02  1.25000000E-01
+                       1.66666667E-01  0.00000000E+00  1.25000000E-01
+                       0.00000000E+00  3.33333333E-01  1.25000000E-01
+                       8.33333333E-02  2.50000000E-01  1.25000000E-01
+                       1.66666667E-01  1.66666667E-01  1.25000000E-01
+                       2.50000000E-01  8.33333333E-02  1.25000000E-01
+                       3.33333333E-01  0.00000000E+00  1.25000000E-01
+                       0.00000000E+00  5.00000000E-01  1.25000000E-01
+                       8.33333333E-02  4.16666667E-01  1.25000000E-01
+                       1.66666667E-01  3.33333333E-01  1.25000000E-01
+                       2.50000000E-01  2.50000000E-01  1.25000000E-01
+                       3.33333333E-01  1.66666667E-01  1.25000000E-01
+              kpt5     0.00000000E+00  8.33333333E-02  0.00000000E+00
+                       8.33333333E-02  0.00000000E+00  0.00000000E+00
+                       0.00000000E+00  2.50000000E-01  0.00000000E+00
+                       8.33333333E-02  1.66666667E-01  0.00000000E+00
+                       1.66666667E-01  8.33333333E-02  0.00000000E+00
+                       2.50000000E-01  0.00000000E+00  0.00000000E+00
+                       0.00000000E+00  4.16666667E-01  0.00000000E+00
+                       8.33333333E-02  3.33333333E-01  0.00000000E+00
+                       1.66666667E-01  2.50000000E-01  0.00000000E+00
+                       2.50000000E-01  1.66666667E-01  0.00000000E+00
+                       3.33333333E-01  8.33333333E-02  0.00000000E+00
+                       4.16666667E-01  0.00000000E+00  0.00000000E+00
+                       8.33333333E-02  5.00000000E-01  0.00000000E+00
+                       1.66666667E-01  4.16666667E-01  0.00000000E+00
+                       2.50000000E-01  3.33333333E-01  0.00000000E+00
+                       3.33333333E-01  2.50000000E-01  0.00000000E+00
+                       4.16666667E-01  1.66666667E-01  0.00000000E+00
+                       5.00000000E-01  8.33333333E-02  0.00000000E+00
+                       8.33333333E-02 -3.33333333E-01  0.00000000E+00
+                       1.66666667E-01 -4.16666667E-01  0.00000000E+00
+                       2.50000000E-01  5.00000000E-01  0.00000000E+00
+                       3.33333333E-01  4.16666667E-01  0.00000000E+00
+                       4.16666667E-01  3.33333333E-01  0.00000000E+00
+                       5.00000000E-01  2.50000000E-01  0.00000000E+00
+                      -4.16666667E-01  1.66666667E-01  0.00000000E+00
+                      -3.33333333E-01  8.33333333E-02  0.00000000E+00
+                       8.33333333E-02 -1.66666667E-01  0.00000000E+00
+                       1.66666667E-01 -2.50000000E-01  0.00000000E+00
+                       2.50000000E-01 -3.33333333E-01  0.00000000E+00
+                       3.33333333E-01 -4.16666667E-01  0.00000000E+00
+                       4.16666667E-01  5.00000000E-01  0.00000000E+00
+                       5.00000000E-01  4.16666667E-01  0.00000000E+00
+                      -4.16666667E-01  3.33333333E-01  0.00000000E+00
+                      -3.33333333E-01  2.50000000E-01  0.00000000E+00
+                      -2.50000000E-01  1.66666667E-01  0.00000000E+00
+                      -1.66666667E-01  8.33333333E-02  0.00000000E+00
+                       0.00000000E+00  0.00000000E+00  1.25000000E-01
+                       0.00000000E+00  1.66666667E-01  1.25000000E-01
+                       8.33333333E-02  8.33333333E-02  1.25000000E-01
+                       1.66666667E-01  0.00000000E+00  1.25000000E-01
+                       0.00000000E+00  3.33333333E-01  1.25000000E-01
+                       8.33333333E-02  2.50000000E-01  1.25000000E-01
+                       1.66666667E-01  1.66666667E-01  1.25000000E-01
+                       2.50000000E-01  8.33333333E-02  1.25000000E-01
+                       3.33333333E-01  0.00000000E+00  1.25000000E-01
+                       0.00000000E+00  5.00000000E-01  1.25000000E-01
+                       8.33333333E-02  4.16666667E-01  1.25000000E-01
+                       1.66666667E-01  3.33333333E-01  1.25000000E-01
+                       2.50000000E-01  2.50000000E-01  1.25000000E-01
+                       3.33333333E-01  1.66666667E-01  1.25000000E-01
+                       outvar_i_n : Printing only first  50 k-points.
+           kptopt1          1
+           kptopt2          2
+           kptopt3          2
+           kptopt4          2
+           kptopt5          2
+         kptrlatt       12    0    0      6    6   -4      0    0    8
+          kptrlen      7.58453675E+01
+P           mkmem1          7
+P           mkmem2          4
+P           mkmem3          4
+P           mkmem4          4
+P           mkmem5          4
+P          mkqmem1          7
+P          mkqmem2          4
+P          mkqmem3          4
+P          mkqmem4          4
+P          mkqmem5          4
+P          mk1mem1          7
+P          mk1mem2          4
+P          mk1mem3          4
+P          mk1mem4          4
+P          mk1mem5          4
+            natom          64
+            nband1        128
+            nband2        128
+            nband3        128
+            nband4        128
+            nband5        128
+           ndtset           5
+            ngfft          64     108      50
+             nkpt1        122
+             nkpt2        288
+             nkpt3        288
+             nkpt4        288
+             nkpt5        288
+-          npband1          2
+-          npband2          1
+-          npband3          1
+-          npband4          1
+-          npband5          1
+-           npfft1          2
+-           npfft2          1
+-           npfft3          1
+-           npfft4          1
+-           npfft5          1
+-        np_spkpt1         18
+-        np_spkpt2         72
+-        np_spkpt3          1
+-        np_spkpt4          1
+-        np_spkpt5          1
+             nsym          32
+           ntypat           2
+              occ1     2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000
+              occ3     2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000
+              occ4     2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000
+              occ5     2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000
+        optdriver1          0
+        optdriver2          0
+        optdriver3          1
+        optdriver4          1
+        optdriver5          5
+           ortalg1         -2
+           ortalg2          2
+           ortalg3          2
+           ortalg4          2
+           ortalg5          2
+        paral_kgb1          1
+        paral_kgb2          0
+        paral_kgb3          0
+        paral_kgb4          0
+        paral_kgb5          0
+          prepanl1          0
+          prepanl2          0
+          prepanl3          0
+          prepanl4          1
+          prepanl5          0
+           prtden1          1
+           prtden2          0
+           prtden3          0
+           prtden4          1
+           prtden5          0
+           prteig           0
+           prtpot1          0
+           prtpot2          0
+           prtpot3          1
+           prtpot4          1
+           prtpot5          0
+            prtwf1          1
+            prtwf2          1
+            prtwf3          1
+            prtwf4          1
+            prtwf5          0
+           rfelfd1          0
+           rfelfd2          0
+           rfelfd3          2
+           rfelfd4          3
+           rfelfd5          0
+           rfphon1          0
+           rfphon2          0
+           rfphon3          0
+           rfphon4          1
+           rfphon5          0
+           rfstrs1          0
+           rfstrs2          0
+           rfstrs3          0
+           rfstrs4          3
+           rfstrs5          0
+            rprim      1.1824348962E+01  0.0000000000E+00  0.0000000000E+00
+                       0.0000000000E+00  2.0480375542E+01  0.0000000000E+00
+                       0.0000000000E+00  0.0000000000E+00  9.4806709360E+00
+           shiftk      0.00000000E+00 -5.00000000E-01  1.00000000E+00
+           symrel      1  0  0   0  1  0   0  0  1       1  0  0   0  1  0   0  0  1
+                       1  0  0   0  1  0   0  0  1       1  0  0   0  1  0   0  0  1
+                       1  0  0   0  1  0   0  0  1       1  0  0   0  1  0   0  0  1
+                       1  0  0   0  1  0   0  0  1       1  0  0   0  1  0   0  0  1
+                       1  0  0   0 -1  0   0  0  1       1  0  0   0 -1  0   0  0  1
+                       1  0  0   0 -1  0   0  0  1       1  0  0   0 -1  0   0  0  1
+                       1  0  0   0 -1  0   0  0  1       1  0  0   0 -1  0   0  0  1
+                       1  0  0   0 -1  0   0  0  1       1  0  0   0 -1  0   0  0  1
+                      -1  0  0   0 -1  0   0  0  1      -1  0  0   0 -1  0   0  0  1
+                      -1  0  0   0 -1  0   0  0  1      -1  0  0   0 -1  0   0  0  1
+                      -1  0  0   0 -1  0   0  0  1      -1  0  0   0 -1  0   0  0  1
+                      -1  0  0   0 -1  0   0  0  1      -1  0  0   0 -1  0   0  0  1
+                      -1  0  0   0  1  0   0  0  1      -1  0  0   0  1  0   0  0  1
+                      -1  0  0   0  1  0   0  0  1      -1  0  0   0  1  0   0  0  1
+                      -1  0  0   0  1  0   0  0  1      -1  0  0   0  1  0   0  0  1
+                      -1  0  0   0  1  0   0  0  1      -1  0  0   0  1  0   0  0  1
+            tnons      0.0000000  0.0000000  0.0000000    -0.2500000 -0.2500000  0.0000000
+                       0.5000000  0.0000000  0.0000000     0.5000000  0.5000000  0.0000000
+                       0.2500000  0.2500000  0.0000000     0.0000000  0.5000000  0.0000000
+                      -0.2500000  0.2500000  0.0000000     0.2500000 -0.2500000  0.0000000
+                       0.5000000  0.0000000  0.5000000     0.0000000  0.0000000  0.5000000
+                      -0.2500000  0.2500000  0.5000000     0.0000000  0.5000000  0.5000000
+                       0.5000000  0.5000000  0.5000000     0.2500000 -0.2500000  0.5000000
+                      -0.2500000 -0.2500000  0.5000000     0.2500000  0.2500000  0.5000000
+                       0.3333333  0.2500000  0.5000000     0.0833333  0.0000000  0.5000000
+                      -0.1666667 -0.2500000  0.5000000    -0.4166667  0.0000000  0.5000000
+                       0.0833333  0.5000000  0.5000000     0.3333333 -0.2500000  0.5000000
+                      -0.4166667  0.5000000  0.5000000    -0.1666667  0.2500000  0.5000000
+                       0.0833333  0.0000000  0.0000000     0.3333333 -0.2500000  0.0000000
+                      -0.1666667  0.2500000  0.0000000    -0.4166667  0.0000000  0.0000000
+                       0.0833333  0.5000000  0.0000000     0.3333333  0.2500000  0.0000000
+                      -0.4166667  0.5000000  0.0000000    -0.1666667 -0.2500000  0.0000000
+           toldfe1     1.00000000E-12 Hartree
+           toldfe2     0.00000000E+00 Hartree
+           toldfe3     0.00000000E+00 Hartree
+           toldfe4     0.00000000E+00 Hartree
+           toldfe5     0.00000000E+00 Hartree
+           tolvrs1     0.00000000E+00
+           tolvrs2     0.00000000E+00
+           tolvrs3     0.00000000E+00
+           tolvrs4     1.00000000E-12
+           tolvrs5     0.00000000E+00
+           tolwfr1     0.00000000E+00
+           tolwfr2     1.00000000E-22
+           tolwfr3     1.00000000E-22
+           tolwfr4     0.00000000E+00
+           tolwfr5     0.00000000E+00
+            typat      1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1  1
+                       1  1  1  1  1  1  1  1  1  1  1  1  2  2  2  2  2  2  2  2
+                       2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2  2
+                       2  2  2  2
+         wfoptalg1        114
+         wfoptalg2          0
+         wfoptalg3          0
+         wfoptalg4          0
+         wfoptalg5          0
+              wtk1       0.00347    0.00347    0.00347    0.00694    0.00694    0.00347
+                         0.00347    0.00694    0.00694    0.00694    0.00694    0.00347
+                         0.00347    0.00694    0.00694    0.00694    0.00694    0.00347
+                         0.00347    0.00694    0.00694    0.00347    0.00347    0.00347
+                         0.00347    0.00694    0.01389    0.00694    0.00694    0.01389
+                         0.01389    0.01389    0.00694    0.00347    0.01389    0.01389
+                         0.01389    0.01389    0.01389    0.00347    0.00694    0.01389
+                         0.01389    0.01389    0.00694    0.00694    0.01389    0.00694
+                         0.00347    0.00694
+              wtk2       0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347
+              wtk3       0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347
+              wtk4       0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347
+              wtk5       0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347    0.00347    0.00347    0.00347    0.00347
+                         0.00347    0.00347
+                       outvars : Printing only first  50 k-points.
+           xangst      1.5642929840E+00  9.0314560688E-01  5.0133778926E+00
+                       5.2143143244E+00  9.0314560688E-01  5.0133778926E+00
+                       6.2571749666E+00  9.0314565769E+00  5.0133778926E+00
+                       4.6928809724E+00  9.9346023531E+00  2.5049004018E+00
+                       1.5642929840E+00  9.9346023531E+00  2.5049004018E+00
+                       5.2143234168E-01  1.8062913831E+00  2.5049004018E+00
+                       4.6928809724E+00  9.0314560688E-01  5.0133778926E+00
+                       5.2143234168E-01  9.0314565769E+00  5.0133778926E+00
+                       5.2143143244E+00  9.9346023531E+00  2.5049004018E+00
+                       6.2571749666E+00  1.8062913831E+00  2.5049004018E+00
+                       4.6928809724E+00  6.3220195869E+00  5.0133778926E+00
+                       3.1285869782E+00  3.6125825969E+00  5.0133778926E+00
+                       1.5642929840E+00  4.5157283731E+00  2.5049004018E+00
+                       3.6500203301E+00  7.2251653631E+00  2.5049004018E+00
+                       1.5642929840E+00  6.3220195869E+00  5.0133778926E+00
+                       3.6500203301E+00  3.6125825969E+00  5.0133778926E+00
+                       4.6928809724E+00  4.5157283731E+00  2.5049004018E+00
+                       3.1285869782E+00  7.2251653631E+00  2.5049004018E+00
+                       2.0857263359E+00  9.0314560688E-01  5.0133778926E+00
+                       2.0857263359E+00  9.9346023531E+00  2.5049004018E+00
+                       5.2143143244E+00  4.5157283731E+00  2.5049004018E+00
+                       5.2143143244E+00  6.3220195869E+00  5.0133778926E+00
+                      -1.0102732027E-06  3.6125825969E+00  5.0133778926E+00
+                       5.2143234168E-01  3.6125825969E+00  5.0133778926E+00
+                      -1.0102732027E-06  7.2251653631E+00  2.5049004018E+00
+                       5.2143234168E-01  7.2251653631E+00  2.5049004018E+00
+                       2.0857263359E+00  4.5157283731E+00  2.5049004018E+00
+                       2.0857263359E+00  6.3220195869E+00  5.0133778926E+00
+                       3.1285869782E+00  9.0314565769E+00  5.0133778926E+00
+                       3.6500203301E+00  9.0314565769E+00  5.0133778926E+00
+                       3.1285869782E+00  1.8062913831E+00  2.5049004018E+00
+                       3.6500203301E+00  1.8062913831E+00  2.5049004018E+00
+                       1.5642929840E+00  9.0314560688E-01  1.9100199819E+00
+                       5.2143143244E+00  9.0314560688E-01  1.9100199819E+00
+                       6.2571749666E+00  9.0314565769E+00  1.9100199819E+00
+                       4.6928809724E+00  9.9346023531E+00  4.4184974726E+00
+                       1.5642929840E+00  9.9346023531E+00  4.4184974726E+00
+                       5.2143234168E-01  1.8062913831E+00  4.4184974726E+00
+                       4.6928809724E+00  9.0314560688E-01  1.9100199819E+00
+                       5.2143234168E-01  9.0314565769E+00  1.9100199819E+00
+                       5.2143143244E+00  9.9346023531E+00  4.4184974726E+00
+                       6.2571749666E+00  1.8062913831E+00  4.4184974726E+00
+                       4.6928809724E+00  6.3220195869E+00  1.9100199819E+00
+                       3.1285869782E+00  3.6125825969E+00  1.9100199819E+00
+                       1.5642929840E+00  4.5157283731E+00  4.4184974726E+00
+                       3.6500203301E+00  7.2251653631E+00  4.4184974726E+00
+                       1.5642929840E+00  6.3220195869E+00  1.9100199819E+00
+                       3.6500203301E+00  3.6125825969E+00  1.9100199819E+00
+                       4.6928809724E+00  4.5157283731E+00  4.4184974726E+00
+                       3.1285869782E+00  7.2251653631E+00  4.4184974726E+00
+                       2.0857263359E+00  9.0314560688E-01  1.9100199819E+00
+                       2.0857263359E+00  9.9346023531E+00  4.4184974726E+00
+                       5.2143143244E+00  4.5157283731E+00  4.4184974726E+00
+                       5.2143143244E+00  6.3220195869E+00  1.9100199819E+00
+                      -1.0102732027E-06  3.6125825969E+00  1.9100199819E+00
+                       5.2143234168E-01  3.6125825969E+00  1.9100199819E+00
+                      -1.0102732027E-06  7.2251653631E+00  4.4184974726E+00
+                       5.2143234168E-01  7.2251653631E+00  4.4184974726E+00
+                       2.0857263359E+00  4.5157283731E+00  4.4184974726E+00
+                       2.0857263359E+00  6.3220195869E+00  1.9100199819E+00
+                       3.1285869782E+00  9.0314565769E+00  1.9100199819E+00
+                       3.6500203301E+00  9.0314565769E+00  1.9100199819E+00
+                       3.1285869782E+00  1.8062913831E+00  4.4184974726E+00
+                       3.6500203301E+00  1.8062913831E+00  4.4184974726E+00
+            xcart      2.9560853313E+00  1.7066978551E+00  9.4739112176E+00
+                       9.8536260438E+00  1.7066978551E+00  9.4739112176E+00
+                       1.1824347052E+01  1.7066979511E+01  9.4739112176E+00
+                       8.8682598121E+00  1.8773677686E+01  4.7335757496E+00
+                       2.9560853313E+00  1.8773677686E+01  4.7335757496E+00
+                       9.8536432261E-01  3.4133960303E+00  4.7335757496E+00
+                       8.8682598121E+00  1.7066978551E+00  9.4739112176E+00
+                       9.8536432261E-01  1.7066979511E+01  9.4739112176E+00
+                       9.8536260438E+00  1.8773677686E+01  4.7335757496E+00
+                       1.1824347052E+01  3.4133960303E+00  4.7335757496E+00
+                       8.8682598121E+00  1.1946885626E+01  9.4739112176E+00
+                       5.9121725717E+00  6.8267917405E+00  9.4739112176E+00
+                       2.9560853313E+00  8.5334899157E+00  4.7335757496E+00
+                       6.8975388034E+00  1.3653583801E+01  4.7335757496E+00
+                       2.9560853313E+00  1.1946885626E+01  9.4739112176E+00
+                       6.8975388034E+00  6.8267917405E+00  9.4739112176E+00
+                       8.8682598121E+00  8.5334899157E+00  4.7335757496E+00
+                       5.9121725717E+00  1.3653583801E+01  4.7335757496E+00
+                       3.9414515630E+00  1.7066978551E+00  9.4739112176E+00
+                       3.9414515630E+00  1.8773677686E+01  4.7335757496E+00
+                       9.8536260438E+00  8.5334899157E+00  4.7335757496E+00
+                       9.8536260438E+00  1.1946885626E+01  9.4739112176E+00
+                      -1.9091396726E-06  6.8267917405E+00  9.4739112176E+00
+                       9.8536432261E-01  6.8267917405E+00  9.4739112176E+00
+                      -1.9091396726E-06  1.3653583801E+01  4.7335757496E+00
+                       9.8536432261E-01  1.3653583801E+01  4.7335757496E+00
+                       3.9414515630E+00  8.5334899157E+00  4.7335757496E+00
+                       3.9414515630E+00  1.1946885626E+01  9.4739112176E+00
+                       5.9121725717E+00  1.7066979511E+01  9.4739112176E+00
+                       6.8975388034E+00  1.7066979511E+01  9.4739112176E+00
+                       5.9121725717E+00  3.4133960303E+00  4.7335757496E+00
+                       6.8975388034E+00  3.4133960303E+00  4.7335757496E+00
+                       2.9560853313E+00  1.7066978551E+00  3.6094146741E+00
+                       9.8536260438E+00  1.7066978551E+00  3.6094146741E+00
+                       1.1824347052E+01  1.7066979511E+01  3.6094146741E+00
+                       8.8682598121E+00  1.8773677686E+01  8.3497501421E+00
+                       2.9560853313E+00  1.8773677686E+01  8.3497501421E+00
+                       9.8536432261E-01  3.4133960303E+00  8.3497501421E+00
+                       8.8682598121E+00  1.7066978551E+00  3.6094146741E+00
+                       9.8536432261E-01  1.7066979511E+01  3.6094146741E+00
+                       9.8536260438E+00  1.8773677686E+01  8.3497501421E+00
+                       1.1824347052E+01  3.4133960303E+00  8.3497501421E+00
+                       8.8682598121E+00  1.1946885626E+01  3.6094146741E+00
+                       5.9121725717E+00  6.8267917405E+00  3.6094146741E+00
+                       2.9560853313E+00  8.5334899157E+00  8.3497501421E+00
+                       6.8975388034E+00  1.3653583801E+01  8.3497501421E+00
+                       2.9560853313E+00  1.1946885626E+01  3.6094146741E+00
+                       6.8975388034E+00  6.8267917405E+00  3.6094146741E+00
+                       8.8682598121E+00  8.5334899157E+00  8.3497501421E+00
+                       5.9121725717E+00  1.3653583801E+01  8.3497501421E+00
+                       3.9414515630E+00  1.7066978551E+00  3.6094146741E+00
+                       3.9414515630E+00  1.8773677686E+01  8.3497501421E+00
+                       9.8536260438E+00  8.5334899157E+00  8.3497501421E+00
+                       9.8536260438E+00  1.1946885626E+01  3.6094146741E+00
+                      -1.9091396726E-06  6.8267917405E+00  3.6094146741E+00
+                       9.8536432261E-01  6.8267917405E+00  3.6094146741E+00
+                      -1.9091396726E-06  1.3653583801E+01  8.3497501421E+00
+                       9.8536432261E-01  1.3653583801E+01  8.3497501421E+00
+                       3.9414515630E+00  8.5334899157E+00  8.3497501421E+00
+                       3.9414515630E+00  1.1946885626E+01  3.6094146741E+00
+                       5.9121725717E+00  1.7066979511E+01  3.6094146741E+00
+                       6.8975388034E+00  1.7066979511E+01  3.6094146741E+00
+                       5.9121725717E+00  3.4133960303E+00  8.3497501421E+00
+                       6.8975388034E+00  3.4133960303E+00  8.3497501421E+00
+             xred      2.4999983854E-01  8.3333328125E-02  9.9928700000E-01
+                       8.3333349479E-01  8.3333328125E-02  9.9928700000E-01
+                       9.9999983854E-01  8.3333332813E-01  9.9928700000E-01
+                       7.4999983854E-01  9.1666667187E-01  4.9928700000E-01
+                       2.4999983854E-01  9.1666667187E-01  4.9928700000E-01
+                       8.3333494792E-02  1.6666667188E-01  4.9928700000E-01
+                       7.4999983854E-01  8.3333328125E-02  9.9928700000E-01
+                       8.3333494792E-02  8.3333332813E-01  9.9928700000E-01
+                       8.3333349479E-01  9.1666667187E-01  4.9928700000E-01
+                       9.9999983854E-01  1.6666667188E-01  4.9928700000E-01
+                       7.4999983854E-01  5.8333332813E-01  9.9928700000E-01
+                       4.9999983854E-01  3.3333332812E-01  9.9928700000E-01
+                       2.4999983854E-01  4.1666667188E-01  4.9928700000E-01
+                       5.8333349479E-01  6.6666667187E-01  4.9928700000E-01
+                       2.4999983854E-01  5.8333332813E-01  9.9928700000E-01
+                       5.8333349479E-01  3.3333332812E-01  9.9928700000E-01
+                       7.4999983854E-01  4.1666667188E-01  4.9928700000E-01
+                       4.9999983854E-01  6.6666667187E-01  4.9928700000E-01
+                       3.3333349479E-01  8.3333328125E-02  9.9928700000E-01
+                       3.3333349479E-01  9.1666667187E-01  4.9928700000E-01
+                       8.3333349479E-01  4.1666667188E-01  4.9928700000E-01
+                       8.3333349479E-01  5.8333332813E-01  9.9928700000E-01
+                      -1.6145833303E-07  3.3333332812E-01  9.9928700000E-01
+                       8.3333494792E-02  3.3333332812E-01  9.9928700000E-01
+                      -1.6145833303E-07  6.6666667187E-01  4.9928700000E-01
+                       8.3333494792E-02  6.6666667187E-01  4.9928700000E-01
+                       3.3333349479E-01  4.1666667188E-01  4.9928700000E-01
+                       3.3333349479E-01  5.8333332813E-01  9.9928700000E-01
+                       4.9999983854E-01  8.3333332813E-01  9.9928700000E-01
+                       5.8333349479E-01  8.3333332813E-01  9.9928700000E-01
+                       4.9999983854E-01  1.6666667188E-01  4.9928700000E-01
+                       5.8333349479E-01  1.6666667188E-01  4.9928700000E-01
+                       2.4999983854E-01  8.3333328125E-02  3.8071300000E-01
+                       8.3333349479E-01  8.3333328125E-02  3.8071300000E-01
+                       9.9999983854E-01  8.3333332813E-01  3.8071300000E-01
+                       7.4999983854E-01  9.1666667187E-01  8.8071300000E-01
+                       2.4999983854E-01  9.1666667187E-01  8.8071300000E-01
+                       8.3333494792E-02  1.6666667188E-01  8.8071300000E-01
+                       7.4999983854E-01  8.3333328125E-02  3.8071300000E-01
+                       8.3333494792E-02  8.3333332813E-01  3.8071300000E-01
+                       8.3333349479E-01  9.1666667187E-01  8.8071300000E-01
+                       9.9999983854E-01  1.6666667188E-01  8.8071300000E-01
+                       7.4999983854E-01  5.8333332813E-01  3.8071300000E-01
+                       4.9999983854E-01  3.3333332812E-01  3.8071300000E-01
+                       2.4999983854E-01  4.1666667188E-01  8.8071300000E-01
+                       5.8333349479E-01  6.6666667187E-01  8.8071300000E-01
+                       2.4999983854E-01  5.8333332813E-01  3.8071300000E-01
+                       5.8333349479E-01  3.3333332812E-01  3.8071300000E-01
+                       7.4999983854E-01  4.1666667188E-01  8.8071300000E-01
+                       4.9999983854E-01  6.6666667187E-01  8.8071300000E-01
+                       3.3333349479E-01  8.3333328125E-02  3.8071300000E-01
+                       3.3333349479E-01  9.1666667187E-01  8.8071300000E-01
+                       8.3333349479E-01  4.1666667188E-01  8.8071300000E-01
+                       8.3333349479E-01  5.8333332813E-01  3.8071300000E-01
+                      -1.6145833303E-07  3.3333332812E-01  3.8071300000E-01
+                       8.3333494792E-02  3.3333332812E-01  3.8071300000E-01
+                      -1.6145833303E-07  6.6666667187E-01  8.8071300000E-01
+                       8.3333494792E-02  6.6666667187E-01  8.8071300000E-01
+                       3.3333349479E-01  4.1666667188E-01  8.8071300000E-01
+                       3.3333349479E-01  5.8333332813E-01  3.8071300000E-01
+                       4.9999983854E-01  8.3333332813E-01  3.8071300000E-01
+                       5.8333349479E-01  8.3333332813E-01  3.8071300000E-01
+                       4.9999983854E-01  1.6666667188E-01  8.8071300000E-01
+                       5.8333349479E-01  1.6666667188E-01  8.8071300000E-01
+            znucl       13.00000    7.00000
+
+================================================================================
+
+ chkinp: Checking input parameters for consistency, jdtset=   1.
+ Slater exchange
+ P. A. M. Dirac.,  Math. Proc. Cambridge Philos. Soc. 26, 376 (1930)
+ F. Bloch.,  Z. Phys. 57, 545 (1929)
+ Perdew & Wang
+ J. P. Perdew and Y. Wang.,  Phys. Rev. B 45, 13244 (1992)
+
+
+ chkinp: Checking input parameters for consistency, jdtset=   2.
+ Slater exchange
+ P. A. M. Dirac.,  Math. Proc. Cambridge Philos. Soc. 26, 376 (1930)
+ F. Bloch.,  Z. Phys. 57, 545 (1929)
+ Perdew & Wang
+ J. P. Perdew and Y. Wang.,  Phys. Rev. B 45, 13244 (1992)
+
+
+ chkinp: Checking input parameters for consistency, jdtset=   3.
+ Slater exchange
+ P. A. M. Dirac.,  Math. Proc. Cambridge Philos. Soc. 26, 376 (1930)
+ F. Bloch.,  Z. Phys. 57, 545 (1929)
+ Perdew & Wang
+ J. P. Perdew and Y. Wang.,  Phys. Rev. B 45, 13244 (1992)
+
+
+ chkint_prt: ERROR -
+ Context: the value of the variable optdriver is 1.
+ Context: the value of the variable chkparal is 1.
+  The value of the input variable autoparal is 1, while it must be
+  equal to 0
+  Action: you should change one of the input variables autoparal,
+   optdriver or chkparal.
+
+ chkinp: Checking input parameters for consistency, jdtset=   4.
+ Slater exchange
+ P. A. M. Dirac.,  Math. Proc. Cambridge Philos. Soc. 26, 376 (1930)
+ F. Bloch.,  Z. Phys. 57, 545 (1929)
+ Perdew & Wang
+ J. P. Perdew and Y. Wang.,  Phys. Rev. B 45, 13244 (1992)
+
+
+ chkint_prt: ERROR -
+ Context: the value of the variable optdriver is 1.
+ Context: the value of the variable chkparal is 1.
+  The value of the input variable autoparal is 1, while it must be
+  equal to 0
+  Action: you should change one of the input variables autoparal,
+   optdriver or chkparal.
+
+ chkinp: Checking input parameters for consistency, jdtset=   5.
+ Slater exchange
+ P. A. M. Dirac.,  Math. Proc. Cambridge Philos. Soc. 26, 376 (1930)
+ F. Bloch.,  Z. Phys. 57, 545 (1929)
+ Perdew & Wang
+ J. P. Perdew and Y. Wang.,  Phys. Rev. B 45, 13244 (1992)
+
+
+ chkint_prt: ERROR -
+ Context: the value of the variable optdriver is 5.
+ Context: the value of the variable chkparal is 1.
+  The value of the input variable autoparal is 1, while it must be
+  equal to 0
+  Action: you should change one of the input variables autoparal,
+   optdriver or chkparal.
+
+ chkint_prt: ERROR -
+ Context: the value of the variable optdriver is 5.
+  The value of the input variable autoparal is 1, while it must be
+  equal to 0
+  Action: you should change the input variables autoparal or optdriver.
+TACC:  MPI job exited with code: 13 
+TACC:  Shutdown complete. Exiting. 

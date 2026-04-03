@@ -1,0 +1,15 @@
+TACC:  Starting up job 2994449 
+TACC:  Starting parallel tasks... 
+
+--- !ERROR
+src_file: m_argparse.F90
+src_line: 154
+mpi_rank: 0
+message: |
+    Cannot find input file: AlNSc3_2.abi
+...
+
+
+ abinit_abort: decision taken to exit. Check above messages for more info
+TACC:  MPI job exited with code: 13 
+TACC:  Shutdown complete. Exiting. 

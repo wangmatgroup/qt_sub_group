@@ -1,0 +1,175 @@
+#Structural optimisation
+
+#ndtset 6    jdtset 1 2 3 4 5 6
+
+#  ngkpt1  6  6  6
+#  ngkpt2  8  8  8
+#  ngkpt3 10 10 10
+#  ngkpt4 12 12 12
+#  ngkpt5 14 14 14
+#  ngkpt6 16 16 16
+
+  ngkpt  6  6  4   # In the present example, only this grid of k points is considered
+                   # A full convergence study on k points should be done, see the above lines.
+
+#Definition of the unit cell
+#**********************************
+
+
+# the following norm-conserving pseudopotentials are stored in the abinit distribution, but are freely
+# available through www.pseudo-dojo.org
+# this set uses the Perdew-Wang parameterization of LDA for the xc model
+ pp_dirpath "$ABI_PSPDIR"
+ pseudos "Psdj_nc_sr_04_pw_std_psp8/Al.psp8, Psdj_nc_sr_04_pw_std_psp8/N.psp8"
+
+ # Structure
+ natom 64
+ ntypat 2
+ typat
+ 1 1 1
+ 1 1 1
+ 1 1 1
+ 1 1 1
+ 1 1 1
+ 1 1 1
+ 1 1 1
+ 1 1 1
+ 1 1 1
+ 1 1 1
+ 1 1 2
+ 2 2 2
+ 2 2 2
+ 2 2 2
+ 2 2 2
+ 2 2 2
+ 2 2 2
+ 2 2 2
+ 2 2 2
+ 2 2 2
+ 2 2 2
+ 2
+ znucl 13 7
+ xred
+    0.2500000000    0.0833330000    0.9992870000
+    0.8333335000    0.0833335000    0.9992870000
+    0.9999995000    0.8333335000    0.9992870000
+    0.7500000000    0.9166670000    0.4992870000
+    0.2499995000    0.9166665000    0.4992870000
+    0.0833335000    0.1666665000    0.4992870000
+    0.7500000000    0.0833330000    0.9992870000
+    0.0833335000    0.8333335000    0.9992870000
+    0.8333335000    0.9166665000    0.4992870000
+    0.9999995000    0.1666665000    0.4992870000
+    0.7500000000    0.5833330000    0.9992870000
+    0.4999995000    0.3333335000    0.9992870000
+    0.2500000000    0.4166670000    0.4992870000
+    0.5833335000    0.6666665000    0.4992870000
+    0.2500000000    0.5833330000    0.9992870000
+    0.5833335000    0.3333335000    0.9992870000
+    0.7500000000    0.4166670000    0.4992870000
+    0.4999995000    0.6666665000    0.4992870000
+    0.3333335000    0.0833335000    0.9992870000
+    0.3333335000    0.9166665000    0.4992870000
+    0.8333335000    0.4166665000    0.4992870000
+    0.8333335000    0.5833335000    0.9992870000
+    0.0000000000    0.3333330000    0.9992870000
+    0.0833335000    0.3333335000    0.9992870000
+    0.0000000000    0.6666670000    0.4992870000
+    0.0833335000    0.6666665000    0.4992870000
+    0.3333335000    0.4166665000    0.4992870000
+    0.3333335000    0.5833335000    0.9992870000
+    0.5000000000    0.8333330000    0.9992870000
+    0.5833335000    0.8333335000    0.9992870000
+    0.5000000000    0.1666670000    0.4992870000
+    0.5833335000    0.1666665000    0.4992870000
+    0.2500000000    0.0833330000    0.3807130000
+    0.8333335000    0.0833335000    0.3807130000
+    0.9999995000    0.8333335000    0.3807130000
+    0.7500000000    0.9166670000    0.8807130000
+    0.2499995000    0.9166665000    0.8807130000
+    0.0833335000    0.1666665000    0.8807130000
+    0.7500000000    0.0833330000    0.3807130000
+    0.0833335000    0.8333335000    0.3807130000
+    0.8333335000    0.9166665000    0.8807130000
+    0.9999995000    0.1666665000    0.8807130000
+    0.7500000000    0.5833330000    0.3807130000
+    0.4999995000    0.3333335000    0.3807130000
+    0.2500000000    0.4166670000    0.8807130000
+    0.5833335000    0.6666665000    0.8807130000
+    0.2500000000    0.5833330000    0.3807130000
+    0.5833335000    0.3333335000    0.3807130000
+    0.7500000000    0.4166670000    0.8807130000
+    0.4999995000    0.6666665000    0.8807130000
+    0.3333335000    0.0833335000    0.3807130000
+    0.3333335000    0.9166665000    0.8807130000
+    0.8333335000    0.4166665000    0.8807130000
+    0.8333335000    0.5833335000    0.3807130000
+    0.0000000000    0.3333330000    0.3807130000
+    0.0833335000    0.3333335000    0.3807130000
+    0.0000000000    0.6666670000    0.8807130000
+    0.0833335000    0.6666665000    0.8807130000
+    0.3333335000    0.4166665000    0.8807130000
+    0.3333335000    0.5833335000    0.3807130000
+    0.5000000000    0.8333330000    0.3807130000
+    0.5833335000    0.8333335000    0.3807130000
+    0.5000000000    0.1666670000    0.8807130000
+    0.5833335000    0.1666665000    0.8807130000
+ acell    1.0    1.0    1.0
+ rprim
+   11.8243489616    0.0000000000    0.0000000000
+    0.0000000000   20.4803755416    0.0000000000
+    0.0000000000    0.0000000000    9.4806709360
+chkprim 0 # we aren't using primitive unit cell
+
+nband 128 # nband is restricted here to the number of filled bands only, no empty bands.
+nbdbuf 0
+
+
+#Numerical parameters of the calculation : planewave basis set and k point grid
+ecut  30
+        # in a production environment this should be checked carefully for convergence and
+        # a more reasonable value is probably around 30
+ecutsm 0.5
+dilatmx 1.05
+nshiftk 4 # this Monkhorst-Pack shift pattern is used so that the symmetry of the shifted grid
+          # is correct. A gamma-centered grid would also have the correct symmetry but would be
+          # less efficient.
+shiftk 0.5 0.5 0.5
+       0.5 0.0 0.0
+       0.0 0.5 0.0
+       0.0 0.0 0.5
+
+# scf parameters
+nstep 30  # limit number of steps for the tutorial, in general this should be set to its
+         # default (30) or higher
+
+# suppress printing of density, wavefunctions, etc except what is
+# explicitly requested above in the ndtset section
+prtwf 0
+prtden 0
+prteig 0
+
+#Structural relaxation
+#*********************
+   geoopt "bfgs"
+   optcell 2
+   tolvrs 1.0d-15
+   tolmxf 5.0d-6
+   ntime 100
+
+##############################################################
+# This section is used only for regression testing of ABINIT #
+##############################################################
+#%%<BEGIN TEST_INFO>
+#%% [setup]
+#%% executable = abinit
+#%% [files]
+#%% files_to_test =
+#%%   tnlo_1.abo, tolnlines=  1, tolabs=  4.192e-06, tolrel=  8.000e-05, fld_options=-medium
+#%% [paral_info]
+#%% max_nprocs = 2
+#%% [extra_info]
+#%% authors = J. Zwanziger, M. Veithen, P. Ghosez
+#%% keywords =
+#%% description = Structural optimisation
+#%%<END TEST_INFO>

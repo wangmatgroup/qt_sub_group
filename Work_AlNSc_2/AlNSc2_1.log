@@ -1,0 +1,2772 @@
+TACC:  Starting up job 2981060 
+TACC:  Starting parallel tasks... 
+  ABINIT 10.4.3-d
+  
+ABI_PSPDIR  found in environment, with value /work/11236/unmeshtok/ls6/modules/abinit-10.4.3/tests//Pspdir/
+-instrng: 110 lines of input have been read from file AlNSc2_1.abi
+
+
+.Version 10.4.3-d of ABINIT, released May 2025.
+.(MPI version, prepared for a x86_64_linux_gnu13.2 computer) 
+
+.Copyright (C) 1998-2025 ABINIT group . 
+ ABINIT comes with ABSOLUTELY NO WARRANTY.
+ It is free software, and you are welcome to redistribute it
+ under certain conditions (GNU General Public License,
+ see ~abinit/COPYING or http://www.gnu.org/copyleft/gpl.txt).
+
+ ABINIT is a project of the Universite Catholique de Louvain,
+ Corning Inc. and other collaborators, see ~abinit/doc/developers/contributors.txt .
+ Please read https://docs.abinit.org/theory/acknowledgments for suggested
+ acknowledgments of the ABINIT effort.
+ For more information, see https://www.abinit.org .
+
+.Starting date : Sat  7 Mar 2026.
+- ( at 21h38 )
+  
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+ === Build Information === 
+  Version       : 10.4.3-d
+  Build target  : x86_64_linux_gnu13.2
+  Build date    : 20260205
+
+ === Compiler Suite === 
+  C compiler       : gnu13.2
+  C++ compiler     : gnu13.2
+  Fortran compiler : gnu13.2
+  CFLAGS           : -g -O2 -march=native
+  CXXFLAGS         : -g -O2 -march=native
+  FCFLAGS          : -g -ffree-line-length-none -fallow-argument-mismatch -fopenmp    -f ...
+  FC_LDFLAGS       : 
+
+ === Optimizations === 
+  Debug level        : basic
+  Optimization level : standard
+  Architecture       : amd_epyc
+
+ === Multicore === 
+  Parallel build : /scratch/projects/compilers/intel24.1/oneapi/mpi/2021.12
+  Parallel I/O   : 
+  openMP support : yes
+  GPU support    : @with_gpu@
+
+ === Connectors / Fallbacks === 
+  LINALG flavor  : mkl
+  FFT flavor     : dfti
+  HDF5           : yes
+  NetCDF         : yes
+  NetCDF Fortran : yes
+  LibXC          : yes
+  Wannier90      : yes
+
+ === Experimental features === 
+  Exports             : @enable_exports@
+  GW double-precision : 
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ Default optimizations:
+   -O2 -march=native
+
+
+ Optimizations for 43_ptgroups:
+   -O0
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ CPP options activated during the build:
+
+                    CC_GNU                   CXX_GNU                    FC_GNU
+ 
+                 HAVE_DFTI HAVE_FC_ALLOCATABLE_DT...             HAVE_FC_ASYNC
+ 
+         HAVE_FC_BACKTRACE  HAVE_FC_COMMAND_ARGUMENT      HAVE_FC_COMMAND_LINE
+ 
+        HAVE_FC_CONTIGUOUS           HAVE_FC_CPUTIME              HAVE_FC_EXIT
+ 
+             HAVE_FC_FLUSH             HAVE_FC_GAMMA            HAVE_FC_GETENV
+ 
+   HAVE_FC_IEEE_ARITHMETIC   HAVE_FC_IEEE_EXCEPTIONS          HAVE_FC_INT_QUAD
+ 
+             HAVE_FC_IOMSG     HAVE_FC_ISO_C_BINDING  HAVE_FC_ISO_FORTRAN_2008
+ 
+        HAVE_FC_LONG_LINES        HAVE_FC_MOVE_ALLOC  HAVE_FC_ON_THE_FLY_SHAPE
+ 
+           HAVE_FC_PRIVATE         HAVE_FC_PROTECTED           HAVE_FC_SHIFTLR
+ 
+         HAVE_FC_STREAM_IO            HAVE_FC_SYSTEM          HAVE_FORTRAN2003
+ 
+                 HAVE_HDF5             HAVE_HDF5_MPI        HAVE_LIBPAW_ABINIT
+ 
+      HAVE_LIBTETRA_ABINIT                HAVE_LIBXC         HAVE_LINALG_AXPBY
+ 
+        HAVE_LINALG_GEMM3M         HAVE_LINALG_GEMMT  HAVE_LINALG_MKL_IMATCOPY
+ 
+   HAVE_LINALG_MKL_OMATADD  HAVE_LINALG_MKL_OMATCOPY   HAVE_LINALG_MKL_THREADS
+ 
+     HAVE_LINALG_SCALAPACK                  HAVE_MPI                 HAVE_MPI2
+ 
+         HAVE_MPI2_INPLACE       HAVE_MPI_IALLGATHER       HAVE_MPI_IALLREDUCE
+ 
+        HAVE_MPI_IALLTOALL       HAVE_MPI_IALLTOALLV           HAVE_MPI_IBCAST
+ 
+         HAVE_MPI_IGATHERV        HAVE_MPI_INTEGER16               HAVE_MPI_IO
+ 
+ HAVE_MPI_TYPE_CREATE_S...               HAVE_NETCDF       HAVE_NETCDF_FORTRAN
+ 
+   HAVE_NETCDF_FORTRAN_MPI           HAVE_NETCDF_MPI         HAVE_OMP_COLLAPSE
+ 
+               HAVE_OPENMP             HAVE_OS_LINUX         HAVE_TIMER_ABINIT
+ 
+            HAVE_WANNIER90                                                      
+ ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+- input  file    -> AlNSc2_1.abi
+- output file    -> AlNSc2_1.abo
+- root for input  files -> AlNSc2_1i
+- root for output files -> AlNSc2_1o
+
+ abinit : after writing the name of files
+ Netcdf library supports MPI-IO
+ABI_PSPDIR  found in environment, with value /work/11236/unmeshtok/ls6/modules/abinit-10.4.3/tests//Pspdir/
+-instrng: 110 lines of input have been read from file AlNSc2_1.abi
+
+ For atom type 1, psp file is /work/11236/unmeshtok/ls6/modules/abinit-10.4.3/tests//Pspdir/Psdj_nc_sr_04_pw_std_psp8/Al.psp8
+ For atom type 2, psp file is /work/11236/unmeshtok/ls6/modules/abinit-10.4.3/tests//Pspdir/Psdj_nc_sr_04_pw_std_psp8/Sc.psp8
+ For atom type 3, psp file is /work/11236/unmeshtok/ls6/modules/abinit-10.4.3/tests//Pspdir/Psdj_nc_sr_04_pw_std_psp8/N.psp8
+  read the values zionpsp=  3.0 , pspcod=   8 , lmax=   2
+  read the values zionpsp= 11.0 , pspcod=   8 , lmax=   2
+  read the values zionpsp=  5.0 , pspcod=   8 , lmax=   1
+
+ inpspheads: deduce mpsang = 3, n1xccc = 2501.
+
+======================================================= 
+ invars1m : enter jdtset= 0
+  xred   is defined in input file
+ ingeo: takes atomic coordinates from input array xred
+
+--- !COMMENT
+src_file: m_symfind.F90
+src_line: 831
+message: |
+    The tolerance on symmetries =   1.000E-05 is bigger than 1.0e-8.
+    In order to avoid spurious effects, the atomic coordinates have been
+    symmetrized before storing them in the dataset internal variable.
+    So, do not be surprised by the fact that your input variables (xcart, xred, ...)
+    do not correspond exactly to the ones echoed by ABINIT, the latter being used to do the calculations.
+    This is not a problem per se.
+    Still, in order to avoid this symmetrization (e.g. for specific debugging/development), decrease tolsym to 1.0e-8 or lower,
+    or (much preferred) use input primitive vectors that are accurate to better than 1.0e-8.
+    This message will only be printed once, even if there are other datasets where tolsym is bigger than 1.0e-8.
+...
+
+
+ symlatt: the Bravais lattice is oP (primitive orthorhombic)
+
+--- !COMMENT
+src_file: m_symfind.F90
+src_line: 1298
+message: |
+    The Bravais lattice determined only from the primitive
+    vectors, bravais(1)=  3, is more symmetric
+    than the real one, iholohedry=  1, obtained by taking into
+    account the atomic positions. Start deforming the primitive vector set.
+...
+
+
+ symlatt: the Bravais lattice is aP (primitive triclinic)
+ symspgr: spgroup=   1  P1   (=C1^1)
+ invars2: take the default value of fband=  1.25000000E-01
+ Slater exchange
+ P. A. M. Dirac.,  Math. Proc. Cambridge Philos. Soc. 26, 376 (1930)
+ F. Bloch.,  Z. Phys. 57, 545 (1929)
+ Perdew & Wang
+ J. P. Perdew and Y. Wang.,  Phys. Rev. B 45, 13244 (1992)
+
+
+ initocc_chkneu: image=   1, nelect_occ=  0.20799999999997E+03, zval=  0.20800000E+03,
+         and input value of cellcharge=  0.00000000000000E+00,
+   nelec_occ is computed from occ and wtk, iimage=    1
+   zval is nominal charge of all nuclei, computed from zion (read in psp),
+   cellcharge is an input variable (usually 0).
+
+--- !WARNING
+src_file: m_dtset.F90
+src_line: 1426
+message: |
+    
+    These should obey zval-nelect_occ=cellcharge-nelectjell to better than:  0.10E-10
+...
+
+Action: check input file for occ,wtk, and cellcharge.
+Note that wtk is NOT automatically normalized when occopt=2,
+but is automatically normalized otherwise.
+
+ getmpw sequential formula gave: 18019
+
+ ====================================================================================================
+ Searching for all possible proc distributions for this input with #CPUs<=216:
+
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ |       np_spkpt|       npfft|      npband|      bandpp|  #MPI(proc)|    WEIGHT|
+ |    1<<   72|    1<<   24|    1<<  108|    1<<  108|    1<<  216|  <=   216|
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ |          72|           1|           3|          36|         216|   200.645|
+ |          72|           1|           3|          18|         216|   200.636|
+ |          72|           1|           3|          12|         216|   200.627|
+ |          72|           1|           3|           6|         216|   200.601|
+ |          72|           1|           3|           4|         216|   200.574|
+ |          72|           1|           3|           2|         216|   200.495|
+ |          72|           1|           3|           1|         216|   200.337|
+ |          72|           3|           1|           1|         216|   198.786|
+ |          36|           3|           2|          54|         216|   197.675|
+ |          72|           3|           1|           2|         216|   195.915|
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ Only the best possible choices for nproc are printed...
+
+ >>> Possible (best) choices for the number of bands (nband) are:
+     with: np_spkpt=72 npfft=1
+     nband=   108 using    216 CPUs =   216 MPI x  1 threads (npband=    3)
+     nband=   110 using    144 CPUs =   144 MPI x  1 threads (npband=    2)
+     nband=   106 using    144 CPUs =   144 MPI x  1 threads (npband=    2)
+     nband=   109 using     72 CPUs =    72 MPI x  1 threads (npband=    1)
+     nband=   107 using     72 CPUs =    72 MPI x  1 threads (npband=    1)
+ >>> The present nband value (   108) seems to be a good choice!
+ ====================================================================================================
+
+
+ For input ecut=  3.000000E+01 best grid ngfft=      60      54      96
+       max ecut=  3.162380E+01
+
+ ==== FFT mesh ====
+  FFT mesh divisions ........................    60   54   96
+  Augmented FFT divisions ...................    61   55   96
+  FFT algorithm .............................   512
+  FFT cache size ............................    16
+ getmpw: optimal value of mpw= 6020
+ Symmetries : space group P1 (#  1); Bravais aP (primitive triclinic)
+
+ getdim_nloc: deduce lmnmax  =  18, lnmax  =   6,
+                      lmnmaxso=  18, lnmaxso=   6.
+memory: analysis of memory needs
+================================================================================
+ Values of the parameters that define the memory need of the present run
+     intxc =       0    ionmov =       2      iscf =       7    lmnmax =       6
+     lnmax =       6     mgfft =      96  mpssoang =       3    mqgrid =    4676
+     natom =      32  nloc_mem =       1    nspden =       1   nspinor =       1
+    nsppol =       1      nsym =       1    n1xccc =    2501    ntypat =       3
+    occopt =       1   xclevel =       1
+-    mband =         108        mffmem =           1         mkmem =           1
+       mpw =        6020          nfft =      311040          nkpt =          72
+================================================================================
+P This job should need less than                     120.243 Mbytes of memory.
+  Rough estimation (10% accuracy) of disk space for files :
+_ WF disk file :    714.289 Mbytes ; DEN or POT disk file :      2.375 Mbytes.
+================================================================================
+
+ Biggest array : f_fftgr(disk), with     37.9708 MBytes.
+ memana : allocated an array of     37.971 Mbytes, for testing purposes.
+ memana: allocated     120.243Mbytes, for testing purposes. 
+ The job will continue.
+--------------------------------------------------------------------------------
+------------- Echo of variables that govern the present computation ------------
+--------------------------------------------------------------------------------
+-
+- outvars: echo of selected default values
+-   iomode0 =  0 , fftalg0 =512 , wfoptalg0 =  0
+-
+- outvars: echo of global parameters not present in the input file
+-  max_nthreads =    1
+-
+ -outvars: echo values of preprocessed input variables --------
+ 
+ These variables are accessible in NetCDF format (AlNSc2_1o_OUT.nc)
+
+-          iomode           1
+            acell      1.0000000000E+00  1.0000000000E+00  1.0000000000E+00 Bohr
+              amu      2.69815390E+01  4.49559100E+01  1.40067400E+01
+        autoparal           1
+           bandpp          36
+       chkdilatmx           0
+          chkprim           0
+     densfor_pred           6
+             ecut      3.00000000E+01 Hartree
+-          fftalg         512
+           ionmov           2
+              ixc       -1012
+              kpt      8.33333333E-02  8.33333333E-02  1.25000000E-01
+                       2.50000000E-01  8.33333333E-02  1.25000000E-01
+                       4.16666667E-01  8.33333333E-02  1.25000000E-01
+                      -4.16666667E-01  8.33333333E-02  1.25000000E-01
+                      -2.50000000E-01  8.33333333E-02  1.25000000E-01
+                      -8.33333333E-02  8.33333333E-02  1.25000000E-01
+                       8.33333333E-02  2.50000000E-01  1.25000000E-01
+                       2.50000000E-01  2.50000000E-01  1.25000000E-01
+                       4.16666667E-01  2.50000000E-01  1.25000000E-01
+                      -4.16666667E-01  2.50000000E-01  1.25000000E-01
+                      -2.50000000E-01  2.50000000E-01  1.25000000E-01
+                      -8.33333333E-02  2.50000000E-01  1.25000000E-01
+                       8.33333333E-02  4.16666667E-01  1.25000000E-01
+                       2.50000000E-01  4.16666667E-01  1.25000000E-01
+                       4.16666667E-01  4.16666667E-01  1.25000000E-01
+                      -4.16666667E-01  4.16666667E-01  1.25000000E-01
+                      -2.50000000E-01  4.16666667E-01  1.25000000E-01
+                      -8.33333333E-02  4.16666667E-01  1.25000000E-01
+                       8.33333333E-02 -4.16666667E-01  1.25000000E-01
+                       2.50000000E-01 -4.16666667E-01  1.25000000E-01
+                       4.16666667E-01 -4.16666667E-01  1.25000000E-01
+                      -4.16666667E-01 -4.16666667E-01  1.25000000E-01
+                      -2.50000000E-01 -4.16666667E-01  1.25000000E-01
+                      -8.33333333E-02 -4.16666667E-01  1.25000000E-01
+                       8.33333333E-02 -2.50000000E-01  1.25000000E-01
+                       2.50000000E-01 -2.50000000E-01  1.25000000E-01
+                       4.16666667E-01 -2.50000000E-01  1.25000000E-01
+                      -4.16666667E-01 -2.50000000E-01  1.25000000E-01
+                      -2.50000000E-01 -2.50000000E-01  1.25000000E-01
+                      -8.33333333E-02 -2.50000000E-01  1.25000000E-01
+                       8.33333333E-02 -8.33333333E-02  1.25000000E-01
+                       2.50000000E-01 -8.33333333E-02  1.25000000E-01
+                       4.16666667E-01 -8.33333333E-02  1.25000000E-01
+                      -4.16666667E-01 -8.33333333E-02  1.25000000E-01
+                      -2.50000000E-01 -8.33333333E-02  1.25000000E-01
+                      -8.33333333E-02 -8.33333333E-02  1.25000000E-01
+                       8.33333333E-02  8.33333333E-02  3.75000000E-01
+                       2.50000000E-01  8.33333333E-02  3.75000000E-01
+                       4.16666667E-01  8.33333333E-02  3.75000000E-01
+                      -4.16666667E-01  8.33333333E-02  3.75000000E-01
+                      -2.50000000E-01  8.33333333E-02  3.75000000E-01
+                      -8.33333333E-02  8.33333333E-02  3.75000000E-01
+                       8.33333333E-02  2.50000000E-01  3.75000000E-01
+                       2.50000000E-01  2.50000000E-01  3.75000000E-01
+                       4.16666667E-01  2.50000000E-01  3.75000000E-01
+                      -4.16666667E-01  2.50000000E-01  3.75000000E-01
+                      -2.50000000E-01  2.50000000E-01  3.75000000E-01
+                      -8.33333333E-02  2.50000000E-01  3.75000000E-01
+                       8.33333333E-02  4.16666667E-01  3.75000000E-01
+                       2.50000000E-01  4.16666667E-01  3.75000000E-01
+                       outvar_i_n : Printing only first  50 k-points.
+         kptrlatt        6    0    0      0    6    0      0    0    4
+          kptrlen      6.14410812E+01
+P           mkmem           1
+            natom          32
+            nband         108
+            ngfft          60      54      96
+             nkpt          72
+-          npband           3
+-        np_spkpt          72
+            nstep          50
+             nsym           1
+            ntime         100
+           ntypat           3
+              occ      2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  2.000000  2.000000  2.000000  2.000000
+                       2.000000  2.000000  0.000000  0.000000  0.000000  0.000000
+          optcell           2
+           ortalg          -2
+        paral_kgb           1
+        pawecutdg      3.00000000E+01 Hartree
+           prtden           0
+           prteig           0
+            prtwf           0
+        restartxf          -1
+            rprim      1.1824356512E+01  0.0000000000E+00  0.0000000000E+00
+                       0.0000000000E+00  1.0240180205E+01  0.0000000000E+00
+                       0.0000000000E+00  0.0000000000E+00  1.8961341859E+01
+           shiftk      5.00000000E-01  5.00000000E-01  5.00000000E-01
+          spgroup           1
+           tolmxf      5.00000000E-06
+           tolvrs      1.00000000E-15
+            typat      2  1  2  2  2  1  1  2  2  2  1  2  1  2  1  2  3  3  3  3
+                       3  3  3  3  3  3  3  3  3  3  3  3
+         wfoptalg         114
+              wtk        0.01389    0.01389    0.01389    0.01389    0.01389    0.01389
+                         0.01389    0.01389    0.01389    0.01389    0.01389    0.01389
+                         0.01389    0.01389    0.01389    0.01389    0.01389    0.01389
+                         0.01389    0.01389    0.01389    0.01389    0.01389    0.01389
+                         0.01389    0.01389    0.01389    0.01389    0.01389    0.01389
+                         0.01389    0.01389    0.01389    0.01389    0.01389    0.01389
+                         0.01389    0.01389    0.01389    0.01389    0.01389    0.01389
+                         0.01389    0.01389    0.01389    0.01389    0.01389    0.01389
+                         0.01389    0.01389
+                       outvars : Printing only first  50 k-points.
+           xangst      5.2157036521E+00  1.3547174941E+00  5.0125099559E+00
+                       5.2157036521E+00  1.3547174941E+00  1.0029464934E+01
+                       5.2157036521E+00  4.0641524823E+00  5.0125099559E+00
+                       5.2157036521E+00  4.0641524823E+00  1.0029464934E+01
+                       2.0871136658E+00  0.0000000000E+00  5.0125099559E+00
+                       2.0871136658E+00  0.0000000000E+00  1.0029464934E+01
+                       2.0871136658E+00  2.7094349882E+00  5.0125099559E+00
+                       2.0871136658E+00  2.7094349882E+00  1.0029464934E+01
+                       1.0414763205E+00  1.3547174941E+00  2.5040324669E+00
+                       1.0414763205E+00  1.3547174941E+00  7.5209874450E+00
+                       1.0414763205E+00  4.0641524823E+00  2.5040324669E+00
+                       1.0414763205E+00  4.0641524823E+00  7.5209874450E+00
+                       4.1700663069E+00  0.0000000000E+00  2.5040324669E+00
+                       4.1700663069E+00  0.0000000000E+00  7.5209874450E+00
+                       4.1700663069E+00  2.7094349882E+00  2.5040324669E+00
+                       4.1700663069E+00  2.7094349882E+00  7.5209874450E+00
+                       5.2191951585E+00  1.3547174941E+00  1.9108879138E+00
+                       5.2191951585E+00  1.3547174941E+00  6.9278428918E+00
+                       5.2191951585E+00  4.0641524823E+00  1.9108879138E+00
+                       5.2191951585E+00  4.0641524823E+00  6.9278428918E+00
+                       2.0906051722E+00  0.0000000000E+00  1.9108879138E+00
+                       2.0906051722E+00  0.0000000000E+00  6.9278428918E+00
+                       2.0906051722E+00  2.7094349882E+00  1.9108879138E+00
+                       2.0906051722E+00  2.7094349882E+00  6.9278428918E+00
+                       1.0379848141E+00  1.3547174941E+00  4.4193654028E+00
+                       1.0379848141E+00  1.3547174941E+00  9.4363203809E+00
+                       1.0379848141E+00  4.0641524823E+00  4.4193654028E+00
+                       1.0379848141E+00  4.0641524823E+00  9.4363203809E+00
+                       4.1665748005E+00  0.0000000000E+00  4.4193654028E+00
+                       4.1665748005E+00  0.0000000000E+00  9.4363203809E+00
+                       4.1665748005E+00  2.7094349882E+00  4.4193654028E+00
+                       4.1665748005E+00  2.7094349882E+00  9.4363203809E+00
+            xcart      9.8562514928E+00  2.5600450512E+00  9.4722710551E+00
+                       9.8562514928E+00  2.5600450512E+00  1.8952941985E+01
+                       9.8562514928E+00  7.6801351537E+00  9.4722710551E+00
+                       9.8562514928E+00  7.6801351537E+00  1.8952941985E+01
+                       3.9440732365E+00  0.0000000000E+00  9.4722710551E+00
+                       3.9440732365E+00  0.0000000000E+00  1.8952941985E+01
+                       3.9440732365E+00  5.1200901025E+00  9.4722710551E+00
+                       3.9440732365E+00  5.1200901025E+00  1.8952941985E+01
+                       1.9681050197E+00  2.5600450512E+00  4.7319355903E+00
+                       1.9681050197E+00  2.5600450512E+00  1.4212606520E+01
+                       1.9681050197E+00  7.6801351537E+00  4.7319355903E+00
+                       1.9681050197E+00  7.6801351537E+00  1.4212606520E+01
+                       7.8802832760E+00  0.0000000000E+00  4.7319355903E+00
+                       7.8802832760E+00  0.0000000000E+00  1.4212606520E+01
+                       7.8802832760E+00  5.1200901025E+00  4.7319355903E+00
+                       7.8802832760E+00  5.1200901025E+00  1.4212606520E+01
+                       9.8628494837E+00  2.5600450512E+00  3.6110548277E+00
+                       9.8628494837E+00  2.5600450512E+00  1.3091725757E+01
+                       9.8628494837E+00  7.6801351537E+00  3.6110548277E+00
+                       9.8628494837E+00  7.6801351537E+00  1.3091725757E+01
+                       3.9506712275E+00  0.0000000000E+00  3.6110548277E+00
+                       3.9506712275E+00  0.0000000000E+00  1.3091725757E+01
+                       3.9506712275E+00  5.1200901025E+00  3.6110548277E+00
+                       3.9506712275E+00  5.1200901025E+00  1.3091725757E+01
+                       1.9615070288E+00  2.5600450512E+00  8.3513902924E+00
+                       1.9615070288E+00  2.5600450512E+00  1.7832061222E+01
+                       1.9615070288E+00  7.6801351537E+00  8.3513902924E+00
+                       1.9615070288E+00  7.6801351537E+00  1.7832061222E+01
+                       7.8736852850E+00  0.0000000000E+00  8.3513902924E+00
+                       7.8736852850E+00  0.0000000000E+00  1.7832061222E+01
+                       7.8736852850E+00  5.1200901025E+00  8.3513902924E+00
+                       7.8736852850E+00  5.1200901025E+00  1.7832061222E+01
+             xred      8.3355500000E-01  2.5000000000E-01  4.9955700000E-01
+                       8.3355500000E-01  2.5000000000E-01  9.9955700000E-01
+                       8.3355500000E-01  7.5000000000E-01  4.9955700000E-01
+                       8.3355500000E-01  7.5000000000E-01  9.9955700000E-01
+                       3.3355500000E-01  0.0000000000E+00  4.9955700000E-01
+                       3.3355500000E-01  0.0000000000E+00  9.9955700000E-01
+                       3.3355500000E-01  5.0000000000E-01  4.9955700000E-01
+                       3.3355500000E-01  5.0000000000E-01  9.9955700000E-01
+                       1.6644500000E-01  2.5000000000E-01  2.4955700000E-01
+                       1.6644500000E-01  2.5000000000E-01  7.4955700000E-01
+                       1.6644500000E-01  7.5000000000E-01  2.4955700000E-01
+                       1.6644500000E-01  7.5000000000E-01  7.4955700000E-01
+                       6.6644500000E-01  0.0000000000E+00  2.4955700000E-01
+                       6.6644500000E-01  0.0000000000E+00  7.4955700000E-01
+                       6.6644500000E-01  5.0000000000E-01  2.4955700000E-01
+                       6.6644500000E-01  5.0000000000E-01  7.4955700000E-01
+                       8.3411300000E-01  2.5000000000E-01  1.9044300000E-01
+                       8.3411300000E-01  2.5000000000E-01  6.9044300000E-01
+                       8.3411300000E-01  7.5000000000E-01  1.9044300000E-01
+                       8.3411300000E-01  7.5000000000E-01  6.9044300000E-01
+                       3.3411300000E-01  0.0000000000E+00  1.9044300000E-01
+                       3.3411300000E-01  0.0000000000E+00  6.9044300000E-01
+                       3.3411300000E-01  5.0000000000E-01  1.9044300000E-01
+                       3.3411300000E-01  5.0000000000E-01  6.9044300000E-01
+                       1.6588700000E-01  2.5000000000E-01  4.4044300000E-01
+                       1.6588700000E-01  2.5000000000E-01  9.4044300000E-01
+                       1.6588700000E-01  7.5000000000E-01  4.4044300000E-01
+                       1.6588700000E-01  7.5000000000E-01  9.4044300000E-01
+                       6.6588700000E-01  0.0000000000E+00  4.4044300000E-01
+                       6.6588700000E-01  0.0000000000E+00  9.4044300000E-01
+                       6.6588700000E-01  5.0000000000E-01  4.4044300000E-01
+                       6.6588700000E-01  5.0000000000E-01  9.4044300000E-01
+            znucl       13.00000   21.00000    7.00000
+
+================================================================================
+
+ chkinp: Checking input parameters for consistency.
+ Slater exchange
+ P. A. M. Dirac.,  Math. Proc. Cambridge Philos. Soc. 26, 376 (1930)
+ F. Bloch.,  Z. Phys. 57, 545 (1929)
+ Perdew & Wang
+ J. P. Perdew and Y. Wang.,  Phys. Rev. B 45, 13244 (1992)
+
+
+--- !WARNING
+src_file: m_chkinp.F90
+src_line: 1095
+message: |
+    For optcell > 0, it is highly recommended to set ecutsm > 0 to have better precision on stress (available only if wfoptalg is neither 1 nor 111).
+...
+
+ DATA TYPE INFORMATION: 
+ REAL:      Data type name: REAL(DP) 
+            Kind value:      8
+            Precision:      15
+            Smallest nonnegligible quantity relative to 1:  0.22204460E-015
+            Smallest positive number:                       0.22250739E-307
+            Largest representable number:                   0.17976931E+309
+ INTEGER:   Data type name: INTEGER(default) 
+            Kind value: 4
+            Bit size:   32
+            Largest representable number: 2147483647
+ LOGICAL:   Data type name: LOGICAL 
+            Kind value: 4
+ CHARACTER: Data type name: CHARACTER             Kind value: 1
+
+  ==== OpenMP parallelism is ON ====
+- Max_threads:       1
+- Num_threads:       1
+- Num_procs:         2
+- Dynamic:           F
+ 
+  ==== Using MPI-2 specifications ==== 
+  MPI-IO support is ON
+  xmpi_tag_ub ................      1048575
+  xmpi_bsize_ch ..............            1
+  xmpi_bsize_int .............            4
+  xmpi_bsize_sp ..............            4
+  xmpi_bsize_dp ..............            8
+  xmpi_bsize_spc .............            8
+  xmpi_bsize_dpc .............           16
+  xmpio_bsize_frm ............            4
+  xmpi_address_kind ..........            8
+  xmpi_offset_kind ...........            8
+  MPI_WTICK ..................    4.0893568660111659E-010
+
+================================================================================
+== DATASET  1 ==================================================================
+-   mpi_nproc: 216, omp_nthreads: 1 (-1 if OMP is not activated)
+
+
+--- !COMMENT
+src_file: m_xgScalapack.F90
+src_line: 241
+message: |
+    xgScalapack in auto mode
+...
+
+
+ getdim_nloc: deduce lmnmax  =  18, lnmax  =   6,
+                      lmnmaxso=  18, lnmaxso=   6.
+ Slater exchange
+ P. A. M. Dirac.,  Math. Proc. Cambridge Philos. Soc. 26, 376 (1930)
+ F. Bloch.,  Z. Phys. 57, 545 (1929)
+ Perdew & Wang
+ J. P. Perdew and Y. Wang.,  Phys. Rev. B 45, 13244 (1992)
+
+ Unit cell volume ucvol=  2.2959064E+03 bohr^3
+ Angles (23,13,12)=  9.00000000E+01  9.00000000E+01  9.00000000E+01 degrees
+
+ getcut: wavevector=  0.0000  0.0000  0.0000  ngfft=  60  54  96
+         ecut(hartree)=     30.000   => boxcut(ratio)=   2.05341
+- pspini: atom type   1  psp file is /work/11236/unmeshtok/ls6/modules/abinit-10.4.3/tests//Pspdir/Psdj_nc_sr_04_pw_std_psp8/Al.psp8
+- pspatm: opening atomic psp file    /work/11236/unmeshtok/ls6/modules/abinit-10.4.3/tests//Pspdir/Psdj_nc_sr_04_pw_std_psp8/Al.psp8
+- Al    ONCVPSP-3.3.0  r_core=   1.76802   1.76802   1.70587
+- 13.00000   3.00000    171102                znucl, zion, pspdat
+    8   -1012    2    4       600   0.00000   pspcod,pspxc,lmax,lloc,mmax,r2well
+    5.99000000000000    5.00000000000000    0.00000000000000   rchrg,fchrg,qchrg
+     nproj     2     2     2
+     extension_switch     1
+  valence charge (before rescaling) integrates to:    2.9194977370493271     
+  pspatm : epsatm=    0.57439192
+         --- l  ekb(1:nproj) -->
+             0    5.725870    0.726131
+             1    6.190420    0.914022
+             2   -4.229503   -0.925599
+ pspatm: atomic psp has been read  and splines computed
+
+- pspini: atom type   2  psp file is /work/11236/unmeshtok/ls6/modules/abinit-10.4.3/tests//Pspdir/Psdj_nc_sr_04_pw_std_psp8/Sc.psp8
+- pspatm: opening atomic psp file    /work/11236/unmeshtok/ls6/modules/abinit-10.4.3/tests//Pspdir/Psdj_nc_sr_04_pw_std_psp8/Sc.psp8
+- Sc    ONCVPSP-3.3.0  r_core=   1.35663   1.35663   1.66161
+- 21.00000  11.00000    171102                znucl, zion, pspdat
+    8   -1012    2    4       600   0.00000   pspcod,pspxc,lmax,lloc,mmax,r2well
+    5.99000000000000    5.00000000000000    0.00000000000000   rchrg,fchrg,qchrg
+     nproj     2     2     2
+     extension_switch     1
+  valence charge (before rescaling) integrates to:    10.858704076134954     
+  pspatm : epsatm=   13.66101531
+         --- l  ekb(1:nproj) -->
+             0   10.746050    0.941131
+             1    2.817636    0.353974
+             2   -4.918228   -1.313641
+ pspatm: atomic psp has been read  and splines computed
+
+- pspini: atom type   3  psp file is /work/11236/unmeshtok/ls6/modules/abinit-10.4.3/tests//Pspdir/Psdj_nc_sr_04_pw_std_psp8/N.psp8
+- pspatm: opening atomic psp file    /work/11236/unmeshtok/ls6/modules/abinit-10.4.3/tests//Pspdir/Psdj_nc_sr_04_pw_std_psp8/N.psp8
+- N     ONCVPSP-3.3.0  r_core=   1.20551   1.35824
+-  7.00000   5.00000    171101                znucl, zion, pspdat
+    8   -1012    1    4       600   0.00000   pspcod,pspxc,lmax,lloc,mmax,r2well
+    5.99000000000000    4.00000000000000    0.00000000000000   rchrg,fchrg,qchrg
+     nproj     2     2
+     extension_switch     1
+  valence charge (before rescaling) integrates to:    4.9976087884156435     
+  pspatm : epsatm=    5.30777697
+         --- l  ekb(1:nproj) -->
+             0    7.408032    0.617798
+             1   -4.361519   -1.032581
+ pspatm: atomic psp has been read  and splines computed
+
+   4.67960347E+04                                ecore*ucvol(ha*bohr**3)
+ ==== Info on pseudopotentials ====
+  Norm-conserving pseudopotentials
+  Number of pseudopotentials ..    3
+  Number of types of atoms   ..    3
+  Scalar calculation (no spin-orbit term)
+  Nonlocal part applied using Legendre polynomials
+  Max number of non-local projectors over l and type   2
+  Highest angular momentum +1 .......   3
+  Max number of (l,n)   components ..   6
+  Max number of (l,m,n) components ..   6
+
+ Pseudo-Core Charge Info: 
+   Number of radial points for pseudo-core charge .. 2501
+   XC core-correction treatment (optnlxccc) ........    1
+   Radius for pseudo-core charge for each type ..... 
+
+  - Atom type    1 has pseudo-core radius ..       5.9900
+  - Atom type    2 has pseudo-core radius ..       5.9900
+  - Atom type    3 has pseudo-core radius ..       5.9900
+
+ Info on the Q-grid used for form factors in spline form: 
+   Number of q-points for radial functions ffspl ..   4676
+   Number of q-points for vlspl ...................   4676
+   vloc is computed in Reciprocal Space
+   model core charge treated in real-space
+
+  XC functional for type 1 is -1012
+  Pseudo valence available: yes
+  XC functional for type 2 is -1012
+  Pseudo valence available: yes
+  XC functional for type 3 is -1012
+  Pseudo valence available: yes
+
+ wfconv:   108 bands initialized randomly with npw=  6020, for ikpt=     1
+_setup2: Arith. and geom. avg. npw (full set) are    6006.500    6006.498
+ initro: for itypat=  1, take pseudo charge density from pp file
+ initro: for itypat=  2, take pseudo charge density from pp file
+ initro: for itypat=  3, take pseudo charge density from pp file
+
+================================================================================
+ Could no open AlNSc2_1o_HIST.nc, starting from scratch
+
+=== [ionmov= 2] Broyden-Fletcher-Goldfarb-Shanno method (forces)            
+================================================================================
+
+--- Iteration: (  1/100) Internal Cycle: (1/1)
+--------------------------------------------------------------------------------
+
+ Cartesian coordinates (xcart) [bohr]
+  9.85625149277694E+00  2.56004505125000E+00  9.47227105510642E+00
+  9.85625149277694E+00  2.56004505125000E+00  1.89529419846564E+01
+  9.85625149277694E+00  7.68013515375000E+00  9.47227105510642E+00
+  9.85625149277694E+00  7.68013515375000E+00  1.89529419846564E+01
+  3.94407323652694E+00  0.00000000000000E+00  9.47227105510642E+00
+  3.94407323652694E+00  0.00000000000000E+00  1.89529419846564E+01
+  3.94407323652694E+00  5.12009010250000E+00  9.47227105510642E+00
+  3.94407323652694E+00  5.12009010250000E+00  1.89529419846564E+01
+  1.96810501972306E+00  2.56004505125000E+00  4.73193559033142E+00
+  1.96810501972306E+00  2.56004505125000E+00  1.42126065198814E+01
+  1.96810501972306E+00  7.68013515375000E+00  4.73193559033142E+00
+  1.96810501972306E+00  7.68013515375000E+00  1.42126065198814E+01
+  7.88028327597306E+00  0.00000000000000E+00  4.73193559033142E+00
+  7.88028327597306E+00  0.00000000000000E+00  1.42126065198814E+01
+  7.88028327597306E+00  5.12009010250000E+00  4.73193559033142E+00
+  7.88028327597306E+00  5.12009010250000E+00  1.42126065198814E+01
+  9.86284948371091E+00  2.56004505125000E+00  3.61105482767258E+00
+  9.86284948371091E+00  2.56004505125000E+00  1.30917257572226E+01
+  9.86284948371091E+00  7.68013515375000E+00  3.61105482767258E+00
+  9.86284948371091E+00  7.68013515375000E+00  1.30917257572226E+01
+  3.95067122746091E+00  0.00000000000000E+00  3.61105482767258E+00
+  3.95067122746091E+00  0.00000000000000E+00  1.30917257572226E+01
+  3.95067122746091E+00  5.12009010250000E+00  3.61105482767258E+00
+  3.95067122746091E+00  5.12009010250000E+00  1.30917257572226E+01
+  1.96150702878909E+00  2.56004505125000E+00  8.35139029244758E+00
+  1.96150702878909E+00  2.56004505125000E+00  1.78320612219976E+01
+  1.96150702878909E+00  7.68013515375000E+00  8.35139029244758E+00
+  1.96150702878909E+00  7.68013515375000E+00  1.78320612219976E+01
+  7.87368528503909E+00  0.00000000000000E+00  8.35139029244758E+00
+  7.87368528503909E+00  0.00000000000000E+00  1.78320612219976E+01
+  7.87368528503909E+00  5.12009010250000E+00  8.35139029244758E+00
+  7.87368528503909E+00  5.12009010250000E+00  1.78320612219976E+01
+ Reduced coordinates (xred)
+  8.33555000000000E-01  2.50000000000000E-01  4.99557000000000E-01
+  8.33555000000000E-01  2.50000000000000E-01  9.99557000000000E-01
+  8.33555000000000E-01  7.50000000000000E-01  4.99557000000000E-01
+  8.33555000000000E-01  7.50000000000000E-01  9.99557000000000E-01
+  3.33555000000000E-01  0.00000000000000E+00  4.99557000000000E-01
+  3.33555000000000E-01  0.00000000000000E+00  9.99557000000000E-01
+  3.33555000000000E-01  5.00000000000000E-01  4.99557000000000E-01
+  3.33555000000000E-01  5.00000000000000E-01  9.99557000000000E-01
+  1.66445000000000E-01  2.50000000000000E-01  2.49557000000000E-01
+  1.66445000000000E-01  2.50000000000000E-01  7.49557000000000E-01
+  1.66445000000000E-01  7.50000000000000E-01  2.49557000000000E-01
+  1.66445000000000E-01  7.50000000000000E-01  7.49557000000000E-01
+  6.66445000000000E-01  0.00000000000000E+00  2.49557000000000E-01
+  6.66445000000000E-01  0.00000000000000E+00  7.49557000000000E-01
+  6.66445000000000E-01  5.00000000000000E-01  2.49557000000000E-01
+  6.66445000000000E-01  5.00000000000000E-01  7.49557000000000E-01
+  8.34113000000000E-01  2.50000000000000E-01  1.90443000000000E-01
+  8.34113000000000E-01  2.50000000000000E-01  6.90443000000000E-01
+  8.34113000000000E-01  7.50000000000000E-01  1.90443000000000E-01
+  8.34113000000000E-01  7.50000000000000E-01  6.90443000000000E-01
+  3.34113000000000E-01  0.00000000000000E+00  1.90443000000000E-01
+  3.34113000000000E-01  0.00000000000000E+00  6.90443000000000E-01
+  3.34113000000000E-01  5.00000000000000E-01  1.90443000000000E-01
+  3.34113000000000E-01  5.00000000000000E-01  6.90443000000000E-01
+  1.65887000000000E-01  2.50000000000000E-01  4.40443000000000E-01
+  1.65887000000000E-01  2.50000000000000E-01  9.40443000000000E-01
+  1.65887000000000E-01  7.50000000000000E-01  4.40443000000000E-01
+  1.65887000000000E-01  7.50000000000000E-01  9.40443000000000E-01
+  6.65887000000000E-01  0.00000000000000E+00  4.40443000000000E-01
+  6.65887000000000E-01  0.00000000000000E+00  9.40443000000000E-01
+  6.65887000000000E-01  5.00000000000000E-01  4.40443000000000E-01
+  6.65887000000000E-01  5.00000000000000E-01  9.40443000000000E-01
+ Scale of Primitive Cell (acell) [bohr]
+  1.00000000000000E+00  1.00000000000000E+00  1.00000000000000E+00
+ Real space primitive translations (rprimd) [bohr]
+  1.18243565125000E+01  0.00000000000000E+00  0.00000000000000E+00
+  0.00000000000000E+00  1.02401802050000E+01  0.00000000000000E+00
+  0.00000000000000E+00  0.00000000000000E+00  1.89613418591000E+01
+ Unitary Cell Volume (ucvol) [Bohr^3]=  2.29590642381931E+03
+ Angles (23,13,12)= [degrees]
+  9.00000000000000E+01  9.00000000000000E+01  9.00000000000000E+01
+ Lengths [Bohr]
+  1.18243565125000E+01  1.02401802050000E+01  1.89613418591000E+01
+
+---SELF-CONSISTENT-FIELD CONVERGENCE--------------------------------------------
+
+ getcut: wavevector=  0.0000  0.0000  0.0000  ngfft=  60  54  96
+         ecut(hartree)=     30.000   => boxcut(ratio)=   2.05341
+
+ 1/G**2 cut-off applied in the following step : cutoff-mode = CRYSTAL
+
+ 1/G**2 cut-off applied in the following step : cutoff-mode = CRYSTAL
+
+ 1/G**2 cut-off applied in the following step : cutoff-mode = CRYSTAL
+
+ ITER STEP NUMBER     1
+ Max number of non-self-consistent loops: 2
+ lobpcg%tolerance(tolwfr_diago)=    1.000000E-20
+ Total charge density [el/Bohr^3]
+)     Maximum=    1.0640E+00  at reduced coord.    0.1333    0.2963    0.2604
+)     Minimum=    7.5070E-04  at reduced coord.    0.3333    0.5000    0.5000
+   Integrated=    2.0800E+02
+
+ 1/G**2 cut-off applied in the following step : cutoff-mode = CRYSTAL
+ ETOT  1  -661.12552311922    -6.611E+02 3.233E-02 9.381E+03
+ scprqt: <Vxc>= -4.1950999E-01 hartree
+
+ Simple mixing update:
+  residual square of the potential:    3716.5332936702921
+{SCF_istep: 1 , Vnl|psi>: 432 , wall_time: ' 13.53 [s] '} <<< TIME
+
+ ITER STEP NUMBER     2
+ Max number of non-self-consistent loops: 2
+ Total charge density [el/Bohr^3]
+)     Maximum=    1.2530E+00  at reduced coord.    0.6333    0.0556    0.7604
+)     Minimum=    1.4541E-03  at reduced coord.    0.6667    0.0000    0.2500
+   Integrated=    2.0800E+02
+ ETOT  2  -656.21750882435     4.908E+00 2.180E-02 3.801E+04
+ scprqt: <Vxc>= -4.4752891E-01 hartree
+
+ Pulay update with  1 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.404      0.596
+{SCF_istep: 2 , Vnl|psi>: 432 , wall_time: ' 12.25 [s] '} <<< TIME
+
+ ITER STEP NUMBER     3
+ Total charge density [el/Bohr^3]
+)     Maximum=    1.0851E+00  at reduced coord.    0.3667    0.4444    0.0104
+)     Minimum=    1.1976E-03  at reduced coord.    0.6667    0.5000    0.2500
+   Integrated=    2.0800E+02
+ ETOT  3  -664.67257509915    -8.455E+00 1.043E-02 3.045E+02
+ scprqt: <Vxc>= -4.3673138E-01 hartree
+
+ Pulay update with  2 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.730      0.135      0.135
+{SCF_istep: 3 , Vnl|psi>: 216 , wall_time: '  6.36 [s] '} <<< TIME
+
+ ITER STEP NUMBER     4
+ Total charge density [el/Bohr^3]
+)     Maximum=    1.1001E+00  at reduced coord.    0.6333    0.9444    0.7604
+)     Minimum=    1.1584E-03  at reduced coord.    0.3333    0.0000    0.0000
+   Integrated=    2.0800E+02
+ ETOT  4  -664.73588069900    -6.331E-02 3.299E-03 3.567E+01
+ scprqt: <Vxc>= -4.3578770E-01 hartree
+
+ Pulay update with  3 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.910      0.656E-01  0.300E-01 -0.521E-02
+{SCF_istep: 4 , Vnl|psi>: 216 , wall_time: '  6.35 [s] '} <<< TIME
+
+ ITER STEP NUMBER     5
+ Total charge density [el/Bohr^3]
+)     Maximum=    1.1067E+00  at reduced coord.    0.3667    0.4444    0.0104
+)     Minimum=    1.1721E-03  at reduced coord.    0.6667    0.0000    0.2500
+   Integrated=    2.0800E+02
+ ETOT  5  -664.74101184765    -5.131E-03 3.317E-03 3.553E+01
+ scprqt: <Vxc>= -4.3629804E-01 hartree
+
+ Pulay update with  4 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.593      0.563     -0.123     -0.354E-02 -0.300E-01
+{SCF_istep: 5 , Vnl|psi>: 216 , wall_time: '  6.32 [s] '} <<< TIME
+
+ ITER STEP NUMBER     6
+ Total charge density [el/Bohr^3]
+)     Maximum=    1.1055E+00  at reduced coord.    0.3667    0.4444    0.0104
+)     Minimum=    1.1738E-03  at reduced coord.    0.6667    0.0000    0.2500
+   Integrated=    2.0800E+02
+ ETOT  6  -664.74726564808    -6.254E-03 9.168E-04 1.614E+00
+ scprqt: <Vxc>= -4.3641581E-01 hartree
+
+ Pulay update with  5 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.970      0.405E-01  0.974E-02 -0.145E-01 -0.307E-02
+{SCF_istep: 6 , Vnl|psi>: 216 , wall_time: '  6.33 [s] '} <<< TIME
+
+ ITER STEP NUMBER     7
+ Total charge density [el/Bohr^3]
+)     Maximum=    1.1056E+00  at reduced coord.    0.3667    0.4444    0.0104
+)     Minimum=    1.1721E-03  at reduced coord.    0.6667    0.0000    0.2500
+   Integrated=    2.0800E+02
+ ETOT  7  -664.74730868420    -4.304E-05 1.450E-03 5.032E-01
+ scprqt: <Vxc>= -4.3640330E-01 hartree
+
+ Pulay update with  6 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.699      0.355     -0.237E-01 -0.321E-01  0.304E-02
+{SCF_istep: 7 , Vnl|psi>: 216 , wall_time: '  6.33 [s] '} <<< TIME
+
+ ITER STEP NUMBER     8
+ Total charge density [el/Bohr^3]
+)     Maximum=    1.1056E+00  at reduced coord.    0.3667    0.4444    0.0104
+)     Minimum=    1.1726E-03  at reduced coord.    0.6667    0.0000    0.2500
+   Integrated=    2.0800E+02
+ ETOT  8  -664.74733140235    -2.272E-05 6.523E-04 2.171E-01
+ scprqt: <Vxc>= -4.3639844E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.825      0.325     -0.126     -0.157E-01 -0.105E-01
+{SCF_istep: 8 , Vnl|psi>: 216 , wall_time: '  6.37 [s] '} <<< TIME
+
+ ITER STEP NUMBER     9
+ Total charge density [el/Bohr^3]
+)     Maximum=    1.1056E+00  at reduced coord.    0.3667    0.4444    0.0104
+)     Minimum=    1.1724E-03  at reduced coord.    0.6667    0.0000    0.2500
+   Integrated=    2.0800E+02
+ ETOT  9  -664.74734115211    -9.750E-06 7.643E-04 4.691E-02
+ scprqt: <Vxc>= -4.3639550E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.786      0.304      0.370E-01 -0.117     -0.887E-02
+{SCF_istep: 9 , Vnl|psi>: 216 , wall_time: '  6.35 [s] '} <<< TIME
+
+ ITER STEP NUMBER    10
+ Total charge density [el/Bohr^3]
+)     Maximum=    1.1055E+00  at reduced coord.    0.3667    0.4444    0.0104
+)     Minimum=    1.1724E-03  at reduced coord.    0.6667    0.0000    0.2500
+   Integrated=    2.0800E+02
+ ETOT 10  -664.74734276475    -1.613E-06 9.115E-04 5.761E-03
+ scprqt: <Vxc>= -4.3639482E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=   1.14      0.155E-01 -0.142     -0.348E-01  0.208E-01
+{SCF_istep: 10 , Vnl|psi>: 216 , wall_time: '  6.33 [s] '} <<< TIME
+
+ ITER STEP NUMBER    11
+ Total charge density [el/Bohr^3]
+)     Maximum=    1.1055E+00  at reduced coord.    0.3667    0.4444    0.0104
+)     Minimum=    1.1725E-03  at reduced coord.    0.6667    0.0000    0.2500
+   Integrated=    2.0800E+02
+ ETOT 11  -664.74734290323    -1.385E-07 5.261E-04 5.666E-04
+ scprqt: <Vxc>= -4.3639449E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.595      0.549     -0.691E-01 -0.782E-01 -0.123E-01
+{SCF_istep: 11 , Vnl|psi>: 216 , wall_time: '  6.34 [s] '} <<< TIME
+
+ ITER STEP NUMBER    12
+ Total charge density [el/Bohr^3]
+)     Maximum=    1.1055E+00  at reduced coord.    0.3667    0.4444    0.0104
+)     Minimum=    1.1725E-03  at reduced coord.    0.6667    0.0000    0.2500
+   Integrated=    2.0800E+02
+ ETOT 12  -664.74734296502    -6.179E-08 1.177E-03 7.299E-05
+ scprqt: <Vxc>= -4.3639385E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.821      0.242     -0.202E-02 -0.540E-01 -0.157E-01
+{SCF_istep: 12 , Vnl|psi>: 216 , wall_time: '  6.36 [s] '} <<< TIME
+
+ ITER STEP NUMBER    13
+ Total charge density [el/Bohr^3]
+)     Maximum=    1.1055E+00  at reduced coord.    0.3667    0.4444    0.0104
+)     Minimum=    1.1725E-03  at reduced coord.    0.6667    0.0000    0.2500
+   Integrated=    2.0800E+02
+ ETOT 13  -664.74734297144    -6.424E-09 5.326E-04 4.361E-06
+ scprqt: <Vxc>= -4.3639400E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.894      0.116      0.682E-02 -0.135E-01 -0.325E-02
+{SCF_istep: 13 , Vnl|psi>: 216 , wall_time: '  6.34 [s] '} <<< TIME
+
+ ITER STEP NUMBER    14
+ Total charge density [el/Bohr^3]
+)     Maximum=    1.1055E+00  at reduced coord.    0.3667    0.4444    0.0104
+)     Minimum=    1.1725E-03  at reduced coord.    0.6667    0.0000    0.2500
+   Integrated=    2.0800E+02
+ ETOT 14  -664.74734297155    -1.104E-10 1.089E-03 1.390E-06
+ scprqt: <Vxc>= -4.3639400E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.574      0.468     -0.816E-02 -0.198E-01 -0.159E-01
+{SCF_istep: 14 , Vnl|psi>: 216 , wall_time: '  6.35 [s] '} <<< TIME
+
+ ITER STEP NUMBER    15
+ Total charge density [el/Bohr^3]
+)     Maximum=    1.1055E+00  at reduced coord.    0.3667    0.4444    0.0104
+)     Minimum=    1.1725E-03  at reduced coord.    0.6667    0.0000    0.2500
+   Integrated=    2.0800E+02
+ ETOT 15  -664.74734297179    -2.340E-10 3.181E-04 5.453E-08
+ scprqt: <Vxc>= -4.3639398E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.890      0.139      0.534E-02 -0.284E-01 -0.854E-02
+{SCF_istep: 15 , Vnl|psi>: 216 , wall_time: '  6.34 [s] '} <<< TIME
+
+ ITER STEP NUMBER    16
+ Total charge density [el/Bohr^3]
+)     Maximum=    1.1055E+00  at reduced coord.    0.3667    0.4444    0.0104
+)     Minimum=    1.1725E-03  at reduced coord.    0.6667    0.0000    0.2500
+   Integrated=    2.0800E+02
+ ETOT 16  -664.74734297181    -2.501E-11 4.611E-04 4.602E-08
+ scprqt: <Vxc>= -4.3639399E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.713      0.343      0.334E-02 -0.448E-01 -0.129E-01
+{SCF_istep: 16 , Vnl|psi>: 216 , wall_time: '  6.36 [s] '} <<< TIME
+
+ ITER STEP NUMBER    17
+ Total charge density [el/Bohr^3]
+)     Maximum=    1.1055E+00  at reduced coord.    0.3667    0.4444    0.0104
+)     Minimum=    1.1725E-03  at reduced coord.    0.6667    0.0000    0.2500
+   Integrated=    2.0800E+02
+ ETOT 17  -664.74734297181     5.002E-12 1.818E-04 9.698E-09
+ scprqt: <Vxc>= -4.3639399E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.615      0.345      0.837E-01 -0.126E-01 -0.289E-01
+{SCF_istep: 17 , Vnl|psi>: 216 , wall_time: '  6.33 [s] '} <<< TIME
+
+ ITER STEP NUMBER    18
+ Total charge density [el/Bohr^3]
+)     Maximum=    1.1055E+00  at reduced coord.    0.3667    0.4444    0.0104
+)     Minimum=    1.1725E-03  at reduced coord.    0.6667    0.0000    0.2500
+   Integrated=    2.0800E+02
+ ETOT 18  -664.74734297179     1.512E-11 1.441E-04 9.261E-10
+ scprqt: <Vxc>= -4.3639399E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=   1.00      0.457E-01 -0.467E-01 -0.969E-02  0.609E-02
+{SCF_istep: 18 , Vnl|psi>: 216 , wall_time: '  6.34 [s] '} <<< TIME
+
+ ITER STEP NUMBER    19
+ Total charge density [el/Bohr^3]
+)     Maximum=    1.1055E+00  at reduced coord.    0.3667    0.4444    0.0104
+)     Minimum=    1.1725E-03  at reduced coord.    0.6667    0.0000    0.2500
+   Integrated=    2.0800E+02
+ ETOT 19  -664.74734297179    -1.819E-12 5.522E-05 3.232E-10
+ scprqt: <Vxc>= -4.3639399E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.657      0.484     -0.732E-01 -0.633E-01 -0.126E-01
+{SCF_istep: 19 , Vnl|psi>: 216 , wall_time: '  6.35 [s] '} <<< TIME
+
+ ITER STEP NUMBER    20
+ Total charge density [el/Bohr^3]
+)     Maximum=    1.1055E+00  at reduced coord.    0.3667    0.4444    0.0104
+)     Minimum=    1.1725E-03  at reduced coord.    0.6667    0.0000    0.2500
+   Integrated=    2.0800E+02
+ ETOT 20  -664.74734297180    -6.253E-12 7.347E-05 9.362E-11
+ scprqt: <Vxc>= -4.3639399E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.687      0.336      0.820E-01 -0.678E-01 -0.364E-01
+{SCF_istep: 20 , Vnl|psi>: 216 , wall_time: '  6.38 [s] '} <<< TIME
+
+ ITER STEP NUMBER    21
+ Total charge density [el/Bohr^3]
+)     Maximum=    1.1055E+00  at reduced coord.    0.3667    0.4444    0.0104
+)     Minimum=    1.1725E-03  at reduced coord.    0.6667    0.0000    0.2500
+   Integrated=    2.0800E+02
+ ETOT 21  -664.74734297182    -1.933E-11 2.765E-05 8.646E-12
+ scprqt: <Vxc>= -4.3639399E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.718      0.270      0.696E-01 -0.369E-01 -0.184E-01
+{SCF_istep: 21 , Vnl|psi>: 216 , wall_time: '  6.36 [s] '} <<< TIME
+
+ ITER STEP NUMBER    22
+ Total charge density [el/Bohr^3]
+)     Maximum=    1.1055E+00  at reduced coord.    0.3667    0.4444    0.0104
+)     Minimum=    1.1725E-03  at reduced coord.    0.6667    0.0000    0.2500
+   Integrated=    2.0800E+02
+ ETOT 22  -664.74734297181     1.046E-11 2.849E-05 2.724E-12
+ scprqt: <Vxc>= -4.3639399E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.727      0.290      0.660E-02 -0.745E-02 -0.122E-01
+{SCF_istep: 22 , Vnl|psi>: 216 , wall_time: '  6.34 [s] '} <<< TIME
+
+ ITER STEP NUMBER    23
+ Total charge density [el/Bohr^3]
+)     Maximum=    1.1055E+00  at reduced coord.    0.3667    0.4444    0.0104
+)     Minimum=    1.1725E-03  at reduced coord.    0.6667    0.0000    0.2500
+   Integrated=    2.0800E+02
+ ETOT 23  -664.74734297180     8.754E-12 2.211E-05 5.112E-13
+ scprqt: <Vxc>= -4.3639399E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.855      0.236     -0.132E-01 -0.585E-01 -0.235E-01
+{SCF_istep: 23 , Vnl|psi>: 216 , wall_time: '  6.36 [s] '} <<< TIME
+
+ ITER STEP NUMBER    24
+ Total charge density [el/Bohr^3]
+)     Maximum=    1.1055E+00  at reduced coord.    0.3667    0.4444    0.0104
+)     Minimum=    1.1725E-03  at reduced coord.    0.6667    0.0000    0.2500
+   Integrated=    2.0800E+02
+ ETOT 24  -664.74734297179     6.935E-12 2.630E-05 9.775E-14
+ scprqt: <Vxc>= -4.3639399E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.658      0.413     -0.971E-02 -0.356E-01 -0.215E-01
+{SCF_istep: 24 , Vnl|psi>: 216 , wall_time: '  6.36 [s] '} <<< TIME
+
+ ITER STEP NUMBER    25
+ Total charge density [el/Bohr^3]
+)     Maximum=    1.1055E+00  at reduced coord.    0.3667    0.4444    0.0104
+)     Minimum=    1.1725E-03  at reduced coord.    0.6667    0.0000    0.2500
+   Integrated=    2.0800E+02
+ ETOT 25  -664.74734297182    -2.376E-11 1.602E-05 2.983E-14
+ scprqt: <Vxc>= -4.3639399E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=   1.06      0.993E-01 -0.894E-01 -0.580E-01 -0.126E-01
+{SCF_istep: 25 , Vnl|psi>: 216 , wall_time: '  6.35 [s] '} <<< TIME
+
+ ITER STEP NUMBER    26
+ Total charge density [el/Bohr^3]
+)     Maximum=    1.1055E+00  at reduced coord.    0.3667    0.4444    0.0104
+)     Minimum=    1.1725E-03  at reduced coord.    0.6667    0.0000    0.2500
+   Integrated=    2.0800E+02
+ ETOT 26  -664.74734297181     1.114E-11 1.885E-05 4.448E-15
+ scprqt: <Vxc>= -4.3639399E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.609      0.490     -0.793E-02 -0.700E-01 -0.234E-01
+{SCF_istep: 26 , Vnl|psi>: 216 , wall_time: '  6.37 [s] '} <<< TIME
+
+ ITER STEP NUMBER    27
+ Total charge density [el/Bohr^3]
+)     Maximum=    1.1055E+00  at reduced coord.    0.3667    0.4444    0.0104
+)     Minimum=    1.1725E-03  at reduced coord.    0.6667    0.0000    0.2500
+   Integrated=    2.0800E+02
+ ETOT 27  -664.74734297181    -2.956E-12 9.895E-06 1.521E-15
+ scprqt: <Vxc>= -4.3639399E-01 hartree
+
+ Pulay update with  7 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.819      0.239      0.109E-01 -0.558E-01 -0.275E-01
+{SCF_istep: 27 , Vnl|psi>: 216 , wall_time: '  6.36 [s] '} <<< TIME
+
+ ITER STEP NUMBER    28
+ Total charge density [el/Bohr^3]
+)     Maximum=    1.1055E+00  at reduced coord.    0.3667    0.4444    0.0104
+)     Minimum=    1.1725E-03  at reduced coord.    0.6667    0.0000    0.2500
+   Integrated=    2.0800E+02
+ ETOT 28  -664.74734297182    -1.467E-11 1.649E-05 2.173E-16
+ scprqt: <Vxc>= -4.3639399E-01 hartree
+
+ At SCF step   28       vres2   =  2.17E-16 < tolvrs=  1.00E-15 =>converged.
+ 
+ -------------------------------------------------------------------------------------------------
+ Ekinetic   = :     3.059537E+02 Ha ,    8.325423E+03 eV
+ Evext_l    = :    -5.796640E+02 Ha ,   -1.577346E+04 eV
+ Evext_nl   = :     6.635076E+00 Ha ,    1.805496E+02 eV
+ Epsp_core  = :     2.038238E+01 Ha ,    5.546327E+02 eV
+ Ehartree   = :     1.810864E+02 Ha ,    4.927611E+03 eV
+ Exc_ks     = :    -1.388126E+02 Ha ,   -3.777282E+03 eV
+ Enn        = :    -4.603282E+02 Ha ,   -1.252617E+04 eV
+ -------------------------------------------------------------------------------------------------
+ Etot       = :    -6.647473E+02 Ha ,   -1.808870E+04 eV
+ -------------------------------------------------------------------------------------------------
+ Computing residual forces using atomic densities taken from pseudos
+
+ Cartesian components of stress tensor (hartree/bohr^3)
+  sigma(1 1)= -1.28651430E-04  sigma(3 2)=  1.02238076E-06
+  sigma(2 2)= -2.95881595E-03  sigma(3 1)= -5.73688159E-06
+  sigma(3 3)= -8.42073275E-04  sigma(2 1)=  1.09991305E-06
+
+ Integrated electronic density in atomic spheres:
+ ------------------------------------------------
+ Atom  Sphere_radius  Integrated_density
+    1        2.00000          8.85246763
+    2        2.00000          1.13216796
+    3        2.00000          8.85010993
+    4        2.00000          8.84855626
+    5        2.00000          8.85387029
+    6        2.00000          1.13397700
+    7        2.00000          1.13322404
+    8        2.00000          8.85300398
+    9        2.00000          8.84420581
+   10        2.00000          8.85482135
+   11        2.00000          1.12931745
+   12        2.00000          8.85801242
+   13        2.00000          1.12896854
+   14        2.00000          8.86100623
+   15        2.00000          1.12774309
+   16        2.00000          8.86197325
+   17        2.00000          5.34534544
+   18        2.00000          5.52424512
+   19        2.00000          5.35980082
+   20        2.00000          5.52416991
+   21        2.00000          5.39506257
+   22        2.00000          5.53270772
+   23        2.00000          5.43792290
+   24        2.00000          5.49253195
+   25        2.00000          5.45216201
+   26        2.00000          5.42684077
+   27        2.00000          5.41250793
+   28        2.00000          5.45214727
+   29        2.00000          5.49635797
+   30        2.00000          5.43657473
+   31        2.00000          5.46840851
+   32        2.00000          5.46276320
+- Creating HDf5 file with MPI-IO support: AlNSc2_1o_GSR.nc
+ Write iteration in HIST netCDF file (also create it)
+
+---OUTPUT-----------------------------------------------------------------------
+
+ Cartesian coordinates (xcart) [bohr]
+  9.85625149277694E+00  2.56004505125000E+00  9.47227105510642E+00
+  9.85625149277694E+00  2.56004505125000E+00  1.89529419846564E+01
+  9.85625149277694E+00  7.68013515375000E+00  9.47227105510642E+00
+  9.85625149277694E+00  7.68013515375000E+00  1.89529419846564E+01
+  3.94407323652694E+00  0.00000000000000E+00  9.47227105510642E+00
+  3.94407323652694E+00  0.00000000000000E+00  1.89529419846564E+01
+  3.94407323652694E+00  5.12009010250000E+00  9.47227105510642E+00
+  3.94407323652694E+00  5.12009010250000E+00  1.89529419846564E+01
+  1.96810501972306E+00  2.56004505125000E+00  4.73193559033142E+00
+  1.96810501972306E+00  2.56004505125000E+00  1.42126065198814E+01
+  1.96810501972306E+00  7.68013515375000E+00  4.73193559033142E+00
+  1.96810501972306E+00  7.68013515375000E+00  1.42126065198814E+01
+  7.88028327597306E+00  0.00000000000000E+00  4.73193559033142E+00
+  7.88028327597306E+00  0.00000000000000E+00  1.42126065198814E+01
+  7.88028327597306E+00  5.12009010250000E+00  4.73193559033142E+00
+  7.88028327597306E+00  5.12009010250000E+00  1.42126065198814E+01
+  9.86284948371091E+00  2.56004505125000E+00  3.61105482767258E+00
+  9.86284948371091E+00  2.56004505125000E+00  1.30917257572226E+01
+  9.86284948371091E+00  7.68013515375000E+00  3.61105482767258E+00
+  9.86284948371091E+00  7.68013515375000E+00  1.30917257572226E+01
+  3.95067122746091E+00  0.00000000000000E+00  3.61105482767258E+00
+  3.95067122746091E+00  0.00000000000000E+00  1.30917257572226E+01
+  3.95067122746091E+00  5.12009010250000E+00  3.61105482767258E+00
+  3.95067122746091E+00  5.12009010250000E+00  1.30917257572226E+01
+  1.96150702878909E+00  2.56004505125000E+00  8.35139029244758E+00
+  1.96150702878909E+00  2.56004505125000E+00  1.78320612219976E+01
+  1.96150702878909E+00  7.68013515375000E+00  8.35139029244758E+00
+  1.96150702878909E+00  7.68013515375000E+00  1.78320612219976E+01
+  7.87368528503909E+00  0.00000000000000E+00  8.35139029244758E+00
+  7.87368528503909E+00  0.00000000000000E+00  1.78320612219976E+01
+  7.87368528503909E+00  5.12009010250000E+00  8.35139029244758E+00
+  7.87368528503909E+00  5.12009010250000E+00  1.78320612219976E+01
+ Reduced coordinates (xred)
+  8.33555000000000E-01  2.50000000000000E-01  4.99557000000000E-01
+  8.33555000000000E-01  2.50000000000000E-01  9.99557000000000E-01
+  8.33555000000000E-01  7.50000000000000E-01  4.99557000000000E-01
+  8.33555000000000E-01  7.50000000000000E-01  9.99557000000000E-01
+  3.33555000000000E-01  0.00000000000000E+00  4.99557000000000E-01
+  3.33555000000000E-01  0.00000000000000E+00  9.99557000000000E-01
+  3.33555000000000E-01  5.00000000000000E-01  4.99557000000000E-01
+  3.33555000000000E-01  5.00000000000000E-01  9.99557000000000E-01
+  1.66445000000000E-01  2.50000000000000E-01  2.49557000000000E-01
+  1.66445000000000E-01  2.50000000000000E-01  7.49557000000000E-01
+  1.66445000000000E-01  7.50000000000000E-01  2.49557000000000E-01
+  1.66445000000000E-01  7.50000000000000E-01  7.49557000000000E-01
+  6.66445000000000E-01  0.00000000000000E+00  2.49557000000000E-01
+  6.66445000000000E-01  0.00000000000000E+00  7.49557000000000E-01
+  6.66445000000000E-01  5.00000000000000E-01  2.49557000000000E-01
+  6.66445000000000E-01  5.00000000000000E-01  7.49557000000000E-01
+  8.34113000000000E-01  2.50000000000000E-01  1.90443000000000E-01
+  8.34113000000000E-01  2.50000000000000E-01  6.90443000000000E-01
+  8.34113000000000E-01  7.50000000000000E-01  1.90443000000000E-01
+  8.34113000000000E-01  7.50000000000000E-01  6.90443000000000E-01
+  3.34113000000000E-01  0.00000000000000E+00  1.90443000000000E-01
+  3.34113000000000E-01  0.00000000000000E+00  6.90443000000000E-01
+  3.34113000000000E-01  5.00000000000000E-01  1.90443000000000E-01
+  3.34113000000000E-01  5.00000000000000E-01  6.90443000000000E-01
+  1.65887000000000E-01  2.50000000000000E-01  4.40443000000000E-01
+  1.65887000000000E-01  2.50000000000000E-01  9.40443000000000E-01
+  1.65887000000000E-01  7.50000000000000E-01  4.40443000000000E-01
+  1.65887000000000E-01  7.50000000000000E-01  9.40443000000000E-01
+  6.65887000000000E-01  0.00000000000000E+00  4.40443000000000E-01
+  6.65887000000000E-01  0.00000000000000E+00  9.40443000000000E-01
+  6.65887000000000E-01  5.00000000000000E-01  4.40443000000000E-01
+  6.65887000000000E-01  5.00000000000000E-01  9.40443000000000E-01
+ Cartesian forces (fcart) [Ha/bohr]; max,rms= 1.32325E-01 4.79638E-02 (free atoms)
+  9.68847449280772E-02 -4.26672382049962E-03 -8.19831114156635E-03
+  1.50718352607543E-02  2.26700544493196E-03  1.84512163502723E-02
+  9.64740570594285E-02  4.03034644269461E-03 -1.05702613577928E-02
+  9.71959809555572E-02 -3.00853892665153E-03  5.75346005284795E-03
+  1.01483727283711E-01  1.38394738989014E-03 -4.86185554891193E-03
+  2.21834683848912E-02 -3.59194215304901E-03  1.15800295180422E-02
+  2.05821064969775E-02 -1.31461996726481E-03  7.45249489209863E-03
+  1.04276865128106E-01  6.50652416223742E-03  4.60762731868273E-03
+ -1.02569632596182E-01  5.85664560199376E-03  3.21404150853457E-03
+ -9.40253760853209E-02 -4.64004913956497E-03 -9.56597122571858E-03
+ -2.21058021049369E-02 -4.22475630289812E-03  1.64720254500599E-02
+ -9.16687413373638E-02  5.46430341169490E-03 -4.10524561048724E-03
+ -1.58414562886016E-02  9.53240817560936E-04  7.87993347436236E-03
+ -9.77016396759175E-02  3.80274557896586E-03 -1.82353368260118E-04
+ -1.68414199738877E-02 -8.99916390051496E-04  4.14239562134132E-03
+ -9.44561114388195E-02 -3.99173952022479E-03  9.02083040145009E-04
+ -1.47215158501621E-02 -3.52316096110295E-04 -1.33992747476352E-02
+  7.94476411161539E-02 -5.95806118919467E-04 -5.56682279633104E-03
+  1.81386693765981E-02  2.27728947701537E-04  6.26611824500183E-02
+  8.08813603330064E-02  7.69958934832938E-04 -1.60866256307891E-03
+  8.44215293009901E-02 -5.25288899537009E-02 -3.20858882577137E-02
+  7.83493647812927E-02  9.76427505165785E-05  3.30679318072941E-04
+  6.97438056178617E-02  4.96705036336235E-02  3.38684849394269E-02
+  9.01472410597555E-02  2.73493465805042E-04 -5.95197078196285E-02
+ -3.35511161851639E-02  5.07662562905795E-02  2.35263785023156E-02
+ -7.49028866047930E-02 -5.04242887652664E-02  3.56603106851160E-02
+ -4.33532239931980E-02 -5.21417959531866E-02 -4.04734134724768E-02
+ -3.01269624930458E-02  4.93120453460083E-02  1.79756481951585E-02
+ -8.46843197830036E-02  1.08805419343961E-03 -5.86378495823575E-02
+ -7.48416189976925E-02  4.97079897437965E-02  3.04665680015810E-02
+ -1.32325485678122E-01 -9.48857253397930E-04 -5.06268973132246E-02
+ -3.15650879969508E-02 -4.92481917954870E-02  1.44579554871071E-02
+ Gradient of E wrt nuclear positions in reduced coordinates (gred)
+ -1.14559976465221E+00  4.36920208068822E-02  1.55450980222508E-01
+ -1.78214753420827E-01 -2.32145442818195E-02 -3.49859820933728E-01
+ -1.14074364487795E+00 -4.12714738617735E-02  2.00426339145143E-01
+ -1.14927993040067E+00  3.08079807626690E-02 -1.09093322934725E-01
+ -1.19997977161992E+00 -1.41718706667144E-02  9.21873051324814E-02
+ -2.62305238866726E-01  3.67821349331576E-02 -2.19572898430067E-01
+ -2.43370164998505E-01  1.34619453658829E-02 -1.41309303352279E-01
+ -1.23300682928061E+00 -6.66279799294978E-02 -8.73667967488715E-02
+  1.21281990317339E+00 -5.99731063612368E-02 -6.09425397926614E-02
+  1.11178956805473E+00  4.75149393492005E-02  1.81383650625164E-01
+  2.61386885083547E-01  4.32622658638863E-02 -3.12331705670381E-01
+  1.08392387862514E+00 -5.59554516305520E-02  7.78409654360182E-02
+  1.87315026833611E-01 -9.76135775058551E-03 -1.49414112434350E-01
+  1.15525901938386E+00 -3.89408000023775E-02  3.45766455473845E-03
+  1.99138953947987E-01  9.21530600356039E-03 -7.85453794918916E-02
+  1.11688273643703E+00  4.08761320185221E-02 -1.71047049094857E-02
+  1.74072451816737E-01  3.60778031329152E-03  2.54068229153916E-01
+ -9.39417232634557E-01  6.10116202497700E-03  1.05554430110264E-01
+ -2.14478093371262E-01 -2.33198546235876E-03 -1.18814010173023E+00
+ -9.56370039793443E-01 -7.88451824313913E-03  3.05024007944752E-02
+ -9.98230259785372E-01  5.37905299094511E-01  6.08391496107391E-01
+ -9.26430821701917E-01 -9.99879361001620E-04 -6.27012359571510E-03
+ -8.24675622164098E-01 -5.08634908081411E-01 -6.42191921186253E-01
+ -1.06593311690883E+00 -2.80062237473363E-03  1.12857352732172E+00
+  3.96720359165687E-01 -5.19855612748749E-01 -4.46091705488987E-01
+  8.85678435030433E-01  5.16353803665285E-01 -6.76167341702201E-01
+  5.12623976461842E-01  5.33941386772971E-01  7.67430229056336E-01
+  3.56231945156489E-01 -5.04964230620256E-01 -3.40842410567314E-01
+  1.00133758813279E+00 -1.11418710136276E-02  1.11185231181357E+00
+  8.84953985001409E-01 -5.09018772604768E-01 -5.77687011151494E-01
+  1.56466371834783E+00  9.71646926361615E-03  9.59953907221603E-01
+  3.73236853824381E-01  5.04310358756190E-01 -2.74142236574688E-01
+ Scale of Primitive Cell (acell) [bohr]
+  1.00000000000000E+00  1.00000000000000E+00  1.00000000000000E+00
+ Real space primitive translations (rprimd) [bohr]
+  1.18243565125000E+01  0.00000000000000E+00  0.00000000000000E+00
+  0.00000000000000E+00  1.02401802050000E+01  0.00000000000000E+00
+  0.00000000000000E+00  0.00000000000000E+00  1.89613418591000E+01
+ Unitary Cell Volume (ucvol) [Bohr^3]=  2.29590642381931E+03
+ Angles (23,13,12)= [degrees]
+  9.00000000000000E+01  9.00000000000000E+01  9.00000000000000E+01
+ Lengths [Bohr]
+  1.18243565125000E+01  1.02401802050000E+01  1.89613418591000E+01
+ Stress tensor in cartesian coordinates (strten) [Ha/bohr^3]
+ -1.28651430333604E-04  1.09991304830599E-06 -5.73688159132126E-06
+  1.09991304830599E-06 -2.95881594776322E-03  1.02238075601160E-06
+ -5.73688159132126E-06  1.02238075601160E-06 -8.42073274685272E-04
+ Total energy (etotal) [Ha]= -6.64747342971823E+02
+ fconv : at Broyd/MD step   1, gradients have not converged yet. 
+  max grad (force/stress) = 2.9588E-01 > tolmxf= 5.0000E-06 ha/bohr (free atoms)
+
+Inverse hessian has been initialized.
+
+--- !WARNING
+src_file: m_geometry.F90
+src_line: 1482
+message: |
+    The new primitive vectors rprimd (an evolving quantity)
+    are too large, given the initial rprimd and the accompanying dilatmx:     1.000000E+00
+    An adequate value would have been dilatmx_new=     1.088765E+00
+    As chkdilatmx=0, assume experienced user. Execution will continue.
+...
+
+ EXIT:           1           1
+ {mover_itime: 1 , wall_time: ' 03:12 [minutes] '} <<< TIME
+
+--- Iteration: (  2/100) Internal Cycle: (1/1)
+--------------------------------------------------------------------------------
+
+ Cartesian coordinates (xcart) [bohr]
+  9.99463978194997E+00  2.78140324943790E+00  9.70642524491472E+00
+  9.91578322295791E+00  2.78793913491042E+00  1.94538929542228E+01
+  9.99388824575993E+00  8.36500920739881E+00  9.70367864279656E+00
+  9.99788240850918E+00  8.35676289872343E+00  1.94405889356001E+01
+  4.06442967750732E+00  6.59049286107789E-04  9.70796921556228E+00
+  3.98809271293987E+00 -5.33586901624038E-03  1.94449729858785E+01
+  3.98288233105852E+00  5.57229775867043E+00  9.72025289082661E+00
+  4.07016198699886E+00  5.58022622234344E+00  1.94375380027143E+01
+  1.87419606444352E+00  2.79324903952866E+00  4.85525466216442E+00
+  1.88603296075267E+00  2.78123925990834E+00  1.45623289011811E+01
+  1.95463777819548E+00  8.35683887374417E+00  4.86856180613911E+00
+  1.88806200461644E+00  8.36681225951952E+00  1.45676136871883E+01
+  7.89642641306736E+00  2.28088840330781E-04  4.86226066700742E+00
+  7.81751069278584E+00  2.75485398357255E-03  1.45741398749746E+01
+  7.89508352653457E+00  5.57278296234117E+00  4.85811439931437E+00
+  7.82043173571605E+00  5.56884044474740E+00  1.45749392210237E+01
+  9.88720667340443E+00  2.78603191024286E+00  3.69177307451143E+00
+  9.98500536156464E+00  2.78517854048647E+00  1.34200093386170E+01
+  9.91988192740162E+00  8.36122883829465E+00  3.76945218047957E+00
+  9.98610798736402E+00  8.36123742951793E+00  1.34237538195080E+01
+  4.05190176429664E+00 -5.76774286817587E-02  3.67077371549207E+00
+  4.04907721831316E+00 -9.62688374379324E-04  1.34241773964714E+01
+  4.03684544979338E+00  5.62816279357562E+00  3.73806883878100E+00
+  4.06056211688635E+00  5.57380389441054E+00  1.33625050262877E+01
+  1.93810739556850E+00  2.84191763529098E+00  8.58698894883232E+00
+  1.89987025011226E+00  2.73116537762135E+00  1.83195949023445E+01
+  1.92791431871090E+00  8.30445180625842E+00  8.52106123919074E+00
+  1.94446842022312E+00  8.41432511523880E+00  1.83011586998495E+01
+  7.82191734923154E+00  1.61900298012607E-04  8.50492660686756E+00
+  7.83508886976211E+00  5.25098722527807E-02  1.83164559214378E+01
+  7.77375730287623E+00  5.57251906610063E+00  8.51280957875191E+00
+  7.87819554937736E+00  5.51934025283788E+00  1.82997497818788E+01
+ Reduced coordinates (xred)
+  8.41748658980567E-01  2.49583335084434E-01  4.99124630223510E-01
+  8.34829643169362E-01  2.50221383354545E-01  1.00053009655020E+00
+  8.41713926615367E-01  7.50393581593489E-01  4.98999536217303E-01
+  8.41774980584382E-01  7.49706202540734E-01  9.99860431059658E-01
+  3.42137600429582E-01  1.35148733927006E-04  4.99300591166435E-01
+  3.35431082504908E-01 -3.50769427992602E-04  1.00016771782810E+00
+  3.35295653411052E-01  4.99871621403047E-01  4.99950036260170E-01
+  3.42373819444244E-01  5.00635391568506E-01  9.99800001120539E-01
+  1.57770563256846E-01  2.50571927982198E-01  2.49726504960800E-01
+  1.58493161268994E-01  2.49546878175318E-01  7.49052501357615E-01
+  1.64575485825460E-01  7.49587433402702E-01  2.50425716231819E-01
+  1.58692464693706E-01  7.50533613989432E-01  7.49340493929860E-01
+  6.65105269058037E-01  9.30882854088342E-05  2.49972578893779E-01
+  6.58182255251680E-01  3.71355337780978E-04  7.49547382886949E-01
+  6.65020700930864E-01  4.99912119086575E-01  2.49775465320235E-01
+  6.58456733463976E-01  4.99610188547436E-01  7.49604574852394E-01
+  8.32867983762998E-01  2.49965594736708E-01  1.89736337209613E-01
+  8.40831982215410E-01  2.49941816832615E-01  6.90149411980877E-01
+  8.35647009005684E-01  7.50022238763688E-01  1.93747680803482E-01
+  8.40953233567679E-01  7.50075189979026E-01  6.90358160932437E-01
+  3.41252629899669E-01 -5.12968413661827E-03  1.88750826076016E-01
+  3.40739099669649E-01  9.53525705230277E-06  6.90460439658044E-01
+  3.40011317218711E-01  5.04850549759795E-01  1.92229186082773E-01
+  3.41736860204524E-01  5.00026707876261E-01  6.87303997061183E-01
+  1.63049541898183E-01  2.54957554972108E-01  4.41683754935866E-01
+  1.59552373119830E-01  2.45075839706351E-01  9.42323684972092E-01
+  1.62220565894485E-01  7.44908117346634E-01  4.38308477360557E-01
+  1.63339126679266E-01  7.54815544683670E-01  9.41391015616655E-01
+  6.58725145594352E-01  1.06253422465002E-04  4.37350505280054E-01
+  6.59557554594783E-01  4.85421044832057E-03  9.42049772781588E-01
+  6.54696075103729E-01  4.99907339789496E-01  4.37772993958791E-01
+  6.63217502682021E-01  4.95190690904889E-01  9.41205496430608E-01
+ Scale of Primitive Cell (acell) [bohr]
+  1.18699938472902E+01  1.11491444981331E+01  1.94403481664638E+01
+ Real space primitive translations (rprimd) [bohr]
+  1.18699931238432E+01 -7.80345840955239E-04  4.07009599234685E-03
+ -6.75798469469052E-04  1.11491444599557E+01 -6.28161790780973E-04
+  6.52673838349320E-03 -1.16314266149406E-03  1.94403470360516E+01
+ Unitary Cell Volume (ucvol) [Bohr^3]=  2.57274042316027E+03
+ Angles (23,13,12)= [degrees]
+  9.00066573925764E+01  8.99611176527054E+01  9.00072407394002E+01
+ Lengths [Bohr]
+  1.18699938472902E+01  1.11491444981331E+01  1.94403481664638E+01
+
+---SELF-CONSISTENT-FIELD CONVERGENCE--------------------------------------------
+
+ getcut: wavevector=  0.0000  0.0000  0.0000  ngfft=  60  54  96
+         ecut(hartree)=     30.000   => boxcut(ratio)=   1.96438
+ Extrapolating rho(t+dt) using atomic densities taken from pseudos
+
+ ITER STEP NUMBER     1
+ Max number of non-self-consistent loops: 2
+ lobpcg%tolerance(tolwfr_diago)=    1.000000E-20
+ Total charge density [el/Bohr^3]
+)     Maximum=    1.0631E+00  at reduced coord.    0.6333    0.0556    0.7604
+)     Minimum=    1.2295E-03  at reduced coord.    0.6667    0.0000    0.2500
+   Integrated=    2.0800E+02
+ ETOT  1  -665.11931788144    -6.651E+02 2.981E-03 8.494E+02
+ scprqt: <Vxc>= -4.2015203E-01 hartree
+
+ Simple mixing update:
+  residual square of the potential:    114.22588738496624
+{SCF_istep: 1 , Vnl|psi>: 684 , wall_time: ' 12.75 [s] '} <<< TIME
+
+ ITER STEP NUMBER     2
+ Max number of non-self-consistent loops: 2
+ Total charge density [el/Bohr^3]
+)     Maximum=    1.0661E+00  at reduced coord.    0.3667    0.4444    0.0104
+)     Minimum=    1.0997E-03  at reduced coord.    0.6667    0.0000    0.2500
+   Integrated=    2.0800E+02
+ ETOT  2  -665.14279058895    -2.347E-02 8.796E-04 2.373E+02
+ scprqt: <Vxc>= -4.1537660E-01 hartree
+
+ Pulay update with  1 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.558      0.442
+{SCF_istep: 2 , Vnl|psi>: 432 , wall_time: ' 12.20 [s] '} <<< TIME
+
+ ITER STEP NUMBER     3
+ Total charge density [el/Bohr^3]
+)     Maximum=    1.0787E+00  at reduced coord.    0.6333    0.0556    0.7604
+)     Minimum=    1.1483E-03  at reduced coord.    0.3333    0.5000    0.5000
+   Integrated=    2.0800E+02
+ ETOT  3  -665.21919968164    -7.641E-02 1.503E-03 6.667E+01
+ scprqt: <Vxc>= -4.1808768E-01 hartree
+
+ Pulay update with  2 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.616      0.305      0.783E-01
+{SCF_istep: 3 , Vnl|psi>: 216 , wall_time: '  6.30 [s] '} <<< TIME
+
+ ITER STEP NUMBER     4
+ Total charge density [el/Bohr^3]
+)     Maximum=    1.0708E+00  at reduced coord.    0.3667    0.4444    0.0104
+)     Minimum=    1.1464E-03  at reduced coord.    0.3333    0.5000    0.5000
+   Integrated=    2.0800E+02
+ ETOT  4  -665.23575953179    -1.656E-02 7.817E-04 1.011E+01
+ scprqt: <Vxc>= -4.1757764E-01 hartree
+
+ Pulay update with  3 previous iterations:
+ mixing of old trial potential: alpha(m:m-4)=  0.882      0.108      0.295E-01 -0.192E-01
+{SCF_istep: 4 , Vnl|psi>: 216 , wall_time: '  6.34 [s] '} <<< TIME
+
+ ITER STEP NUMBER     5
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 108 PID 1763560 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 109 PID 1763561 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 110 PID 1763562 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 111 PID 1763563 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 162 PID 3346357 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 54 PID 557779 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 0 PID 505622 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 112 PID 1763564 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 113 PID 1763565 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 114 PID 1763566 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 115 PID 1763567 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 116 PID 1763568 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 117 PID 1763569 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 118 PID 1763570 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 119 PID 1763571 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 120 PID 1763572 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 121 PID 1763573 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 122 PID 1763574 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 123 PID 1763575 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 124 PID 1763576 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 125 PID 1763577 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 126 PID 1763578 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 55 PID 557780 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 56 PID 557781 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 57 PID 557782 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 58 PID 557783 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 59 PID 557784 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 60 PID 557785 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 61 PID 557786 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 62 PID 557787 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 63 PID 557788 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 64 PID 557789 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 65 PID 557790 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 66 PID 557791 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 127 PID 1763580 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 128 PID 1763581 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 129 PID 1763582 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 130 PID 1763583 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 131 PID 1763584 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 132 PID 1763585 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 133 PID 1763586 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 134 PID 1763587 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 135 PID 1763588 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 136 PID 1763589 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 137 PID 1763590 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 138 PID 1763591 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 139 PID 1763592 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 140 PID 1763593 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 141 PID 1763594 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 142 PID 1763595 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 143 PID 1763596 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 144 PID 1763597 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 145 PID 1763598 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 146 PID 1763599 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 147 PID 1763600 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 148 PID 1763602 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 149 PID 1763603 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 150 PID 1763604 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 151 PID 1763605 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 152 PID 1763606 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 153 PID 1763607 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 154 PID 1763608 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 155 PID 1763609 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 156 PID 1763610 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 157 PID 1763611 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 158 PID 1763612 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 159 PID 1763613 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 160 PID 1763614 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 161 PID 1763615 RUNNING AT c310-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 67 PID 557792 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 68 PID 557793 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 69 PID 557794 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 70 PID 557795 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 71 PID 557796 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 72 PID 557797 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 73 PID 557798 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 74 PID 557799 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 75 PID 557800 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 76 PID 557801 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 77 PID 557802 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 78 PID 557803 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 79 PID 557804 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 80 PID 557805 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 81 PID 557806 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 82 PID 557807 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 83 PID 557808 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 84 PID 557809 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 85 PID 557810 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 86 PID 557811 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 87 PID 557812 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 88 PID 557813 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 89 PID 557814 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 90 PID 557815 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 91 PID 557816 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 92 PID 557817 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 93 PID 557818 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 94 PID 557819 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 95 PID 557820 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 96 PID 557821 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 97 PID 557822 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 98 PID 557823 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 99 PID 557824 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 100 PID 557825 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 101 PID 557826 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 102 PID 557827 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 103 PID 557828 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 104 PID 557829 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 105 PID 557830 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 106 PID 557831 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 107 PID 557832 RUNNING AT c303-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 163 PID 3346358 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 164 PID 3346359 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 165 PID 3346360 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 166 PID 3346361 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 167 PID 3346362 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 168 PID 3346363 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 169 PID 3346364 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 170 PID 3346365 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 171 PID 3346366 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 172 PID 3346367 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 173 PID 3346368 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 174 PID 3346369 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 175 PID 3346370 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 176 PID 3346371 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 177 PID 3346372 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 178 PID 3346373 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 179 PID 3346374 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 180 PID 3346375 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 181 PID 3346376 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 182 PID 3346377 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 1 PID 505623 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 2 PID 505624 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 3 PID 505625 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 4 PID 505626 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 5 PID 505627 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 6 PID 505628 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 7 PID 505629 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 8 PID 505630 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 9 PID 505631 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 10 PID 505632 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 11 PID 505633 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 12 PID 505634 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 13 PID 505635 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 14 PID 505636 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 15 PID 505637 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 16 PID 505638 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 17 PID 505639 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 18 PID 505640 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 19 PID 505641 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 20 PID 505642 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 21 PID 505643 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 22 PID 505644 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 23 PID 505645 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 24 PID 505646 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 25 PID 505647 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 26 PID 505648 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 27 PID 505649 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 28 PID 505650 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 29 PID 505651 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 30 PID 505652 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 31 PID 505653 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 32 PID 505654 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 33 PID 505655 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 34 PID 505656 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 35 PID 505657 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 36 PID 505658 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 37 PID 505659 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 38 PID 505660 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 39 PID 505661 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 40 PID 505662 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 41 PID 505663 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 42 PID 505664 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 43 PID 505665 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 44 PID 505666 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 45 PID 505667 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 46 PID 505668 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 47 PID 505669 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 48 PID 505670 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 49 PID 505671 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 50 PID 505672 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 51 PID 505673 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 52 PID 505674 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 53 PID 505675 RUNNING AT c303-005
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 183 PID 3346378 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 184 PID 3346379 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 185 PID 3346380 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 186 PID 3346381 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 187 PID 3346382 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 188 PID 3346383 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 189 PID 3346384 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 190 PID 3346385 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 191 PID 3346386 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 192 PID 3346387 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 193 PID 3346388 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 194 PID 3346389 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 195 PID 3346390 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 196 PID 3346391 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 197 PID 3346392 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 198 PID 3346393 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 199 PID 3346394 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 200 PID 3346395 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 201 PID 3346396 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 202 PID 3346397 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 203 PID 3346398 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 204 PID 3346399 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 205 PID 3346400 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 206 PID 3346401 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 207 PID 3346402 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 208 PID 3346403 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 209 PID 3346404 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 210 PID 3346405 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 211 PID 3346406 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 212 PID 3346407 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 213 PID 3346408 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 214 PID 3346409 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 215 PID 3346410 RUNNING AT c310-006
+=   KILLED BY SIGNAL: 15 (Terminated)
+===================================================================================

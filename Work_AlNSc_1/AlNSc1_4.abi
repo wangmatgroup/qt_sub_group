@@ -1,0 +1,22 @@
+ddb_filepath = "/scratch/11236/unmeshtok/abinit_tutorials/tutorespfn/Input/Work_AlNSc_1/AlNSc1_3.ddb.out"
+   rfmeth  1
+   enunit  0
+   eivec   1
+   chneut  2
+   selectz 0
+   dieflag  1
+   ifcflag  0 ! This is the default value
+   thmflag  0 ! This is the default value
+    nlflag  1
+   elaflag  3
+ piezoflag  3
+ instrflag  1
+   ramansr  1
+    alphon  1
+    prtmbm  1
+
+     nph1l  1
+     qph1l  0.0 0.0 0.0 1.0
+
+     nph2l  1
+     qph2l  1.0 0.0 0.0 0.0
